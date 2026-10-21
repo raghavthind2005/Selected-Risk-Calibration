@@ -1,0 +1,1038 @@
+run_name: second_certification
+namespace_id: earlier_run
+target: chemistry_multi_tree
+out: 
+input_root: 
+protocol_mode: formal
+diagnostic_only: false
+claim_ids:
+- C2
+claim_role: formal_fresh_fixed_row_certification_second_draw
+evaluation_type: simulator_true_outcome
+evaluation_subtype: fresh_d_cert_forty_frozen_rows_seed3to10
+n_fixedcert_per_law: 60
+objective_laws:
+- random_linear
+- corner_pressure
+- boundary_pressure
+- residual_hotspot_pressure
+- boundary_residual_pressure
+lambda_grid:
+- 0.0
+- 0.25
+- 0.5
+- 0.75
+- 1.0
+cmicl:
+  hidden_layers:
+  - 32
+  - 32
+  weight_decay: 0.001
+  max_iter: 2000
+  tol: 1.0e-06
+  epsilon: 0.01
+solver:
+  proposal_starts: 500
+  claim_budgets:
+  - 20
+  - 100
+  - 500
+  max_iter: 200
+  feasibility_tolerance: 1.0e-06
+  fd_relative_step: 1.0e-06
+certification:
+  familywise_k: 40
+  delta_row: 0.00125
+  counts_against_familywise_k: true
+risk_target: 0.12
+cluster_bootstrap_seed: 20260831
+jobs: 64
+checkpoint_every: 2
+deadline_guard_seconds: 300
+segment_max_seconds: 3600
+max_evaluation_cells: 200
+max_physical_cpu_hours: 30.0
+hard_physical_cpu_hours: 45.0
+inputs:
+  exact_base_asset: data/earlier_run.json
+  exact_base_asset_sha256: 6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565
+  fixed_row_ledger: data/earlier_run.json
+  fixed_row_ledger_sha256: 9053a9d1410b22640460808bdc758c371037a6dd45b9a1512914c9a16811989e
+  history_census: data/certification_run.json
+  history_census_sha256: 9f8c16b52d871125c6b6773bdc0e4c68630ee2a6289a1710062b5e3b9f23f30f
+  spent_census: data/certification_run.json
+  spent_census_sha256: 206304adcc6bef47738e786cd5d53558137930091079d36a09aedef3d42ca808
+  history_census_asset_id: certification_run
+  spent_census_asset_id: certification_run
+  fixed_row_ledger_asset_id: earlier_run
+contexts:
+- source_run: methane_seed3
+  source_namespace_id: methane_seed3
+  target: methane
+  benchmark: methane_reactor
+  seed: 3
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed3/fit_state.npz
+  source_fit_state_sha256: 4bcd10177384764602b7583579d28447b07aa739423b10719e8689442ab2e4ec
+  source_split_receipt: results/methane_seed3/split_receipt.json
+  source_split_receipt_sha256: 53c931a2b0d23a207fbd9a1639cb2ecfb0573a0f1bb749615f297ac4281a3aa0
+  source_frozen_policies: results/methane_seed3/frozen_policies.json
+  source_frozen_policies_sha256: 610a40cf4bee850c011158435dc35e05d1ff7349565951bfac3a9431f6306ef9
+- source_run: methane_seed4
+  source_namespace_id: methane_seed4
+  target: methane
+  benchmark: methane_reactor
+  seed: 4
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed4/fit_state.npz
+  source_fit_state_sha256: 2f7fd1be08217b427671ca6e0c0fa7a54a36b7a376d8e74c210396ea599c81ed
+  source_split_receipt: results/methane_seed4/split_receipt.json
+  source_split_receipt_sha256: 4d19e95f82a760395e1e642a7b1741181a2e295575ce20a71ffd5ffe1d018111
+  source_frozen_policies: results/methane_seed4/frozen_policies.json
+  source_frozen_policies_sha256: 7ddb8a1c1b8c92e4ba93817dc5c53623d66d6ed18ce47e42b4480c6b059d0169
+- source_run: methane_seed5
+  source_namespace_id: methane_seed5
+  target: methane
+  benchmark: methane_reactor
+  seed: 5
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed5/fit_state.npz
+  source_fit_state_sha256: 66d0dec9e31e56ebc95f868f1134db9a5faee116708b865986a9c50c9d7ad6dd
+  source_split_receipt: results/methane_seed5/split_receipt.json
+  source_split_receipt_sha256: 1edab85010291c79ddfc8842e7eecc557fbd5f123c540d9c3fc86dc33e6b35e2
+  source_frozen_policies: results/methane_seed5/frozen_policies.json
+  source_frozen_policies_sha256: d78f469e70ec7d19e04dd93d91072567a271493527760e5704eca106b2169291
+- source_run: methane_seed6
+  source_namespace_id: methane_seed6
+  target: methane
+  benchmark: methane_reactor
+  seed: 6
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed6/fit_state.npz
+  source_fit_state_sha256: b0ae24e511c9720e4290789c693ea120621a4a6f3f803cd0ba367a780d7869f9
+  source_split_receipt: results/methane_seed6/split_receipt.json
+  source_split_receipt_sha256: 6e122e209a91a81bbe398da578f804b15f91eb4a6e7bba936f4b3c1695e425d4
+  source_frozen_policies: results/methane_seed6/frozen_policies.json
+  source_frozen_policies_sha256: 50c1f0c5fe7f7f8a21e36eb2af9d74da2629694abbec2e3027752203a7cd25a3
+- source_run: methane_seed7
+  source_namespace_id: methane_seed7
+  target: methane
+  benchmark: methane_reactor
+  seed: 7
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed7/fit_state.npz
+  source_fit_state_sha256: 12c0fe12784a5ffe276b5640414f3b37635af3b00310f5825d493ca59931b534
+  source_split_receipt: results/methane_seed7/split_receipt.json
+  source_split_receipt_sha256: 95905597bbb62c2d02687a74804a8104ecc357d183297e80287e87a8d3414026
+  source_frozen_policies: results/methane_seed7/frozen_policies.json
+  source_frozen_policies_sha256: feb503ee23815dbd42c1099b78aa9327e99047b717971d522afce026b35bbac7
+- source_run: methane_seed8
+  source_namespace_id: methane_seed8
+  target: methane
+  benchmark: methane_reactor
+  seed: 8
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed8/fit_state.npz
+  source_fit_state_sha256: ca22c0d17f685aecbe5d38b46f72c706b10e8e13cfe0f8fcab50928c71ee7ebd
+  source_split_receipt: results/methane_seed8/split_receipt.json
+  source_split_receipt_sha256: 6c46b0eed9d48d4e037c3178452075d224a2c629e4b8819bf9939ac75a262180
+  source_frozen_policies: results/methane_seed8/frozen_policies.json
+  source_frozen_policies_sha256: 7478f6923588a8d208a0fd73933eea0589aa77fd5de841d4399cf49b790acdfb
+- source_run: methane_seed9
+  source_namespace_id: methane_seed9
+  target: methane
+  benchmark: methane_reactor
+  seed: 9
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed9/fit_state.npz
+  source_fit_state_sha256: 08abf7498ec2247dd11a7ee61e6322271eab0c55c2858be15f68f94027297c58
+  source_split_receipt: results/methane_seed9/split_receipt.json
+  source_split_receipt_sha256: 9b1c3054478b28d1c27fdd96acc3611952b1898ce0b95ec6466054c9c74fc9a0
+  source_frozen_policies: results/methane_seed9/frozen_policies.json
+  source_frozen_policies_sha256: 1854bcab8bf8f77acc79a3cd20b2fe919843934e0e4222214fda9b4f29927876
+- source_run: methane_seed10
+  source_namespace_id: methane_seed10
+  target: methane
+  benchmark: methane_reactor
+  seed: 10
+  anchors:
+  - id: a0p25
+    fraction: 0.25
+  - id: a0p50
+    fraction: 0.5
+  - id: a0p75
+    fraction: 0.75
+  alpha: 0.1
+  fit_tau: 0.9
+  n_train: 1000
+  n_cal: 300
+  knob_maps:
+    alpha_max_knob: 3.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  source_fit_state: results/methane_seed10/fit_state.npz
+  source_fit_state_sha256: a2d0cfa885b2e414a23fb14b2229f8278a22415d3e60f656888d4b1d60968be9
+  source_split_receipt: results/methane_seed10/split_receipt.json
+  source_split_receipt_sha256: 038076d10124d2cad52bc9bd179a3aa7d882542b02bc99787d9ab2f706f77489
+  source_frozen_policies: results/methane_seed10/frozen_policies.json
+  source_frozen_policies_sha256: eaab0c8726326491ed0b1d9e3747169b9f5c7201ea5f818c2008abed9a4341a0
+- source_run: williams_seed3
+  source_namespace_id: williams_seed3
+  target: williams
+  benchmark: williams_otto
+  seed: 3
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed3/fit_state.npz
+  source_fit_state_sha256: 87bbf4c4210d32b332f9e4b09898680bc1f29db0533740d3915210d4f77ec4c8
+  source_split_receipt: results/williams_seed3/split_receipt.json
+  source_split_receipt_sha256: b481248b6640b84766da6d99887d91e3958ae0ed766618fcc3c2128b5e9119c9
+  source_frozen_policies: results/williams_seed3/frozen_policies.json
+  source_frozen_policies_sha256: 05edec2a8a9575834f562ee5456a1086816dc1793d0c009f84f79d08e40cbf6a
+- source_run: williams_seed4
+  source_namespace_id: williams_seed4
+  target: williams
+  benchmark: williams_otto
+  seed: 4
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed4/fit_state.npz
+  source_fit_state_sha256: 380e805053293b5fac1acfc674a60e6fa3758d82bee8d68c642fae8d57462fa9
+  source_split_receipt: results/williams_seed4/split_receipt.json
+  source_split_receipt_sha256: d117320bb688bd942aef1757afcbb5ac45aa5da5871cdf43dbba2f2db9cb03b1
+  source_frozen_policies: results/williams_seed4/frozen_policies.json
+  source_frozen_policies_sha256: d0bc0e7472ac685f2a93a8494a1980b196d34539ad0424e7307d7d6e5eba1df4
+- source_run: williams_seed5
+  source_namespace_id: williams_seed5
+  target: williams
+  benchmark: williams_otto
+  seed: 5
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed5/fit_state.npz
+  source_fit_state_sha256: ef1a8e509469b8eeb4c53c5711d9b87671da6ad771eebe5f4647b1b4b5cc1558
+  source_split_receipt: results/williams_seed5/split_receipt.json
+  source_split_receipt_sha256: 292f5f25e549a89f8851b5949bfd648994b1dec0b67df47ae014d2ff0400bbad
+  source_frozen_policies: results/williams_seed5/frozen_policies.json
+  source_frozen_policies_sha256: d4a42b1b8ce197e0d3230fde318a1f7717590b798e51258761149b2d83def5ef
+- source_run: williams_seed6
+  source_namespace_id: williams_seed6
+  target: williams
+  benchmark: williams_otto
+  seed: 6
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed6/fit_state.npz
+  source_fit_state_sha256: 80cffb34e52c366c5c8f7d5d6aa54a215595502bc6a8ce13501f1ea546e0aa1c
+  source_split_receipt: results/williams_seed6/split_receipt.json
+  source_split_receipt_sha256: cfca8f593764c87fd5bf120c01eaf7f0b846a176b8dc107a52fe20344944d8ad
+  source_frozen_policies: results/williams_seed6/frozen_policies.json
+  source_frozen_policies_sha256: 7b7e40e094d1095c1de4377b873f23ea7f1dd7e950f165d8dba25e29bccc31d4
+- source_run: williams_seed7
+  source_namespace_id: williams_seed7
+  target: williams
+  benchmark: williams_otto
+  seed: 7
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed7/fit_state.npz
+  source_fit_state_sha256: b28321d6ecf4c2bde09aff62bd65e4e89205314425243c2978426a7567823982
+  source_split_receipt: results/williams_seed7/split_receipt.json
+  source_split_receipt_sha256: f152a4f0b941c69864744a87860e4ad9f52ba33772b977b35d7e9711bb8bb3a2
+  source_frozen_policies: results/williams_seed7/frozen_policies.json
+  source_frozen_policies_sha256: 2f2dc9a1be6408dd39a78b6f7dc6ea61127604b75bc5bd66501026f809341fc3
+- source_run: williams_seed8
+  source_namespace_id: williams_seed8
+  target: williams
+  benchmark: williams_otto
+  seed: 8
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed8/fit_state.npz
+  source_fit_state_sha256: ee7f74140f55ca11c15415388831147be13b0926e47dd6fd5661c099c3be5974
+  source_split_receipt: results/williams_seed8/split_receipt.json
+  source_split_receipt_sha256: 2f6ce4a8a21c2b569718ce4778c551e396b51f107ba8b9ad7d90ea73cb2b1545
+  source_frozen_policies: results/williams_seed8/frozen_policies.json
+  source_frozen_policies_sha256: 707c1c9572353aa1bbab27323e808c2689cbc69d479d4e40c438af0ee017cffd
+- source_run: williams_seed9
+  source_namespace_id: williams_seed9
+  target: williams
+  benchmark: williams_otto
+  seed: 9
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed9/fit_state.npz
+  source_fit_state_sha256: 36d37d3b3bbeb8ffa74bae42247589dad94dffc54b1e3a0562f59784f9c9dda1
+  source_split_receipt: results/williams_seed9/split_receipt.json
+  source_split_receipt_sha256: 7eeb4f2811239ab92532590e5e36d0e00dad8bd5b1d54891b1abc82fe511e3c7
+  source_frozen_policies: results/williams_seed9/frozen_policies.json
+  source_frozen_policies_sha256: 5654c0ff73d48c04695ed3b07d35956e4545f257ec09f85b163cd8d56a2e8c4b
+- source_run: williams_seed10
+  source_namespace_id: williams_seed10
+  target: williams
+  benchmark: williams_otto
+  seed: 10
+  anchors:
+  - id: a0p333
+    fraction: 0.3333333333333333
+  - id: a0p667
+    fraction: 0.6666666666666666
+  alpha: 0.1
+  fit_tau: 0.85
+  n_train: 2000
+  n_cal: 1000
+  knob_maps:
+    alpha_max_knob: 5.0
+    dose_log_scale: 2.0
+    box_level_scale: 4.0
+    knn_level_scale: 4.0
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  source_fit_state: results/williams_seed10/fit_state.npz
+  source_fit_state_sha256: 9b366b1df74a8f12ad601b45e30170955bb3c68a98a39e37e08cccf31e1a8ac5
+  source_split_receipt: results/williams_seed10/split_receipt.json
+  source_split_receipt_sha256: 863a987107ad61ec19142e1652f391b2b10c7f7943ac1af35c38e4f69fddc853
+  source_frozen_policies: results/williams_seed10/frozen_policies.json
+  source_frozen_policies_sha256: b1bd7a8d5efe10a6ffb4240c53cc56b72bde247091a939a6d10b8d1c47deb234
+prior_diagnostic_objective_files:
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+allowed_result_files:
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- results/methane_seed10/fit_state.npz
+- results/methane_seed10/frozen_policies.json
+- results/methane_seed10/objectives/cert/boundary_pressure.json
+- results/methane_seed10/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed10/objectives/cert/corner_pressure.json
+- results/methane_seed10/objectives/cert/random_linear.json
+- results/methane_seed10/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed10/objectives/match/boundary_pressure.json
+- results/methane_seed10/objectives/match/boundary_residual_pressure.json
+- results/methane_seed10/objectives/match/corner_pressure.json
+- results/methane_seed10/objectives/match/random_linear.json
+- results/methane_seed10/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed10/objectives/perf/boundary_pressure.json
+- results/methane_seed10/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed10/objectives/perf/corner_pressure.json
+- results/methane_seed10/objectives/perf/random_linear.json
+- results/methane_seed10/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed10/objectives/prop/boundary_pressure.json
+- results/methane_seed10/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed10/objectives/prop/corner_pressure.json
+- results/methane_seed10/objectives/prop/random_linear.json
+- results/methane_seed10/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed10/split_receipt.json
+- results/methane_seed3/fit_state.npz
+- results/methane_seed3/frozen_policies.json
+- results/methane_seed3/objectives/cert/boundary_pressure.json
+- results/methane_seed3/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed3/objectives/cert/corner_pressure.json
+- results/methane_seed3/objectives/cert/random_linear.json
+- results/methane_seed3/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed3/objectives/match/boundary_pressure.json
+- results/methane_seed3/objectives/match/boundary_residual_pressure.json
+- results/methane_seed3/objectives/match/corner_pressure.json
+- results/methane_seed3/objectives/match/random_linear.json
+- results/methane_seed3/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed3/objectives/perf/boundary_pressure.json
+- results/methane_seed3/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed3/objectives/perf/corner_pressure.json
+- results/methane_seed3/objectives/perf/random_linear.json
+- results/methane_seed3/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed3/objectives/prop/boundary_pressure.json
+- results/methane_seed3/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed3/objectives/prop/corner_pressure.json
+- results/methane_seed3/objectives/prop/random_linear.json
+- results/methane_seed3/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed3/split_receipt.json
+- results/methane_seed4/fit_state.npz
+- results/methane_seed4/frozen_policies.json
+- results/methane_seed4/objectives/cert/boundary_pressure.json
+- results/methane_seed4/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed4/objectives/cert/corner_pressure.json
+- results/methane_seed4/objectives/cert/random_linear.json
+- results/methane_seed4/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed4/objectives/match/boundary_pressure.json
+- results/methane_seed4/objectives/match/boundary_residual_pressure.json
+- results/methane_seed4/objectives/match/corner_pressure.json
+- results/methane_seed4/objectives/match/random_linear.json
+- results/methane_seed4/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed4/objectives/perf/boundary_pressure.json
+- results/methane_seed4/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed4/objectives/perf/corner_pressure.json
+- results/methane_seed4/objectives/perf/random_linear.json
+- results/methane_seed4/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed4/objectives/prop/boundary_pressure.json
+- results/methane_seed4/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed4/objectives/prop/corner_pressure.json
+- results/methane_seed4/objectives/prop/random_linear.json
+- results/methane_seed4/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed4/split_receipt.json
+- results/methane_seed5/fit_state.npz
+- results/methane_seed5/frozen_policies.json
+- results/methane_seed5/objectives/cert/boundary_pressure.json
+- results/methane_seed5/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed5/objectives/cert/corner_pressure.json
+- results/methane_seed5/objectives/cert/random_linear.json
+- results/methane_seed5/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed5/objectives/match/boundary_pressure.json
+- results/methane_seed5/objectives/match/boundary_residual_pressure.json
+- results/methane_seed5/objectives/match/corner_pressure.json
+- results/methane_seed5/objectives/match/random_linear.json
+- results/methane_seed5/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed5/objectives/perf/boundary_pressure.json
+- results/methane_seed5/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed5/objectives/perf/corner_pressure.json
+- results/methane_seed5/objectives/perf/random_linear.json
+- results/methane_seed5/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed5/objectives/prop/boundary_pressure.json
+- results/methane_seed5/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed5/objectives/prop/corner_pressure.json
+- results/methane_seed5/objectives/prop/random_linear.json
+- results/methane_seed5/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed5/split_receipt.json
+- results/methane_seed6/fit_state.npz
+- results/methane_seed6/frozen_policies.json
+- results/methane_seed6/objectives/cert/boundary_pressure.json
+- results/methane_seed6/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed6/objectives/cert/corner_pressure.json
+- results/methane_seed6/objectives/cert/random_linear.json
+- results/methane_seed6/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed6/objectives/match/boundary_pressure.json
+- results/methane_seed6/objectives/match/boundary_residual_pressure.json
+- results/methane_seed6/objectives/match/corner_pressure.json
+- results/methane_seed6/objectives/match/random_linear.json
+- results/methane_seed6/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed6/objectives/perf/boundary_pressure.json
+- results/methane_seed6/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed6/objectives/perf/corner_pressure.json
+- results/methane_seed6/objectives/perf/random_linear.json
+- results/methane_seed6/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed6/objectives/prop/boundary_pressure.json
+- results/methane_seed6/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed6/objectives/prop/corner_pressure.json
+- results/methane_seed6/objectives/prop/random_linear.json
+- results/methane_seed6/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed6/split_receipt.json
+- results/methane_seed7/fit_state.npz
+- results/methane_seed7/frozen_policies.json
+- results/methane_seed7/objectives/cert/boundary_pressure.json
+- results/methane_seed7/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed7/objectives/cert/corner_pressure.json
+- results/methane_seed7/objectives/cert/random_linear.json
+- results/methane_seed7/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed7/objectives/match/boundary_pressure.json
+- results/methane_seed7/objectives/match/boundary_residual_pressure.json
+- results/methane_seed7/objectives/match/corner_pressure.json
+- results/methane_seed7/objectives/match/random_linear.json
+- results/methane_seed7/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed7/objectives/perf/boundary_pressure.json
+- results/methane_seed7/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed7/objectives/perf/corner_pressure.json
+- results/methane_seed7/objectives/perf/random_linear.json
+- results/methane_seed7/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed7/objectives/prop/boundary_pressure.json
+- results/methane_seed7/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed7/objectives/prop/corner_pressure.json
+- results/methane_seed7/objectives/prop/random_linear.json
+- results/methane_seed7/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed7/split_receipt.json
+- results/methane_seed8/fit_state.npz
+- results/methane_seed8/frozen_policies.json
+- results/methane_seed8/objectives/cert/boundary_pressure.json
+- results/methane_seed8/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed8/objectives/cert/corner_pressure.json
+- results/methane_seed8/objectives/cert/random_linear.json
+- results/methane_seed8/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed8/objectives/match/boundary_pressure.json
+- results/methane_seed8/objectives/match/boundary_residual_pressure.json
+- results/methane_seed8/objectives/match/corner_pressure.json
+- results/methane_seed8/objectives/match/random_linear.json
+- results/methane_seed8/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed8/objectives/perf/boundary_pressure.json
+- results/methane_seed8/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed8/objectives/perf/corner_pressure.json
+- results/methane_seed8/objectives/perf/random_linear.json
+- results/methane_seed8/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed8/objectives/prop/boundary_pressure.json
+- results/methane_seed8/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed8/objectives/prop/corner_pressure.json
+- results/methane_seed8/objectives/prop/random_linear.json
+- results/methane_seed8/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed8/split_receipt.json
+- results/methane_seed9/fit_state.npz
+- results/methane_seed9/frozen_policies.json
+- results/methane_seed9/objectives/cert/boundary_pressure.json
+- results/methane_seed9/objectives/cert/boundary_residual_pressure.json
+- results/methane_seed9/objectives/cert/corner_pressure.json
+- results/methane_seed9/objectives/cert/random_linear.json
+- results/methane_seed9/objectives/cert/residual_hotspot_pressure.json
+- results/methane_seed9/objectives/match/boundary_pressure.json
+- results/methane_seed9/objectives/match/boundary_residual_pressure.json
+- results/methane_seed9/objectives/match/corner_pressure.json
+- results/methane_seed9/objectives/match/random_linear.json
+- results/methane_seed9/objectives/match/residual_hotspot_pressure.json
+- results/methane_seed9/objectives/perf/boundary_pressure.json
+- results/methane_seed9/objectives/perf/boundary_residual_pressure.json
+- results/methane_seed9/objectives/perf/corner_pressure.json
+- results/methane_seed9/objectives/perf/random_linear.json
+- results/methane_seed9/objectives/perf/residual_hotspot_pressure.json
+- results/methane_seed9/objectives/prop/boundary_pressure.json
+- results/methane_seed9/objectives/prop/boundary_residual_pressure.json
+- results/methane_seed9/objectives/prop/corner_pressure.json
+- results/methane_seed9/objectives/prop/random_linear.json
+- results/methane_seed9/objectives/prop/residual_hotspot_pressure.json
+- results/methane_seed9/split_receipt.json
+- results/williams_seed10/fit_state.npz
+- results/williams_seed10/frozen_policies.json
+- results/williams_seed10/objectives/cert/boundary_pressure.json
+- results/williams_seed10/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed10/objectives/cert/corner_pressure.json
+- results/williams_seed10/objectives/cert/random_linear.json
+- results/williams_seed10/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed10/objectives/match/boundary_pressure.json
+- results/williams_seed10/objectives/match/boundary_residual_pressure.json
+- results/williams_seed10/objectives/match/corner_pressure.json
+- results/williams_seed10/objectives/match/random_linear.json
+- results/williams_seed10/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed10/objectives/perf/boundary_pressure.json
+- results/williams_seed10/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed10/objectives/perf/corner_pressure.json
+- results/williams_seed10/objectives/perf/random_linear.json
+- results/williams_seed10/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed10/objectives/prop/boundary_pressure.json
+- results/williams_seed10/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed10/objectives/prop/corner_pressure.json
+- results/williams_seed10/objectives/prop/random_linear.json
+- results/williams_seed10/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed10/split_receipt.json
+- results/williams_seed3/fit_state.npz
+- results/williams_seed3/frozen_policies.json
+- results/williams_seed3/objectives/cert/boundary_pressure.json
+- results/williams_seed3/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed3/objectives/cert/corner_pressure.json
+- results/williams_seed3/objectives/cert/random_linear.json
+- results/williams_seed3/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed3/objectives/match/boundary_pressure.json
+- results/williams_seed3/objectives/match/boundary_residual_pressure.json
+- results/williams_seed3/objectives/match/corner_pressure.json
+- results/williams_seed3/objectives/match/random_linear.json
+- results/williams_seed3/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed3/objectives/perf/boundary_pressure.json
+- results/williams_seed3/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed3/objectives/perf/corner_pressure.json
+- results/williams_seed3/objectives/perf/random_linear.json
+- results/williams_seed3/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed3/objectives/prop/boundary_pressure.json
+- results/williams_seed3/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed3/objectives/prop/corner_pressure.json
+- results/williams_seed3/objectives/prop/random_linear.json
+- results/williams_seed3/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed3/split_receipt.json
+- results/williams_seed4/fit_state.npz
+- results/williams_seed4/frozen_policies.json
+- results/williams_seed4/objectives/cert/boundary_pressure.json
+- results/williams_seed4/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed4/objectives/cert/corner_pressure.json
+- results/williams_seed4/objectives/cert/random_linear.json
+- results/williams_seed4/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed4/objectives/match/boundary_pressure.json
+- results/williams_seed4/objectives/match/boundary_residual_pressure.json
+- results/williams_seed4/objectives/match/corner_pressure.json
+- results/williams_seed4/objectives/match/random_linear.json
+- results/williams_seed4/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed4/objectives/perf/boundary_pressure.json
+- results/williams_seed4/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed4/objectives/perf/corner_pressure.json
+- results/williams_seed4/objectives/perf/random_linear.json
+- results/williams_seed4/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed4/objectives/prop/boundary_pressure.json
+- results/williams_seed4/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed4/objectives/prop/corner_pressure.json
+- results/williams_seed4/objectives/prop/random_linear.json
+- results/williams_seed4/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed4/split_receipt.json
+- results/williams_seed5/fit_state.npz
+- results/williams_seed5/frozen_policies.json
+- results/williams_seed5/objectives/cert/boundary_pressure.json
+- results/williams_seed5/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed5/objectives/cert/corner_pressure.json
+- results/williams_seed5/objectives/cert/random_linear.json
+- results/williams_seed5/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed5/objectives/match/boundary_pressure.json
+- results/williams_seed5/objectives/match/boundary_residual_pressure.json
+- results/williams_seed5/objectives/match/corner_pressure.json
+- results/williams_seed5/objectives/match/random_linear.json
+- results/williams_seed5/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed5/objectives/perf/boundary_pressure.json
+- results/williams_seed5/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed5/objectives/perf/corner_pressure.json
+- results/williams_seed5/objectives/perf/random_linear.json
+- results/williams_seed5/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed5/objectives/prop/boundary_pressure.json
+- results/williams_seed5/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed5/objectives/prop/corner_pressure.json
+- results/williams_seed5/objectives/prop/random_linear.json
+- results/williams_seed5/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed5/split_receipt.json
+- results/williams_seed6/fit_state.npz
+- results/williams_seed6/frozen_policies.json
+- results/williams_seed6/objectives/cert/boundary_pressure.json
+- results/williams_seed6/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed6/objectives/cert/corner_pressure.json
+- results/williams_seed6/objectives/cert/random_linear.json
+- results/williams_seed6/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed6/objectives/match/boundary_pressure.json
+- results/williams_seed6/objectives/match/boundary_residual_pressure.json
+- results/williams_seed6/objectives/match/corner_pressure.json
+- results/williams_seed6/objectives/match/random_linear.json
+- results/williams_seed6/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed6/objectives/perf/boundary_pressure.json
+- results/williams_seed6/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed6/objectives/perf/corner_pressure.json
+- results/williams_seed6/objectives/perf/random_linear.json
+- results/williams_seed6/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed6/objectives/prop/boundary_pressure.json
+- results/williams_seed6/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed6/objectives/prop/corner_pressure.json
+- results/williams_seed6/objectives/prop/random_linear.json
+- results/williams_seed6/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed6/split_receipt.json
+- results/williams_seed7/fit_state.npz
+- results/williams_seed7/frozen_policies.json
+- results/williams_seed7/objectives/cert/boundary_pressure.json
+- results/williams_seed7/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed7/objectives/cert/corner_pressure.json
+- results/williams_seed7/objectives/cert/random_linear.json
+- results/williams_seed7/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed7/objectives/match/boundary_pressure.json
+- results/williams_seed7/objectives/match/boundary_residual_pressure.json
+- results/williams_seed7/objectives/match/corner_pressure.json
+- results/williams_seed7/objectives/match/random_linear.json
+- results/williams_seed7/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed7/objectives/perf/boundary_pressure.json
+- results/williams_seed7/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed7/objectives/perf/corner_pressure.json
+- results/williams_seed7/objectives/perf/random_linear.json
+- results/williams_seed7/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed7/objectives/prop/boundary_pressure.json
+- results/williams_seed7/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed7/objectives/prop/corner_pressure.json
+- results/williams_seed7/objectives/prop/random_linear.json
+- results/williams_seed7/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed7/split_receipt.json
+- results/williams_seed8/fit_state.npz
+- results/williams_seed8/frozen_policies.json
+- results/williams_seed8/objectives/cert/boundary_pressure.json
+- results/williams_seed8/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed8/objectives/cert/corner_pressure.json
+- results/williams_seed8/objectives/cert/random_linear.json
+- results/williams_seed8/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed8/objectives/match/boundary_pressure.json
+- results/williams_seed8/objectives/match/boundary_residual_pressure.json
+- results/williams_seed8/objectives/match/corner_pressure.json
+- results/williams_seed8/objectives/match/random_linear.json
+- results/williams_seed8/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed8/objectives/perf/boundary_pressure.json
+- results/williams_seed8/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed8/objectives/perf/corner_pressure.json
+- results/williams_seed8/objectives/perf/random_linear.json
+- results/williams_seed8/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed8/objectives/prop/boundary_pressure.json
+- results/williams_seed8/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed8/objectives/prop/corner_pressure.json
+- results/williams_seed8/objectives/prop/random_linear.json
+- results/williams_seed8/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed8/split_receipt.json
+- results/williams_seed9/fit_state.npz
+- results/williams_seed9/frozen_policies.json
+- results/williams_seed9/objectives/cert/boundary_pressure.json
+- results/williams_seed9/objectives/cert/boundary_residual_pressure.json
+- results/williams_seed9/objectives/cert/corner_pressure.json
+- results/williams_seed9/objectives/cert/random_linear.json
+- results/williams_seed9/objectives/cert/residual_hotspot_pressure.json
+- results/williams_seed9/objectives/match/boundary_pressure.json
+- results/williams_seed9/objectives/match/boundary_residual_pressure.json
+- results/williams_seed9/objectives/match/corner_pressure.json
+- results/williams_seed9/objectives/match/random_linear.json
+- results/williams_seed9/objectives/match/residual_hotspot_pressure.json
+- results/williams_seed9/objectives/perf/boundary_pressure.json
+- results/williams_seed9/objectives/perf/boundary_residual_pressure.json
+- results/williams_seed9/objectives/perf/corner_pressure.json
+- results/williams_seed9/objectives/perf/random_linear.json
+- results/williams_seed9/objectives/perf/residual_hotspot_pressure.json
+- results/williams_seed9/objectives/prop/boundary_pressure.json
+- results/williams_seed9/objectives/prop/boundary_residual_pressure.json
+- results/williams_seed9/objectives/prop/corner_pressure.json
+- results/williams_seed9/objectives/prop/random_linear.json
+- results/williams_seed9/objectives/prop/residual_hotspot_pressure.json
+- results/williams_seed9/split_receipt.json
+input_list: conf/runs/second_certification.inputs.json
+expected:
+  question: do the 40 certification fixed rows still control selected violation risk when each
+    is re-certified on 300 objectives that have never existed
+  claim_authority: a second independent draw for C2. It is a certification, not a
+    selection; it says nothing about C3 equal-cost superiority or about C4 shape necessity
+  namespace_contract: 300 new D_cert objectives per tree at 60 per law in a fresh
+    salt family, with zero UID and zero weight overlap against all four objective
+    roles of all sixteen source trees, every diagnostic family drawn since, the historical
+    census blooms and the spent seed-3..9 namespaces
+  context_contract: each tree's fitted surrogate, both point clouds and every correction
+    scalar are reused bitwise from its sealed fit_state.npz; nothing is refitted and
+    no sealed tree is written
+  fixed_row_contract: the 40 rows are read from the identity-only data/earlier_run.json
+    asset, re-checked field for field against each tree's frozen_policies.json, and
+    their methods rebuilt from the frozen fit. No row is selected, no knob is derived,
+    and the ledger carries no risk, count, severity or cost field
+  blindness_contract: this process never reads a historical D_prop/D_cert/D_perf outcome,
+    the candidate locks, or any earlier outcome table; the input ledger refuses
+    them as declared inputs
+  certification_contract: 40 fixed rows x 300 fresh objectives, exact one-sided Clopper-Pearson
+    at delta_row .00125, each counting against K=40 for .95 simultaneous coverage,
+    reported against the registered .12 target with no result-based stopping
+  inference_contract: the seed is the resampling unit. Per-domain cluster means and
+    percentile-bootstrap intervals over the eight seeds are reported next to the row
+    counts; anchors inside a seed are never treated as independent replicates
+  solver_contract: 500 deterministic starts with common random numbers across the
+    fixed rows of one tree, the frozen 20/100/500 ladder, and per-objective constraint-at-x*,
+    correction-at-x*, solver feasibility, true h and ladder feasibility saved
+  science_gate: none. Every row, risk, bound and failure set is handed back as measured;
+    no row is dropped and no threshold is moved after the fact
+server: 
+remote_dir: 
+command:  -u LLM-SR/scripts/run_earlier_run.py
+  runs=second_certification runs.jobs=64
+smoke:
+  n_fixedcert_per_law: 1
+  claim_budgets:
+  - 2
+  - 3
+  - 4
+  max_evaluation_cells: 200
+  source_runs:
+  - methane_seed3
+  - williams_seed3
+numerical_environment:
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  NUMEXPR_NUM_THREADS: '1'
+  PYTHONHASHSEED: '0'
+  NPY_DISABLE_CPU_FEATURES: AVX512F
+  OPENBLAS_CORETYPE: Cooperlake
+run_id: job-earlier_run-0831-160430

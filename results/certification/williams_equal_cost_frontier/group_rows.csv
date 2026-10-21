@@ -1,0 +1,13 @@
+run_name,target,context_id,anchor_id,primary_arm,control_group,n_controls,n_comparable,n_primary_wins,n_ties,n_primary_losses,n_unresolved_or_unavailable,min_control_risk,median_control_risk,primary_risk,best_control_arm,primary_beats_best_control
+williams_equal_cost_frontier,williams,seed10,a0p333,floorscale_lam0.75,law_blind_constant,4,3,3,0,0,1,0.17666666666666667,0.17666666666666667,0.013333333333333334,dose_response,True
+williams_equal_cost_frontier,williams,seed10,a0p333,floorscale_lam0.75,own_family_peer,7,7,7,0,0,0,0.03,0.08666666666666667,0.013333333333333334,oc_envelope,True
+williams_equal_cost_frontier,williams,seed10,a0p333,floorscale_lam0.75,trust_region,2,2,2,0,0,0,0.26,0.26666666666666666,0.013333333333333334,trust_region_box,True
+williams_equal_cost_frontier,williams,seed10,a0p667,floorscale_lam0.5,law_blind_constant,4,3,3,0,0,1,0.17666666666666667,0.17666666666666667,0.01,dose_response,True
+williams_equal_cost_frontier,williams,seed10,a0p667,floorscale_lam0.5,own_family_peer,7,7,7,0,0,0,0.02,0.04,0.01,floorscale_lam0.75,True
+williams_equal_cost_frontier,williams,seed10,a0p667,floorscale_lam0.5,trust_region,2,2,2,0,0,0,0.22,0.22999999999999998,0.01,trust_region_knn,True
+williams_equal_cost_frontier,williams,seed9,a0p333,floorscale_lam0.75,law_blind_constant,4,3,3,0,0,1,0.14,0.14,0.13666666666666666,dose_response,True
+williams_equal_cost_frontier,williams,seed9,a0p333,floorscale_lam0.75,own_family_peer,7,7,2,1,4,0,0.043333333333333335,0.056666666666666664,0.13666666666666666,oc_envelope,False
+williams_equal_cost_frontier,williams,seed9,a0p333,floorscale_lam0.75,trust_region,2,2,2,0,0,0,0.19333333333333333,0.215,0.13666666666666666,trust_region_knn,True
+williams_equal_cost_frontier,williams,seed9,a0p667,floorscale_lam0.75,law_blind_constant,4,3,3,0,0,1,0.14,0.14,0.016666666666666666,dose_response,True
+williams_equal_cost_frontier,williams,seed9,a0p667,floorscale_lam0.75,own_family_peer,7,7,7,0,0,0,0.02,0.06,0.016666666666666666,floorscale_lam1,True
+williams_equal_cost_frontier,williams,seed9,a0p667,floorscale_lam0.75,trust_region,2,2,2,0,0,0,0.18333333333333332,0.21,0.016666666666666666,trust_region_knn,True

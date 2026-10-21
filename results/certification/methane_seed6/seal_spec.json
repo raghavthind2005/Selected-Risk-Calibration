@@ -1,0 +1,113 @@
+{
+ "bindings": {
+  "candidate_lock_sha256": "013a067b248e6d44926044452bb05f5bf074d4c6ed825d37411203dd24d1a08c",
+  "frozen_policies_sha256": "50c1f0c5fe7f7f8a21e36eb2af9d74da2629694abbec2e3027752203a7cd25a3",
+  "input_inventory_sha256": "fcfa16971acabfdd391e404cf877985d0eb4c68899882e001e78bfc80fb7446b",
+  "method_lock_sha256": "f81de9a3b96d574539cdda272dcc7dbaec4b9fbfcbec88753df3f285c959bce4",
+  "operational_readiness_sha256": "0a64fbd101e653d237ee20ab9c0000483e8fc96cd725d6602652dd0545671d2f",
+  "perf_cost_support_lock_sha256": "56e73f0e0aeb1131b65beda9093fef626299107de45442b75853ec7be5cb50d5",
+  "perf_primary_cost_lock_sha256": "7bdf8680345624634f75789d9fc5df8cdb50208b23a7eae5d60212e7e7bd29ab",
+  "policy_flow_sha256": "35ae757f16f9765b0fdd452a4e6ceac5ff9081c7910a3613a45ba5afc7f4ad9d",
+  "solver_receipt_sha256": "d35b04a32f10cf739183b1f0c648dc1a697b10e0855b7e704a2857b9b0be4375",
+  "split_receipt_sha256": "6e122e209a91a81bbe398da578f804b15f91eb4a6e7bba936f4b3c1695e425d4"
+ },
+ "envelope_names": [
+  "seal_spec.json"
+ ],
+ "launcher_finalize_resource_receipt": true,
+ "launcher_required_completion_files": [
+  ".done",
+  "manifest.json",
+  "manifest_v2.json",
+  "split_receipt.json",
+  "method_lock.json",
+  "cost_support_lock.json",
+  "frozen_policies.json",
+  "proposal_cost_lock.json",
+  "candidate_lock.json",
+  "certification_rows.csv",
+  "perf_primary_cost_lock.json",
+  "perf_cost_support_lock.json",
+  "perf_rows.csv",
+  "randomized_primary_rows.csv",
+  "randomized_sensitivity_rows.csv",
+  "policy_flow.json",
+  "availability_rows.csv",
+  "operational_readiness.json",
+  "input_receipt.json",
+  "solver_receipt.json",
+  "matcher/matcher_trace.csv"
+ ],
+ "operational_scale_readiness": {
+  "availability_tables": {
+   "class_counts": {
+    "measured": 42,
+    "proven_unavailable": 0,
+    "unresolved": 0
+   },
+   "contract": "availability-schema-v1",
+   "empty_table_is_not_zero_measured_slots": true,
+   "empty_table_meaning": "no_availability_exception_rows",
+   "exception_table_is_a_subset_of_the_ledger": true,
+   "ledger_recomputed_from": "perf_cost_support_lock.json",
+   "n_exception_rows": 0,
+   "n_ledger_rows": 42,
+   "pass": true,
+   "perf_split_declared_counts": {
+    "measurable_slots": 42,
+    "n_slots": 42,
+    "proven_unavailable_slots": 0,
+    "unresolved_slots": 0
+   },
+   "problems": []
+  },
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 78,
+   "proven_unavailable": 0,
+   "randomized_matched": 6,
+   "unresolved": 0
+  },
+  "fail_reasons": [],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 84,
+  "n_slots": 84,
+  "pass": true,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 39,
+    "randomized_matched": 3
+   },
+   "perf": {
+    "matched": 39,
+    "randomized_matched": 3
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 15,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 8,
+   "perf": 8
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 0
+ },
+ "policy_flow_pass": true,
+ "post_seal_writes_into_this_root_are_forbidden": true,
+ "protocol": "receipt-v2",
+ "run_name": "methane_seed6",
+ "schema_version": 2
+}

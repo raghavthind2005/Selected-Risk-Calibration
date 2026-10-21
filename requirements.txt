@@ -1,0 +1,11 @@
+# Everything analysis/ needs, and nothing else.
+#
+# These versions built the committed tables and figures. The matplotlib pin is
+# load-bearing: the same data rendered by matplotlib 3.10.9 and 3.11.2 differs in
+# 95,950 pixels of the certification figure while every data table stays
+# byte-identical. An unpinned install reproduces the tables and misses the figures.
+#
+# Interpreter used for the committed outputs: CPython 3.13.12.
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2

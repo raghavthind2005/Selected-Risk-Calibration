@@ -1,0 +1,335 @@
+{
+ "config": "mlp",
+ "stored_file": "(not shipped) alpha_sweep_mlp.json",
+ "alphas_stored": [
+  0.01,
+  0.02,
+  0.05,
+  0.1,
+  0.15,
+  0.2
+ ],
+ "alphas_rebuilt": [
+  0.01,
+  0.02,
+  0.05,
+  0.1,
+  0.15,
+  0.2
+ ],
+ "per_alpha": {
+  "0.01": {
+   "alpha": {
+    "stored": 0.01,
+    "rebuilt": 0.01,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.99,
+    "rebuilt": 0.99,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 3.5286262208765624,
+    "rebuilt": 3.5286262208765624,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 1.0,
+    "rebuilt": 1.0,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.93,
+    "rebuilt": 0.93,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.95,
+    "rebuilt": 0.95,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.05999999999999994,
+    "rebuilt": 0.05999999999999994,
+    "identical": true
+   },
+   "slack": {
+    "stored": 3.6310288109575595e-11,
+    "rebuilt": 1.2990497566534032e-11,
+    "identical": false
+   },
+   "obj": {
+    "stored": 31.705745375058335,
+    "rebuilt": 31.70615051214819,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.02": {
+   "alpha": {
+    "stored": 0.02,
+    "rebuilt": 0.02,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.98,
+    "rebuilt": 0.98,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 2.8991415599862354,
+    "rebuilt": 2.8991415599862354,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 1.0,
+    "rebuilt": 1.0,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.53,
+    "rebuilt": 0.53,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.55,
+    "rebuilt": 0.55,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.44999999999999996,
+    "rebuilt": 0.44999999999999996,
+    "identical": true
+   },
+   "slack": {
+    "stored": 1.7311263533770216e-11,
+    "rebuilt": 3.647993018773832e-11,
+    "identical": false
+   },
+   "obj": {
+    "stored": 31.381811357675538,
+    "rebuilt": 31.38258521997794,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.05": {
+   "alpha": {
+    "stored": 0.05,
+    "rebuilt": 0.05,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.95,
+    "rebuilt": 0.95,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 2.283743551796203,
+    "rebuilt": 2.283743551796203,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 1.0,
+    "rebuilt": 1.0,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.52,
+    "rebuilt": 0.52,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.54,
+    "rebuilt": 0.54,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.42999999999999994,
+    "rebuilt": 0.42999999999999994,
+    "identical": true
+   },
+   "slack": {
+    "stored": 1.380435765696575e-10,
+    "rebuilt": 1.2633671886419506e-11,
+    "identical": false
+   },
+   "obj": {
+    "stored": 31.053329573458736,
+    "rebuilt": 31.05332107477506,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.1": {
+   "alpha": {
+    "stored": 0.1,
+    "rebuilt": 0.1,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.9,
+    "rebuilt": 0.9,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 1.5733395915908481,
+    "rebuilt": 1.5733395915908481,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.98,
+    "rebuilt": 0.98,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.38,
+    "rebuilt": 0.38,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.47,
+    "rebuilt": 0.47,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.52,
+    "rebuilt": 0.52,
+    "identical": true
+   },
+   "slack": {
+    "stored": 7.854383810013132e-12,
+    "rebuilt": 1.1344036821014924e-11,
+    "identical": false
+   },
+   "obj": {
+    "stored": 30.677435662152085,
+    "rebuilt": 30.685699224762846,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.15": {
+   "alpha": {
+    "stored": 0.15,
+    "rebuilt": 0.15,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.85,
+    "rebuilt": 0.85,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 1.2844236469982953,
+    "rebuilt": 1.2844236469982953,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.975,
+    "rebuilt": 0.975,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.14,
+    "rebuilt": 0.14,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.23,
+    "rebuilt": 0.23,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.71,
+    "rebuilt": 0.71,
+    "identical": true
+   },
+   "slack": {
+    "stored": 3.604827547576406e-11,
+    "rebuilt": 3.360645095540349e-13,
+    "identical": false
+   },
+   "obj": {
+    "stored": 30.513761173264044,
+    "rebuilt": 30.511822022530634,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.2": {
+   "alpha": {
+    "stored": 0.2,
+    "rebuilt": 0.2,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.8,
+    "rebuilt": 0.8,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 0.9684461678710914,
+    "rebuilt": 0.9684461678710914,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.93,
+    "rebuilt": 0.93,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.15,
+    "rebuilt": 0.15,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.24,
+    "rebuilt": 0.24,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.65,
+    "rebuilt": 0.65,
+    "identical": true
+   },
+   "slack": {
+    "stored": 6.435019184181101e-11,
+    "rebuilt": 1.3020917677408761e-11,
+    "identical": false
+   },
+   "obj": {
+    "stored": 30.34284744322755,
+    "rebuilt": 30.336437453974263,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  }
+ },
+ "all_identical": false
+}

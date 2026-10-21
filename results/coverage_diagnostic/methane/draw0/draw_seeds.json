@@ -1,0 +1,13 @@
+{
+ "draw": 0,
+ "seeds": {
+  "global": 0,
+  "mlp_h": 0,
+  "gbm": 0,
+  "mlp_u": 1,
+  "cost": 0
+ },
+ "configs": [
+  "mlp:scalar"
+ ]
+}

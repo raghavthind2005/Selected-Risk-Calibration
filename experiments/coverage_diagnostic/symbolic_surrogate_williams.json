@@ -1,0 +1,18 @@
+{
+ "function": "def equation(x: np.ndarray, params: np.ndarray) -> np.ndarray:\n    \"\"\"Symbolic predictor h_hat(x) for an unknown 5-variable process constraint.\n\n    Args:\n        x      : shape (n_samples, 5).  Columns x1..x5 with ranges\n                   x1 in [0.03,0.10], x2 in [5.8,6.8], x3 in [1,5],\n                   x4 in [1,5], x5 in [0.10,0.90].\n        params : learnable constants (up to MAX_NPARAMS=12).\n\n    Return:\n        1-D array of h_hat values. Feasible region: h_hat(x) <= 0.\n\n    Start simple (a normalised linear form is provided) and let the `fit_hint`\n    diagnostics tell you which variables need nonlinear / interaction / ratio\n    terms and which can be dropped. Not every input need appear.\n    \"\"\"\n    x1, x2, x3, x4, x5 = x[:, 0], x[:, 1], x[:, 2], x[:, 3], x[:, 4]\n    # Normalise each variable to roughly [0, 1] for numerical stability.\n    x1_n = (x1 - 0.03) / 0.07\n    x2_n = (x2 - 5.8) / 1.0\n    x3_n = (x3 - 1.0) / 4.0\n    x4_n = (x4 - 1.0) / 4.0\n    x5_n = (x5 - 0.1) / 0.8\n    \n    # Address remaining x4 trend: add quadratic x4 term\n    # Address x5 saturation more carefully with exponential approach\n    # Add x2*x3 interaction as hinted\n    # Reduce bias to fix under-conservative trend where h>0\n    return (params[0] * x1_n +                     # linear size effect\n            params[1] * x2_n +                     # linear thermal\n            params[2] * x2_n**2 +                  # quadratic thermal\n            params[3] * x3_n +                     # linear x3 (replacing squared)\n            params[4] * x2_n * x3_n +              # x2*x3 interaction term\n            params[5] * x4_n +                     # linear x4\n            params[6] * x4_n**2 +                  # quadratic x4 (addressing residual trend)\n            params[7] * x4_n / (1.0 + params[8] * x5_n) +  # x4 with x5 saturation\n            params[9] * (1.0 - np.exp(-params[10] * x5_n)) +  # saturating recycle\n            params[11])                            # bias term\n\n",
+ "optimized_params": [
+  0.11491543,
+  -0.53816846,
+  0.80427467,
+  -0.19511434,
+  0.72142711,
+  -0.70888532,
+  0.09269842,
+  -1.45298541,
+  5.01901871,
+  0.42620746,
+  4.7522563,
+  0.19387095
+ ],
+ "score": -0.03304927980874397
+}

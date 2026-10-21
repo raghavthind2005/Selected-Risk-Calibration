@@ -1,0 +1,3 @@
+run_name,target,seed,arm,n,violation_count,selected_violation_risk,mean_positive_severity,mean_box_range_cost,failure_uid_sha256
+williams_seed3,williams,3,static_conformal,200,31,0.155,2.305698278008328,0.0,22838f4032807bf38d7e9dddee92e7f4660671fd2d6eb7720d2fd20935b667e4
+williams_seed3,williams,3,published_exact_cmicl,200,4,0.02,0.49455131114340123,0.0026627147389896655,0f9f4c7e7eb7bf7e43e7322a9f3e8a3381cbe717e92af13e59794391f79bd147

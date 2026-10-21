@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Violation rates at matched cost (lower is better). Each rate is averaged
+over the seeds on which the method could be compared with SRC's correction; rates in
+italics use fewer than five seeds. Bold marks the lowest rate in each column among
+methods compared on all five seeds. Budgets are fractions of C-MICL's own cost
+$C^{\star}$. $^{\ast}$Sized to each budget without the certification step.
+$^{\ddagger}$Our controls rather than published methods.}
+\label{tab:matched}
+\begin{tabular}{l ccc ccc ccc}
+\toprule
+ & \multicolumn{3}{c}{Methane} & \multicolumn{3}{c}{Williams--Otto} & \multicolumn{3}{c}{Hanoi} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+budget $/C^{\star}$ & 0.25 & 0.55 & 1.0 & 0.25 & 0.55 & 1.0 & 0.25 & 0.55 & 1.0 \\
+\midrule
+SRC correction$^{\ast}$ & \textbf{0.42} & \textbf{0.27} & \textbf{0.07} & \textbf{0.18} & \textbf{0.08} & \textbf{0.08} & \textbf{0.35} & \textbf{0.20} & 0.10 \\
+\midrule
+C-MICL~\cite{bib12} & 0.48 & 0.42 & \textit{0.33} & 0.36 & 0.33 & 0.34 & \textit{0.42} & 0.43 & \textit{0.44} \\
+C-MICL refit$^{\ddagger}$ & \textit{0.49} & 0.31 & 0.12 & 0.36 & 0.35 & 0.23 & 0.43 & 0.42 & 0.43 \\
+W-MICL~\cite{bib12} & \textit{0.47} & \textit{0.35} & 0.27 & \textit{0.34} & 0.25 & 0.20 & \textit{0.23} & \textit{0.22} & \textit{0.07} \\
+Locally weighted~\cite{bib31} & \textit{0.52} & \textit{0.47} & \textit{0.38} & \textit{0.31} & \textit{0.23} & \textit{0.21} & \textbf{0.35} & \textbf{0.20} & \textbf{0.08} \\
+Scalar padding & 0.44 & 0.32 & 0.26 & 0.34 & 0.26 & 0.20 & 0.41 & 0.32 & 0.22 \\
+$\alpha$-tightening & \textit{0.41} & \textbf{0.27} & \textit{0.29} & \textit{0.29} & \textit{0.23} & \textit{0.20} & \textit{0.35} & -- & \textit{0.08} \\
+Box trust region$^{\ddagger}$ & \textit{0.39} & 0.31 & 0.28 & 0.26 & 0.26 & 0.26 & \textit{0.33} & 0.31 & 0.20 \\
+\bottomrule
+\end{tabular}
+\end{table*}

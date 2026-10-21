@@ -1,0 +1,1041 @@
+{
+ "arm_inventory": [
+  "floorscale_lam0",
+  "floorscale_lam0.25",
+  "floorscale_lam0.5",
+  "floorscale_lam0.75",
+  "floorscale_lam1",
+  "pure_scalar",
+  "alpha_tightening",
+  "dose_response",
+  "trust_region_box",
+  "trust_region_knn",
+  "scaled_cmicl",
+  "oc_envelope",
+  "law_blind_envelope",
+  "oc_scalar_floor"
+ ],
+ "arm_taxonomy": {
+  "alpha_tightening": {
+   "correction": "c(x) = conformal_quantile(residuals, tightened alpha)",
+   "group": "law_blind_constant",
+   "shape": "constant"
+  },
+  "dose_response": {
+   "correction": "c(x) = q_hat + dose",
+   "group": "law_blind_constant",
+   "shape": "constant"
+  },
+  "floorscale_lam0": {
+   "correction": "c(x) = s",
+   "group": "law_blind_constant",
+   "shape": "constant"
+  },
+  "floorscale_lam0.25": {
+   "correction": "c(x) = s*((1-0.25) + 0.25*u(x)/median_cal_u)",
+   "group": "own_family_peer",
+   "shape": "location_dependent_law_blind"
+  },
+  "floorscale_lam0.5": {
+   "correction": "c(x) = s*((1-0.5) + 0.5*u(x)/median_cal_u)",
+   "group": "own_family_peer",
+   "shape": "location_dependent_law_blind"
+  },
+  "floorscale_lam0.75": {
+   "correction": "c(x) = s*((1-0.75) + 0.75*u(x)/median_cal_u)",
+   "group": "own_family_peer",
+   "shape": "location_dependent_law_blind"
+  },
+  "floorscale_lam1": {
+   "correction": "c(x) = s*u(x)/median_cal_u",
+   "group": "own_family_peer",
+   "shape": "location_dependent_law_blind"
+  },
+  "law_blind_envelope": {
+   "correction": "q_hat + registered location-only max-affine envelope",
+   "group": "own_family_peer",
+   "shape": "location_dependent_law_blind"
+  },
+  "oc_envelope": {
+   "correction": "q_hat + registered objective-conditioned max-affine envelope",
+   "group": "own_family_peer",
+   "shape": "location_and_objective_dependent"
+  },
+  "oc_scalar_floor": {
+   "correction": "q_hat + registered per-objective scalar floor",
+   "group": "own_family_peer",
+   "shape": "objective_dependent_constant"
+  },
+  "published_exact_cmicl": {
+   "correction": "c(x) = normalized_quantile * u(x); the published exact C-MICL context",
+   "group": "exact_cmicl_reference",
+   "shape": "location_dependent_law_blind"
+  },
+  "pure_scalar": {
+   "correction": "c(x) = s",
+   "group": "law_blind_constant",
+   "shape": "constant"
+  },
+  "scaled_cmicl": {
+   "correction": "c(x) = k * normalized_quantile * u(x)",
+   "group": "own_family_peer",
+   "shape": "location_dependent_law_blind"
+  },
+  "static_conformal": {
+   "correction": "c(x) = q_hat; the split-conformal denominator every cost is measured against",
+   "group": "static_reference",
+   "shape": "constant"
+  },
+  "trust_region_box": {
+   "correction": "max(h_hat(x)+q_hat, box_violation(x)); no additive margin",
+   "group": "trust_region",
+   "shape": "feasible_set_restriction"
+  },
+  "trust_region_knn": {
+   "correction": "max(h_hat(x)+q_hat, knn_distance(x)-radius); no additive margin",
+   "group": "trust_region",
+   "shape": "feasible_set_restriction"
+  }
+ },
+ "claim_ceiling": "a fresh equal-cost effect measurement on two frozen contexts of one domain. The primary is the arm the source tree's selector already fixed; its knob and every control's knob come from this run's own cost-only D_match, and every control is matched to the primary's measured D_perf cost within the declared tolerance. It produces no certification row, no Clopper-Pearson bound and no entry in the K=40 fixed-row ledger. Two contexts of one domain are not a seed distribution; a win, a tie or a loss here is evidence about C3/C4 at these two anchors and nothing wider.",
+ "claim_ids": [
+  "C3",
+  "C4"
+ ],
+ "claim_role": "fresh_equal_cost_effect_measurement_on_two_frozen_contexts",
+ "contexts": [
+  {
+   "anchors": [
+    {
+     "fraction": 0.25,
+     "id": "a0p25"
+    },
+    {
+     "fraction": 0.5,
+     "id": "a0p50"
+    },
+    {
+     "fraction": 0.75,
+     "id": "a0p75"
+    }
+   ],
+   "context_id": "seed9",
+   "seed": 9,
+   "source_run": "methane_seed9"
+  },
+  {
+   "anchors": [
+    {
+     "fraction": 0.25,
+     "id": "a0p25"
+    },
+    {
+     "fraction": 0.5,
+     "id": "a0p50"
+    },
+    {
+     "fraction": 0.75,
+     "id": "a0p75"
+    }
+   ],
+   "context_id": "seed10",
+   "seed": 10,
+   "source_run": "methane_seed10"
+  }
+ ],
+ "cost_mix_namespace": "earlier_run-equal-cost-frontier-cost-mix-v1",
+ "diagnostic_only": false,
+ "evaluation_subtype": "fresh_d_match_to_d_perf_equal_cost_frontier_methane",
+ "evaluation_type": "simulator_true_outcome",
+ "figures": [
+  {
+   "n_points": 84,
+   "path": "figures/equal_cost_frontier.png",
+   "shows": "measured arms only; unresolved and unavailable arms are in the tables"
+  },
+  {
+   "n_points": 72,
+   "path": "figures/paired_risk_delta.png",
+   "shows": "one bar per comparable primary-versus-control pair"
+  }
+ ],
+ "finished_at": "2026-09-02T16:09:30+08:00",
+ "frontier_summary": {
+  "aggregated_at": "2026-09-02T16:09:24+08:00",
+  "arm_taxonomy": {
+   "alpha_tightening": {
+    "correction": "c(x) = conformal_quantile(residuals, tightened alpha)",
+    "group": "law_blind_constant",
+    "shape": "constant"
+   },
+   "dose_response": {
+    "correction": "c(x) = q_hat + dose",
+    "group": "law_blind_constant",
+    "shape": "constant"
+   },
+   "floorscale_lam0": {
+    "correction": "c(x) = s",
+    "group": "law_blind_constant",
+    "shape": "constant"
+   },
+   "floorscale_lam0.25": {
+    "correction": "c(x) = s*((1-0.25) + 0.25*u(x)/median_cal_u)",
+    "group": "own_family_peer",
+    "shape": "location_dependent_law_blind"
+   },
+   "floorscale_lam0.5": {
+    "correction": "c(x) = s*((1-0.5) + 0.5*u(x)/median_cal_u)",
+    "group": "own_family_peer",
+    "shape": "location_dependent_law_blind"
+   },
+   "floorscale_lam0.75": {
+    "correction": "c(x) = s*((1-0.75) + 0.75*u(x)/median_cal_u)",
+    "group": "own_family_peer",
+    "shape": "location_dependent_law_blind"
+   },
+   "floorscale_lam1": {
+    "correction": "c(x) = s*u(x)/median_cal_u",
+    "group": "own_family_peer",
+    "shape": "location_dependent_law_blind"
+   },
+   "law_blind_envelope": {
+    "correction": "q_hat + registered location-only max-affine envelope",
+    "group": "own_family_peer",
+    "shape": "location_dependent_law_blind"
+   },
+   "oc_envelope": {
+    "correction": "q_hat + registered objective-conditioned max-affine envelope",
+    "group": "own_family_peer",
+    "shape": "location_and_objective_dependent"
+   },
+   "oc_scalar_floor": {
+    "correction": "q_hat + registered per-objective scalar floor",
+    "group": "own_family_peer",
+    "shape": "objective_dependent_constant"
+   },
+   "published_exact_cmicl": {
+    "correction": "c(x) = normalized_quantile * u(x); the published exact C-MICL context",
+    "group": "exact_cmicl_reference",
+    "shape": "location_dependent_law_blind"
+   },
+   "pure_scalar": {
+    "correction": "c(x) = s",
+    "group": "law_blind_constant",
+    "shape": "constant"
+   },
+   "scaled_cmicl": {
+    "correction": "c(x) = k * normalized_quantile * u(x)",
+    "group": "own_family_peer",
+    "shape": "location_dependent_law_blind"
+   },
+   "static_conformal": {
+    "correction": "c(x) = q_hat; the split-conformal denominator every cost is measured against",
+    "group": "static_reference",
+    "shape": "constant"
+   },
+   "trust_region_box": {
+    "correction": "max(h_hat(x)+q_hat, box_violation(x)); no additive margin",
+    "group": "trust_region",
+    "shape": "feasible_set_restriction"
+   },
+   "trust_region_knn": {
+    "correction": "max(h_hat(x)+q_hat, knn_distance(x)-radius); no additive margin",
+    "group": "trust_region",
+    "shape": "feasible_set_restriction"
+   }
+  },
+  "availability_counts": {
+   "measured": 84
+  },
+  "contexts": [
+   "seed9",
+   "seed10"
+  ],
+  "denominator_note": "unresolved and proven_unavailable arms stay in n_controls and are reported as not_comparable; they are never dropped from the denominator to make a win rate look better",
+  "n_dominance_rows": 78,
+  "n_frontier_rows": 84,
+  "n_group_rows": 18,
+  "no_certification_row_is_produced_here": true,
+  "paired_verdict_counts": {
+   "not_comparable": 6,
+   "primary_loses": 8,
+   "primary_wins": 42,
+   "tie": 22
+  },
+  "per_context": [
+   {
+    "anchors": [
+     {
+      "anchor_id": "a0p25",
+      "fraction": 0.25
+     },
+     {
+      "anchor_id": "a0p50",
+      "fraction": 0.5
+     },
+     {
+      "anchor_id": "a0p75",
+      "fraction": 0.75
+     }
+    ],
+    "context_id": "seed9",
+    "fit_scalars": {
+     "h_cal_bitwise": true,
+     "h_train_bitwise": true,
+     "identity_strength": 4.646544894556973,
+     "median_cal_u": 2.8428585960097648,
+     "normalized_quantile": 1.634462192765712,
+     "q_hat": 0.25986544891823105,
+     "q_hat_bitwise": true
+    },
+    "fit_state_sha256": "08abf7498ec2247dd11a7ee61e6322271eab0c55c2858be15f68f94027297c58",
+    "frozen_method_is_the_source_tree_method": true,
+    "match": {
+     "outcome_queries_before_lock": 0,
+     "iteration_cap": 12,
+     "iterations_completed": 8,
+     "terminal_counts": {
+      "matched": 39,
+      "proven_unavailable": 0,
+      "randomized_matched": 3,
+      "unresolved": 0
+     },
+     "termination_reason": "all_slots_terminal"
+    },
+    "method_agreement_sha256": "d5ddcb86aef073a94eb8f6b9992743cf904448c4c4a5221b853b47aecb95c344",
+    "n_objectives": 400,
+    "objective_namespaces": {
+     "match": "r52pfront-methane-s9-match-equal-cost-frontier-v1",
+     "perf": "r52pfront-methane-s9-perf-equal-cost-frontier-v1"
+    },
+    "perf_match": {
+     "outcome_queries_before_perf_lock": 0,
+     "iterations_completed": 7,
+     "terminal_counts": {
+      "matched": 39,
+      "proven_unavailable": 0,
+      "randomized_matched": 3,
+      "unresolved": 0
+     },
+     "termination_reason": "all_slots_terminal"
+    },
+    "performance": {
+     "all_controls_matched": true,
+     "n_controls": 39,
+     "n_controls_within_tolerance": 39,
+     "n_measured_rows": 42,
+     "n_perf_rows": 42,
+     "n_proven_unavailable_rows": 0,
+     "n_unresolved_rows": 0
+    },
+    "primary": {
+     "carried_not_reselected": true,
+     "n_fixed_rows": 3,
+     "selected_arm_by_anchor": {
+      "a0p25": "floorscale_lam0",
+      "a0p50": "floorscale_lam0",
+      "a0p75": "floorscale_lam0"
+     }
+    },
+    "run_name": "methane_equal_cost_frontier",
+    "schema_version": 1,
+    "seed": 9,
+    "source_run": "methane_seed9",
+    "split_receipt_sha256": "9b1c3054478b28d1c27fdd96acc3611952b1898ce0b95ec6466054c9c74fc9a0",
+    "target": "methane",
+    "written_at": "2026-09-02T08:09:11+08:00",
+    "zero_overlap_pass": true
+   },
+   {
+    "anchors": [
+     {
+      "anchor_id": "a0p25",
+      "fraction": 0.25
+     },
+     {
+      "anchor_id": "a0p50",
+      "fraction": 0.5
+     },
+     {
+      "anchor_id": "a0p75",
+      "fraction": 0.75
+     }
+    ],
+    "context_id": "seed10",
+    "fit_scalars": {
+     "h_cal_bitwise": true,
+     "h_train_bitwise": true,
+     "identity_strength": 4.652571610404506,
+     "median_cal_u": 3.398499087363141,
+     "normalized_quantile": 1.3690077563076195,
+     "q_hat": 0.07781607836482252,
+     "q_hat_bitwise": true
+    },
+    "fit_state_sha256": "a2d0cfa885b2e414a23fb14b2229f8278a22415d3e60f656888d4b1d60968be9",
+    "frozen_method_is_the_source_tree_method": true,
+    "match": {
+     "outcome_queries_before_lock": 0,
+     "iteration_cap": 12,
+     "iterations_completed": 7,
+     "terminal_counts": {
+      "matched": 39,
+      "proven_unavailable": 0,
+      "randomized_matched": 3,
+      "unresolved": 0
+     },
+     "termination_reason": "all_slots_terminal"
+    },
+    "method_agreement_sha256": "e8ca12eb72e816ba85ef0ca897490d3239167a23cc6b1aee6dd9c9cdaf784e2d",
+    "n_objectives": 400,
+    "objective_namespaces": {
+     "match": "r52pfront-methane-s10-match-equal-cost-frontier-v1",
+     "perf": "r52pfront-methane-s10-perf-equal-cost-frontier-v1"
+    },
+    "perf_match": {
+     "outcome_queries_before_perf_lock": 0,
+     "iterations_completed": 6,
+     "terminal_counts": {
+      "matched": 39,
+      "proven_unavailable": 0,
+      "randomized_matched": 3,
+      "unresolved": 0
+     },
+     "termination_reason": "all_slots_terminal"
+    },
+    "performance": {
+     "all_controls_matched": true,
+     "n_controls": 39,
+     "n_controls_within_tolerance": 39,
+     "n_measured_rows": 42,
+     "n_perf_rows": 42,
+     "n_proven_unavailable_rows": 0,
+     "n_unresolved_rows": 0
+    },
+    "primary": {
+     "carried_not_reselected": true,
+     "n_fixed_rows": 3,
+     "selected_arm_by_anchor": {
+      "a0p25": "floorscale_lam0",
+      "a0p50": "floorscale_lam0",
+      "a0p75": "floorscale_lam0"
+     }
+    },
+    "run_name": "methane_equal_cost_frontier",
+    "schema_version": 1,
+    "seed": 10,
+    "source_run": "methane_seed10",
+    "split_receipt_sha256": "038076d10124d2cad52bc9bd179a3aa7d882542b02bc99787d9ab2f706f77489",
+    "target": "methane",
+    "written_at": "2026-09-02T16:09:24+08:00",
+    "zero_overlap_pass": true
+   }
+  ],
+  "primary_rows": [
+   {
+    "anchor_cost": 0.0033067620654198145,
+    "anchor_id": "a0p25",
+    "arm": "floorscale_lam0",
+    "arm_group": "law_blind_constant",
+    "arm_shape": "constant",
+    "availability_class": "measured",
+    "context_id": "seed9",
+    "estimand": "point",
+    "exact_cmicl_discordance_count": 58.0,
+    "failure_uid_sha256": "000dd8c7ba2579c66d7d331933d7362377ae15c07416d5bdbc666b039ed902a5",
+    "is_primary": true,
+    "knob": 0.47265625,
+    "locked_cost": 0.0033067620654198145,
+    "locked_relative_error": 0.0,
+    "mean_positive_severity": 1.0554994426230517,
+    "measured_cost": 0.003306762065419814,
+    "measured_relative_error": 1.3114970488181865e-16,
+    "method": "earlier_run",
+    "n": 300.0,
+    "risk": 0.19333333333333333,
+    "role": "primary",
+    "run_name": "methane_equal_cost_frontier",
+    "seed": 9,
+    "source_run": "methane_seed9",
+    "static_discordance_count": 12.0,
+    "target": "methane",
+    "terminal_reason": "",
+    "terminal_state": "matched",
+    "violation_count": 58.0,
+    "within_equal_cost_tolerance": true
+   },
+   {
+    "anchor_cost": 0.0043832325711264004,
+    "anchor_id": "a0p50",
+    "arm": "floorscale_lam0",
+    "arm_group": "law_blind_constant",
+    "arm_shape": "constant",
+    "availability_class": "measured",
+    "context_id": "seed9",
+    "estimand": "point",
+    "exact_cmicl_discordance_count": 49.0,
+    "failure_uid_sha256": "615f68efdb7efa5ffae54e6846ea4a28fe2172ca684faa229e955183fdbf1742",
+    "is_primary": true,
+    "knob": 0.578125,
+    "locked_cost": 0.0043832325711264004,
+    "locked_relative_error": 0.0,
+    "mean_positive_severity": 0.8067161036911281,
+    "measured_cost": 0.0043832325711264004,
+    "measured_relative_error": 0.0,
+    "method": "earlier_run",
+    "n": 300.0,
+    "risk": 0.16333333333333333,
+    "role": "primary",
+    "run_name": "methane_equal_cost_frontier",
+    "seed": 9,
+    "source_run": "methane_seed9",
+    "static_discordance_count": 21.0,
+    "target": "methane",
+    "terminal_reason": "",
+    "terminal_state": "matched",
+    "violation_count": 49.0,
+    "within_equal_cost_tolerance": true
+   },
+   {
+    "anchor_cost": 0.005559625841981067,
+    "anchor_id": "a0p75",
+    "arm": "floorscale_lam0",
+    "arm_group": "law_blind_constant",
+    "arm_shape": "constant",
+    "availability_class": "measured",
+    "context_id": "seed9",
+    "estimand": "point",
+    "exact_cmicl_discordance_count": 47.0,
+    "failure_uid_sha256": "ecbc2c1115fc00c3973a01e36e56a64e21f42fd4dfec05e45c5cde65ffc67267",
+    "is_primary": true,
+    "knob": 0.6796875,
+    "locked_cost": 0.005559625841981067,
+    "locked_relative_error": 0.0,
+    "mean_positive_severity": 0.3282863049444115,
+    "measured_cost": 0.005559625841981067,
+    "measured_relative_error": 0.0,
+    "method": "earlier_run",
+    "n": 300.0,
+    "risk": 0.15666666666666668,
+    "role": "primary",
+    "run_name": "methane_equal_cost_frontier",
+    "seed": 9,
+    "source_run": "methane_seed9",
+    "static_discordance_count": 23.0,
+    "target": "methane",
+    "terminal_reason": "",
+    "terminal_state": "matched",
+    "violation_count": 47.0,
+    "within_equal_cost_tolerance": true
+   },
+   {
+    "anchor_cost": 0.004254408264851431,
+    "anchor_id": "a0p25",
+    "arm": "floorscale_lam0",
+    "arm_group": "law_blind_constant",
+    "arm_shape": "constant",
+    "availability_class": "measured",
+    "context_id": "seed10",
+    "estimand": "point",
+    "exact_cmicl_discordance_count": 4.0,
+    "failure_uid_sha256": "e73f236c3c86ddf65d506002e11392931c3479d0396c47bc47581ba89071441c",
+    "is_primary": true,
+    "knob": 0.4921875,
+    "locked_cost": 0.004254408264851431,
+    "locked_relative_error": 0.0,
+    "mean_positive_severity": 0.9217847684907323,
+    "measured_cost": 0.00425440826485143,
+    "measured_relative_error": 2.038736491639203e-16,
+    "method": "earlier_run",
+    "n": 300.0,
+    "risk": 0.18333333333333332,
+    "role": "primary",
+    "run_name": "methane_equal_cost_frontier",
+    "seed": 10,
+    "source_run": "methane_seed10",
+    "static_discordance_count": 21.0,
+    "target": "methane",
+    "terminal_reason": "",
+    "terminal_state": "matched",
+    "violation_count": 55.0,
+    "within_equal_cost_tolerance": true
+   },
+   {
+    "anchor_cost": 0.006398620365857572,
+    "anchor_id": "a0p50",
+    "arm": "floorscale_lam0",
+    "arm_group": "law_blind_constant",
+    "arm_shape": "constant",
+    "availability_class": "measured",
+    "context_id": "seed10",
+    "estimand": "point",
+    "exact_cmicl_discordance_count": 5.0,
+    "failure_uid_sha256": "ffeb39bf7b8767935fe5690cd9ea8b48e990110b3b90263019bb04ff59096d68",
+    "is_primary": true,
+    "knob": 0.6796875,
+    "locked_cost": 0.006398620365857572,
+    "locked_relative_error": 0.0,
+    "mean_positive_severity": 0.28814189646710275,
+    "measured_cost": 0.006398620365857571,
+    "measured_relative_error": 2.7110898549836245e-16,
+    "method": "earlier_run",
+    "n": 300.0,
+    "risk": 0.18,
+    "role": "primary",
+    "run_name": "methane_equal_cost_frontier",
+    "seed": 10,
+    "source_run": "methane_seed10",
+    "static_discordance_count": 22.0,
+    "target": "methane",
+    "terminal_reason": "",
+    "terminal_state": "matched",
+    "violation_count": 54.0,
+    "within_equal_cost_tolerance": true
+   },
+   {
+    "anchor_cost": 0.00884319491020277,
+    "anchor_id": "a0p75",
+    "arm": "floorscale_lam0",
+    "arm_group": "law_blind_constant",
+    "arm_shape": "constant",
+    "availability_class": "measured",
+    "context_id": "seed10",
+    "estimand": "point",
+    "exact_cmicl_discordance_count": 59.0,
+    "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "is_primary": true,
+    "knob": 0.859375,
+    "locked_cost": 0.00884319491020277,
+    "locked_relative_error": 0.0,
+    "mean_positive_severity": 0.0,
+    "measured_cost": 0.008843194910202771,
+    "measured_relative_error": 1.961647903944063e-16,
+    "method": "earlier_run",
+    "n": 300.0,
+    "risk": 0.0,
+    "role": "primary",
+    "run_name": "methane_equal_cost_frontier",
+    "seed": 10,
+    "source_run": "methane_seed10",
+    "static_discordance_count": 76.0,
+    "target": "methane",
+    "terminal_reason": "",
+    "terminal_state": "matched",
+    "violation_count": 0.0,
+    "within_equal_cost_tolerance": true
+   }
+  ],
+  "run_name": "methane_equal_cost_frontier",
+  "schema_version": 1,
+  "target": "methane",
+  "win_tie_loss": {
+   "not_comparable": 6,
+   "primary_loses": 8,
+   "primary_wins": 42,
+   "tie": 22
+  }
+ },
+ "group_rows": [
+  {
+   "anchor_id": "a0p25",
+   "best_control_arm": "dose_response",
+   "context_id": "seed10",
+   "control_group": "law_blind_constant",
+   "median_control_risk": 0.18333333333333332,
+   "min_control_risk": 0.18333333333333332,
+   "n_comparable": 2,
+   "n_controls": 3,
+   "n_primary_losses": 0,
+   "n_primary_wins": 0,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 1,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.18333333333333332,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p25",
+   "best_control_arm": "law_blind_envelope",
+   "context_id": "seed10",
+   "control_group": "own_family_peer",
+   "median_control_risk": 0.185,
+   "min_control_risk": 0.18,
+   "n_comparable": 8,
+   "n_controls": 8,
+   "n_primary_losses": 2,
+   "n_primary_wins": 4,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.18333333333333332,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p25",
+   "best_control_arm": "trust_region_box",
+   "context_id": "seed10",
+   "control_group": "trust_region",
+   "median_control_risk": 0.26166666666666666,
+   "min_control_risk": 0.25666666666666665,
+   "n_comparable": 2,
+   "n_controls": 2,
+   "n_primary_losses": 0,
+   "n_primary_wins": 2,
+   "n_ties": 0,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": true,
+   "primary_risk": 0.18333333333333332,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p50",
+   "best_control_arm": "dose_response",
+   "context_id": "seed10",
+   "control_group": "law_blind_constant",
+   "median_control_risk": 0.18,
+   "min_control_risk": 0.18,
+   "n_comparable": 2,
+   "n_controls": 3,
+   "n_primary_losses": 0,
+   "n_primary_wins": 0,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 1,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.18,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p50",
+   "best_control_arm": "law_blind_envelope",
+   "context_id": "seed10",
+   "control_group": "own_family_peer",
+   "median_control_risk": 0.18166666666666664,
+   "min_control_risk": 0.0,
+   "n_comparable": 8,
+   "n_controls": 8,
+   "n_primary_losses": 2,
+   "n_primary_wins": 4,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.18,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p50",
+   "best_control_arm": "trust_region_knn",
+   "context_id": "seed10",
+   "control_group": "trust_region",
+   "median_control_risk": 0.255,
+   "min_control_risk": 0.25,
+   "n_comparable": 2,
+   "n_controls": 2,
+   "n_primary_losses": 0,
+   "n_primary_wins": 2,
+   "n_ties": 0,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": true,
+   "primary_risk": 0.18,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p75",
+   "best_control_arm": "dose_response",
+   "context_id": "seed10",
+   "control_group": "law_blind_constant",
+   "median_control_risk": 0.0,
+   "min_control_risk": 0.0,
+   "n_comparable": 2,
+   "n_controls": 3,
+   "n_primary_losses": 0,
+   "n_primary_wins": 0,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 1,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.0,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p75",
+   "best_control_arm": "law_blind_envelope",
+   "context_id": "seed10",
+   "control_group": "own_family_peer",
+   "median_control_risk": 0.18,
+   "min_control_risk": 0.0,
+   "n_comparable": 8,
+   "n_controls": 8,
+   "n_primary_losses": 0,
+   "n_primary_wins": 6,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.0,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p75",
+   "best_control_arm": "trust_region_knn",
+   "context_id": "seed10",
+   "control_group": "trust_region",
+   "median_control_risk": 0.25166666666666665,
+   "min_control_risk": 0.24666666666666667,
+   "n_comparable": 2,
+   "n_controls": 2,
+   "n_primary_losses": 0,
+   "n_primary_wins": 2,
+   "n_ties": 0,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": true,
+   "primary_risk": 0.0,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p25",
+   "best_control_arm": "dose_response",
+   "context_id": "seed9",
+   "control_group": "law_blind_constant",
+   "median_control_risk": 0.19333333333333333,
+   "min_control_risk": 0.19333333333333333,
+   "n_comparable": 2,
+   "n_controls": 3,
+   "n_primary_losses": 0,
+   "n_primary_wins": 0,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 1,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.19333333333333333,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p25",
+   "best_control_arm": "law_blind_envelope",
+   "context_id": "seed9",
+   "control_group": "own_family_peer",
+   "median_control_risk": 0.20666666666666667,
+   "min_control_risk": 0.18666666666666668,
+   "n_comparable": 8,
+   "n_controls": 8,
+   "n_primary_losses": 1,
+   "n_primary_wins": 6,
+   "n_ties": 1,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.19333333333333333,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p25",
+   "best_control_arm": "trust_region_knn",
+   "context_id": "seed9",
+   "control_group": "trust_region",
+   "median_control_risk": 0.22833333333333333,
+   "min_control_risk": 0.21333333333333335,
+   "n_comparable": 2,
+   "n_controls": 2,
+   "n_primary_losses": 0,
+   "n_primary_wins": 2,
+   "n_ties": 0,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": true,
+   "primary_risk": 0.19333333333333333,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p50",
+   "best_control_arm": "dose_response",
+   "context_id": "seed9",
+   "control_group": "law_blind_constant",
+   "median_control_risk": 0.16333333333333333,
+   "min_control_risk": 0.16333333333333333,
+   "n_comparable": 2,
+   "n_controls": 3,
+   "n_primary_losses": 0,
+   "n_primary_wins": 0,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 1,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.16333333333333333,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p50",
+   "best_control_arm": "law_blind_envelope",
+   "context_id": "seed9",
+   "control_group": "own_family_peer",
+   "median_control_risk": 0.18333333333333335,
+   "min_control_risk": 0.15333333333333332,
+   "n_comparable": 8,
+   "n_controls": 8,
+   "n_primary_losses": 1,
+   "n_primary_wins": 5,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.16333333333333333,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p50",
+   "best_control_arm": "trust_region_knn",
+   "context_id": "seed9",
+   "control_group": "trust_region",
+   "median_control_risk": 0.21500000000000002,
+   "min_control_risk": 0.18666666666666668,
+   "n_comparable": 2,
+   "n_controls": 2,
+   "n_primary_losses": 0,
+   "n_primary_wins": 2,
+   "n_ties": 0,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": true,
+   "primary_risk": 0.16333333333333333,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p75",
+   "best_control_arm": "dose_response",
+   "context_id": "seed9",
+   "control_group": "law_blind_constant",
+   "median_control_risk": 0.15666666666666668,
+   "min_control_risk": 0.15666666666666668,
+   "n_comparable": 2,
+   "n_controls": 3,
+   "n_primary_losses": 0,
+   "n_primary_wins": 0,
+   "n_ties": 2,
+   "n_unresolved_or_unavailable": 1,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.15666666666666668,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p75",
+   "best_control_arm": "law_blind_envelope",
+   "context_id": "seed9",
+   "control_group": "own_family_peer",
+   "median_control_risk": 0.16,
+   "min_control_risk": 0.01,
+   "n_comparable": 8,
+   "n_controls": 8,
+   "n_primary_losses": 2,
+   "n_primary_wins": 5,
+   "n_ties": 1,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": false,
+   "primary_risk": 0.15666666666666668,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  },
+  {
+   "anchor_id": "a0p75",
+   "best_control_arm": "trust_region_knn",
+   "context_id": "seed9",
+   "control_group": "trust_region",
+   "median_control_risk": 0.21333333333333332,
+   "min_control_risk": 0.18333333333333332,
+   "n_comparable": 2,
+   "n_controls": 2,
+   "n_primary_losses": 0,
+   "n_primary_wins": 2,
+   "n_ties": 0,
+   "n_unresolved_or_unavailable": 0,
+   "primary_arm": "floorscale_lam0",
+   "primary_beats_best_control": true,
+   "primary_risk": 0.15666666666666668,
+   "run_name": "methane_equal_cost_frontier",
+   "target": "methane"
+  }
+ ],
+ "n_match_per_law": 20,
+ "n_perf_per_law": 60,
+ "namespace_id": "earlier_run",
+ "relative_tolerance": 0.01,
+ "run_name": "methane_equal_cost_frontier",
+ "schema_version": 1,
+ "segments": {
+  "current_segment_index": 19,
+  "distinct_run_ids_so_far": [
+   "methane_equal_cost_frontier--s01-0901-224042",
+   "methane_equal_cost_frontier--s02-0901-233559",
+   "methane_equal_cost_frontier--s03-0902-003131",
+   "methane_equal_cost_frontier--s04-0902-012704",
+   "methane_equal_cost_frontier--s05-0902-022243",
+   "methane_equal_cost_frontier--s06-0902-031830",
+   "methane_equal_cost_frontier--s07-0902-041359",
+   "methane_equal_cost_frontier--s08-0902-050937",
+   "methane_equal_cost_frontier--s09-0902-060514",
+   "methane_equal_cost_frontier--s10-0902-070059",
+   "methane_equal_cost_frontier--s11-0902-075932",
+   "methane_equal_cost_frontier--s12-0902-085516",
+   "methane_equal_cost_frontier--s13-0902-095101",
+   "methane_equal_cost_frontier--s14-0902-104650",
+   "methane_equal_cost_frontier--s15-0902-114235",
+   "methane_equal_cost_frontier--s16-0902-124034",
+   "methane_equal_cost_frontier--s17-0902-133620",
+   "methane_equal_cost_frontier--s18-0902-143200"
+  ],
+  "n_finished_segments_before_this_one": 18,
+  "n_segments_total": 19
+ },
+ "solver": {
+  "cells_by_split": {
+   "match": 2615,
+   "perf": 2445
+  },
+  "match_oracle_queries": 0,
+  "n_outcome_cells": 435,
+  "objective_solve_rows": 199000,
+  "oracle_queries": 104400,
+  "solver_failure_rows": 800
+ },
+ "source_sha_agreement": {
+  "all_contexts_agree": true,
+  "per_context_policy_source_sha256": {
+   "seed10": [
+    "6560527dde2f5d4cfad19c0aea5cd4ac59ee0dd6157ff34d24ec9cdf98749881"
+   ],
+   "seed9": [
+    "6560527dde2f5d4cfad19c0aea5cd4ac59ee0dd6157ff34d24ec9cdf98749881"
+   ]
+  },
+  "run_source_tree_sha256": "6560527dde2f5d4cfad19c0aea5cd4ac59ee0dd6157ff34d24ec9cdf98749881",
+  "why": "the nested source_binding.json copies are envelope members and are not in the payload digest; this check is what binds them"
+ },
+ "splits": [
+  "match",
+  "perf"
+ ],
+ "target": "methane"
+}

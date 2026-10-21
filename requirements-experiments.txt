@@ -1,0 +1,19 @@
+# Additionally needed to start the experiment entry points in experiments/.
+#
+# These are the versions the runs themselves recorded.
+#
+# methane matched-cost runs (Darwin arm64, BLAS accelerate):
+#   python 3.12.7, numpy 2.2.6, scipy 1.14.1
+# williams and hanoi matched-cost runs (Linux x86_64, BLAS scipy-openblas):
+#   python 3.12.13, numpy 2.0.2
+# distributed shard runs:
+#   numpy 2.1.3, scipy 1.14.1, scikit-learn 1.5.2, wntr 1.5.0 (hanoi only)
+#
+# The pandas and scikit-learn versions of the methane matched-cost runs were not
+# recorded, so they are left unpinned here rather than guessed.
+numpy
+scipy
+matplotlib
+pandas
+scikit-learn
+wntr      # hanoi only; recorded version 1.5.0

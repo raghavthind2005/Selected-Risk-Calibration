@@ -1,0 +1,97 @@
+{\scriptsize
+\begin{longtable}{llllccc}
+\caption{Violation rates in the matched-cost comparison. The rate is the mean of the
+per-seed rates over the seeds where the method can be compared with SRC's correction
+(all five seeds for SRC's correction itself); the interval is a two-sided 95\%
+Clopper--Pearson interval on the pooled objectives, and the range runs over seeds.}
+\label{tab:pooled-rates}\\
+\toprule
+benchmark & budget & method & rate & seeds & 95\% interval & seed range \\
+\midrule
+\endfirsthead
+\toprule
+benchmark & budget & method & rate & seeds & 95\% interval & seed range \\
+\midrule
+\endhead
+Methane & 0.25 & SRC correction$^{\ast}$ & 0.423 & 5 & [0.392, 0.454] & 0.310--0.465 \\
+ &  & C-MICL & 0.484 & 5 & [0.453, 0.515] & 0.295--0.575 \\
+ &  & C-MICL refit & 0.486 & 4 & [0.451, 0.522] & 0.355--0.570 \\
+ &  & W-MICL ($P{=}5$) & 0.465 & 2 & [0.415, 0.515] & 0.460--0.470 \\
+ &  & Locally weighted & 0.520 & 3 & [0.479, 0.561] & 0.510--0.525 \\
+ &  & Scalar padding & 0.435 & 5 & [0.404, 0.466] & 0.320--0.525 \\
+ &  & $\alpha$-tightening & 0.405 & 2 & [0.357, 0.455] & 0.330--0.480 \\
+ &  & Trust region (box) & 0.391 & 4 & [0.357, 0.426] & 0.210--0.475 \\
+\addlinespace[2pt]
+Methane & 0.55 & SRC correction$^{\ast}$ & 0.266 & 5 & [0.239, 0.295] & 0.090--0.415 \\
+ &  & C-MICL & 0.415 & 5 & [0.384, 0.446] & 0.160--0.540 \\
+ &  & C-MICL refit & 0.311 & 5 & [0.282, 0.341] & 0.125--0.500 \\
+ &  & W-MICL ($P{=}5$) & 0.350 & 2 & [0.303, 0.399] & 0.245--0.455 \\
+ &  & Locally weighted & 0.472 & 3 & [0.431, 0.512] & 0.455--0.500 \\
+ &  & Scalar padding & 0.322 & 5 & [0.293, 0.352] & 0.180--0.450 \\
+ &  & $\alpha$-tightening & 0.274 & 5 & [0.247, 0.303] & 0.180--0.450 \\
+ &  & Trust region (box) & 0.313 & 5 & [0.284, 0.343] & 0.210--0.450 \\
+\addlinespace[2pt]
+Methane & 1.0 & SRC correction$^{\ast}$ & 0.070 & 5 & [0.055, 0.088] & 0.000--0.350 \\
+ &  & C-MICL & 0.330 & 4 & [0.297, 0.364] & 0.165--0.490 \\
+ &  & C-MICL refit & 0.124 & 5 & [0.104, 0.146] & 0.025--0.300 \\
+ &  & W-MICL ($P{=}5$) & 0.266 & 5 & [0.239, 0.295] & 0.135--0.390 \\
+ &  & Locally weighted & 0.379 & 4 & [0.345, 0.413] & 0.310--0.435 \\
+ &  & Scalar padding & 0.257 & 5 & [0.230, 0.285] & 0.180--0.425 \\
+ &  & $\alpha$-tightening & 0.290 & 2 & [0.246, 0.337] & 0.165--0.415 \\
+ &  & Trust region (box) & 0.277 & 5 & [0.249, 0.306] & 0.205--0.405 \\
+\addlinespace[2pt]
+Williams--Otto & 0.25 & SRC correction$^{\ast}$ & 0.176 & 5 & [0.153, 0.201] & 0.040--0.285 \\
+ &  & C-MICL & 0.359 & 5 & [0.330, 0.390] & 0.320--0.392 \\
+ &  & C-MICL refit & 0.360 & 5 & [0.330, 0.391] & 0.325--0.395 \\
+ &  & W-MICL ($P{=}5$) & 0.338 & 3 & [0.301, 0.378] & 0.295--0.420 \\
+ &  & Locally weighted & 0.309 & 4 & [0.277, 0.342] & 0.260--0.405 \\
+ &  & Scalar padding & 0.337 & 5 & [0.308, 0.367] & 0.285--0.420 \\
+ &  & $\alpha$-tightening & 0.285 & 1 & [0.224, 0.353] & 0.285--0.285 \\
+ &  & Trust region (box) & 0.264 & 5 & [0.237, 0.292] & 0.230--0.305 \\
+\addlinespace[2pt]
+Williams--Otto & 0.55 & SRC correction$^{\ast}$ & 0.078 & 5 & [0.062, 0.096] & 0.000--0.150 \\
+ &  & C-MICL & 0.331 & 5 & [0.302, 0.361] & 0.196--0.400 \\
+ &  & C-MICL refit & 0.353 & 5 & [0.323, 0.384] & 0.310--0.400 \\
+ &  & W-MICL ($P{=}5$) & 0.254 & 5 & [0.227, 0.282] & 0.145--0.345 \\
+ &  & Locally weighted & 0.229 & 4 & [0.200, 0.259] & 0.175--0.295 \\
+ &  & Scalar padding & 0.262 & 5 & [0.235, 0.290] & 0.145--0.345 \\
+ &  & $\alpha$-tightening & 0.230 & 3 & [0.197, 0.266] & 0.170--0.305 \\
+ &  & Trust region (box) & 0.262 & 5 & [0.235, 0.290] & 0.225--0.305 \\
+\addlinespace[2pt]
+Williams--Otto & 1.0 & SRC correction$^{\ast}$ & 0.075 & 5 & [0.059, 0.093] & 0.000--0.160 \\
+ &  & C-MICL & 0.339 & 5 & [0.310, 0.369] & 0.300--0.385 \\
+ &  & C-MICL refit & 0.231 & 5 & [0.206, 0.259] & 0.110--0.330 \\
+ &  & W-MICL ($P{=}5$) & 0.195 & 5 & [0.171, 0.221] & 0.145--0.290 \\
+ &  & Locally weighted & 0.213 & 4 & [0.185, 0.243] & 0.180--0.295 \\
+ &  & Scalar padding & 0.202 & 5 & [0.178, 0.228] & 0.145--0.330 \\
+ &  & $\alpha$-tightening & 0.200 & 1 & [0.147, 0.262] & 0.200--0.200 \\
+ &  & Trust region (box) & 0.263 & 5 & [0.236, 0.291] & 0.225--0.305 \\
+\addlinespace[2pt]
+Hanoi & 0.25 & SRC correction$^{\ast}$ & 0.353 & 5 & [0.323, 0.384] & 0.185--0.520 \\
+ &  & C-MICL & 0.415 & 4 & [0.381, 0.450] & 0.300--0.490 \\
+ &  & C-MICL refit & 0.434 & 5 & [0.403, 0.465] & 0.330--0.555 \\
+ &  & W-MICL ($P{=}5$) & 0.225 & 1 & [0.169, 0.289] & 0.225--0.225 \\
+ &  & Locally weighted & 0.353 & 5 & [0.323, 0.384] & 0.195--0.560 \\
+ &  & Scalar padding & 0.406 & 5 & [0.375, 0.437] & 0.260--0.545 \\
+ &  & $\alpha$-tightening & 0.347 & 3 & [0.309, 0.386] & 0.255--0.445 \\
+ &  & Trust region (box) & 0.333 & 3 & [0.296, 0.373] & 0.275--0.400 \\
+\addlinespace[2pt]
+Hanoi & 0.55 & SRC correction$^{\ast}$ & 0.204 & 5 & [0.179, 0.230] & 0.075--0.430 \\
+ &  & C-MICL & 0.432 & 5 & [0.401, 0.463] & 0.330--0.535 \\
+ &  & C-MICL refit & 0.417 & 5 & [0.386, 0.448] & 0.360--0.505 \\
+ &  & W-MICL ($P{=}5$) & 0.222 & 3 & [0.189, 0.257] & 0.155--0.290 \\
+ &  & Locally weighted & 0.198 & 5 & [0.174, 0.224] & 0.065--0.445 \\
+ &  & Scalar padding & 0.321 & 5 & [0.292, 0.351] & 0.180--0.485 \\
+ &  & $\alpha$-tightening & -- & 0 & -- & -- \\
+ &  & Trust region (box) & 0.306 & 5 & [0.278, 0.336] & 0.170--0.465 \\
+\addlinespace[2pt]
+Hanoi & 1.0 & SRC correction$^{\ast}$ & 0.102 & 5 & [0.084, 0.122] & 0.035--0.215 \\
+ &  & C-MICL & 0.443 & 3 & [0.403, 0.484] & 0.285--0.565 \\
+ &  & C-MICL refit & 0.431 & 5 & [0.400, 0.462] & 0.410--0.455 \\
+ &  & W-MICL ($P{=}5$) & 0.074 & 4 & [0.057, 0.094] & 0.005--0.170 \\
+ &  & Locally weighted & 0.082 & 5 & [0.066, 0.101] & 0.005--0.325 \\
+ &  & Scalar padding & 0.222 & 5 & [0.197, 0.249] & 0.080--0.400 \\
+ &  & $\alpha$-tightening & 0.080 & 2 & [0.055, 0.111] & 0.080--0.080 \\
+ &  & Trust region (box) & 0.196 & 5 & [0.172, 0.222] & 0.115--0.320 \\
+\bottomrule
+\end{longtable}}

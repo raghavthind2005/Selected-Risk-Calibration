@@ -1,0 +1,42 @@
+{
+  "true_form": "Williams-Otto full plant w/ recycle (arXiv 2511.18998 AN6)",
+  "replication": "EXACT: reactions, recycle fixed-point, 5 decisions from AN6",
+  "variables": {
+    "x1": "V_reactor",
+    "x2": "T_scaled",
+    "x3": "FA_feed",
+    "x4": "FB_feed",
+    "x5": "eta_recycle"
+  },
+  "variable_bounds": {
+    "x1": [
+      0.03,
+      0.1
+    ],
+    "x2": [
+      5.8,
+      6.8
+    ],
+    "x3": [
+      1.0,
+      5.0
+    ],
+    "x4": [
+      1.0,
+      5.0
+    ],
+    "x5": [
+      0.1,
+      0.9
+    ]
+  },
+  "constraint": "h(x) = 0.64 - F_P(x) <= 0  [min production F_P >= 0.64]",
+  "objective": "minimize feed+energy operating cost (parallel to C-MICL methane)",
+  "sigma_noise": 0.05,
+  "seeds": {
+    "train": 42,
+    "calibration": 43,
+    "test_id": 44,
+    "test_clean": 45
+  }
+}

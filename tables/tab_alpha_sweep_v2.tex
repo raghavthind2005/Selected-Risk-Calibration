@@ -1,0 +1,26 @@
+\begin{table}[t]\centering
+\small
+\caption{The $\alpha$ sweep on methane over five repetitions, reported as the minimum and maximum across them. The gap is $(1-\alpha)$ minus coverage at $x^{\star}$, so a positive gap is coverage promised but not delivered, and the mean objective is minimised, so a larger value is worse.}
+\label{tab:alpha-sweep}
+\begin{tabular}{l r rr rr rr rr}
+\toprule
+surrogate & $\alpha$ & \multicolumn{2}{c}{random inputs} & \multicolumn{2}{c}{at $x^{\star}$} & \multicolumn{2}{c}{gap} & \multicolumn{2}{c}{mean objective} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+ & & min & max & min & max & min & max & min & max \\
+\midrule
+symbolic & 0.20 & 0.740 & 0.740 & 0.500 & 0.680 & +0.120 & +0.300 & 22.789 & 32.398 \\
+ & 0.15 & 0.835 & 0.835 & 0.530 & 0.700 & +0.150 & +0.320 & 23.043 & 32.656 \\
+ & 0.10 & 0.910 & 0.910 & 0.530 & 0.710 & +0.190 & +0.370 & 23.355 & 32.971 \\
+ & 0.05 & 0.955 & 0.955 & 0.580 & 0.780 & +0.170 & +0.370 & 23.716 & 33.335 \\
+ & 0.02 & 0.965 & 0.965 & 0.630 & 0.800 & +0.180 & +0.350 & 24.292 & 33.915 \\
+ & 0.01 & 0.990 & 0.990 & 1.000 & 1.000 & -0.010 & -0.010 & 29.364 & 39.544 \\
+\midrule
+MLP & 0.20 & 0.905 & 0.960 & 0.150 & 0.510 & +0.290 & +0.650 & 21.500 & 30.336 \\
+ & 0.15 & 0.935 & 0.980 & 0.140 & 0.550 & +0.300 & +0.710 & 21.734 & 30.512 \\
+ & 0.10 & 0.955 & 0.990 & 0.190 & 0.600 & +0.300 & +0.710 & 21.934 & 30.686 \\
+ & 0.05 & 0.960 & 1.000 & 0.460 & 0.740 & +0.210 & +0.490 & 22.301 & 31.053 \\
+ & 0.02 & 0.985 & 1.000 & 0.460 & 0.840 & +0.140 & +0.520 & 23.394 & 31.383 \\
+ & 0.01 & 0.985 & 1.000 & 0.760 & 0.960 & +0.030 & +0.230 & 23.604 & 31.706 \\
+\bottomrule
+\end{tabular}
+\end{table}

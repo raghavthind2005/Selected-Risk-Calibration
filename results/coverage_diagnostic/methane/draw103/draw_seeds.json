@@ -1,0 +1,13 @@
+{
+ "draw": 103,
+ "seeds": {
+  "global": 103,
+  "mlp_h": 103,
+  "gbm": 103,
+  "mlp_u": 104,
+  "cost": 103
+ },
+ "configs": [
+  "mlp:normalized"
+ ]
+}

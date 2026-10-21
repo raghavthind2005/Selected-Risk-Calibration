@@ -1,0 +1,180 @@
+run_name: williams_seed3
+namespace_id: williams_seed3
+target: williams
+benchmark: williams_otto
+seed: 3
+out: 
+input_root: 
+protocol_mode: formal
+diagnostic_only: false
+claim_ids:
+- C2
+- C3
+- C4
+claim_role: formal_fixed_row_certification_and_same_cost_effect
+evaluation_type: simulator_true_outcome
+evaluation_subtype: fresh_exact_policy_equal_cost_seed3_formal
+alpha: 0.1
+fit_tau: 0.85
+fit_maxiter: 300
+n_train: 2000
+n_cal: 1000
+n_prop_per_law: 60
+n_match_per_law: 20
+n_cert_per_law: 60
+n_perf_per_law: 40
+objective_laws:
+- random_linear
+- corner_pressure
+- boundary_pressure
+- residual_hotspot_pressure
+- boundary_residual_pressure
+lambda_grid:
+- 0.0
+- 0.25
+- 0.5
+- 0.75
+- 1.0
+anchors:
+- id: a0p333
+  fraction: 0.3333333333333333
+- id: a0p667
+  fraction: 0.6666666666666666
+knob_maps:
+  alpha_max_knob: 5.0
+  dose_log_scale: 2.0
+  box_level_scale: 4.0
+  knn_level_scale: 4.0
+cmicl:
+  hidden_layers:
+  - 32
+  - 32
+  weight_decay: 0.001
+  max_iter: 2000
+  tol: 1.0e-06
+  epsilon: 0.01
+solver:
+  proposal_starts: 500
+  claim_budgets:
+  - 20
+  - 100
+  - 500
+  max_iter: 200
+  feasibility_tolerance: 1.0e-06
+  fd_relative_step: 1.0e-06
+certification:
+  familywise_k: 40
+  delta_row: 0.00125
+  counts_against_familywise_k: true
+risk_target: 0.12
+relative_tolerance: 0.01
+initial_knob_grid:
+- 0.0
+- 0.5
+- 1.0
+- 2.0
+- 4.0
+- 8.0
+max_total_iterations: 12
+jobs: 32
+checkpoint_every: 2
+deadline_guard_seconds: 300
+segment_max_seconds: 3600
+max_evaluation_cells: 12000
+max_physical_cpu_hours: 260.0
+hard_physical_cpu_hours: 320.0
+force_segment_after_stages: []
+inputs:
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  expression_manifest: (not shipped)
+  expression_manifest_sha256: 6b906365f1c05390a7c593283bcfd727279c9a9b71e96e76bfbc10e3f290372d
+  earlier_run: (not shipped)
+  earlier_run: f79488baa64c89e0717518c378e5a6d15d1c612fc27ca03783de9851bfb16bf8
+  exact_base_asset: data/earlier_run.json
+  exact_base_asset_sha256: 6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565
+  history_census: data/certification_run.json
+  history_census_sha256: 9f8c16b52d871125c6b6773bdc0e4c68630ee2a6289a1710062b5e3b9f23f30f
+  history_census_asset_id: certification_run
+  namespace_preflight: data/certification_run.json
+  namespace_preflight_sha256: fa93e51f68d78e7b61ba4ed770c5d97934762f475a65320152e6b677d43d2653
+  namespace_preflight_asset_id: certification_run
+  certification_run: (not shipped)
+  certification_run: fc954b33ecf0375ad052c92a385f73465e4b070d0ff8a6d61173cbbc68d09de7
+  certification_run: williams_integration_replay_may_start
+allowed_result_files:
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+input_list: conf/runs/williams_seed3.inputs.json
+expected:
+  question: on fresh Williams-Otto seed-3 roles, does one exact frozen policy per
+    anchor certify selected risk and beat strong controls at its measured D_perf cost
+  claim_authority: formal fixed-seed evidence for C2/C3/C4; no cross-seed conclusion
+    before seeds 3-10 complete
+  release_contract: the certification chain production chain is SHA-bound, local_canonical, independently
+    verified, check-closed and screened PASS before any fit or solve
+  split_contract: six pre-registered mutually exclusive roles reproduce the v2 digests
+    with zero historical, cross-role, cross-domain or seed-4 overlap
+  policy_contract: D_match freezes seven fields; D_prop selects only among those records;
+    D_cert and D_perf-primary carry the selected record bitwise
+  cost_contract: all controls match the selected policy's measured D_perf cost within
+    1%, or remain honestly unresolved/proven_unavailable outside the risk denominator
+  randomized_contract: locked endpoint-weighted expectation is primary and hash realization
+    is sensitivity in a separate table
+  certification_contract: 2 fixed rows x 300 fresh objectives at delta_row .00125,
+    each counts against K=40 and reports the .12 target without result-based stopping
+  resume_contract: objective-level checkpoints and bounded one-hour child segments
+    resume without recomputing completed cells
+  finalization_contract: the bound launcher seals 0444/0555, clears ACLs, rescans
+    after 12 seconds, writes an external sidecar, and exits zero before fresh-root
+    local verification
+  anomaly_contract: the intermediate-lambda threshold, the cross-role family reversal
+    and the nested-start flips are all localised from saved per-objective corrections,
+    knobs, failure flows and 20/100/500 trajectories rather than re-argued
+  science_gate: none; every lambda/risk/availability/control direction is handed back
+    without changing the matrix
+server: 
+remote_dir: 
+command:  -u LLM-SR/scripts/run_certification_run.py
+  runs=williams_seed3 runs.jobs=32
+smoke:
+  n_train: 60
+  n_cal: 40
+  n_prop_per_law: 2
+  n_match_per_law: 1
+  n_cert_per_law: 2
+  n_perf_per_law: 1
+  claim_budgets:
+  - 2
+  - 3
+  - 4
+  anchors:
+  - id: smoke_a0p5
+    fraction: 0.5
+  initial_knob_grid:
+  - 0.0
+  - 1.0
+  - 4.0
+  max_total_iterations: 4
+  max_evaluation_cells: 2000
+numerical_environment:
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  NUMEXPR_NUM_THREADS: '1'
+  PYTHONHASHSEED: '0'
+  NPY_DISABLE_CPU_FEATURES: AVX512F
+  OPENBLAS_CORETYPE: Cooperlake
+run_id: job-williams_seed3-0824-114839

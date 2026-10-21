@@ -1,0 +1,194 @@
+{
+ "arms": [
+  "floorscale_lam0",
+  "floorscale_lam0.25",
+  "floorscale_lam0.5",
+  "floorscale_lam0.75",
+  "floorscale_lam1",
+  "pure_scalar",
+  "alpha_tightening",
+  "dose_response",
+  "trust_region_box",
+  "trust_region_knn",
+  "scaled_cmicl",
+  "oc_envelope",
+  "law_blind_envelope",
+  "oc_scalar_floor"
+ ],
+ "cmicl": {
+  "architecture": [
+   32,
+   32
+  ],
+  "identity_strength": 5.537589745912839,
+  "loss": "absolute fresh D_train residual prediction + normalized split conformal",
+  "weight_decay": 0.001
+ },
+ "common_random_numbers": "same target/seed/split/law/objective_id seed across every arm",
+ "coordinate_identity_checks": [
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.0,
+   "left_sha256": "2be104c93daa153a6a6d8e3f3833f0fb4c65c09a4b4e4e9570880f1f01578d8d",
+   "max_abs_difference": 0.0,
+   "right_sha256": "2be104c93daa153a6a6d8e3f3833f0fb4c65c09a4b4e4e9570880f1f01578d8d"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.5,
+   "left_sha256": "52c17e66fb95e499bb7870dfbd5cdaacee0b41bbbbc941821108eeb040f5977d",
+   "max_abs_difference": 0.0,
+   "right_sha256": "52c17e66fb95e499bb7870dfbd5cdaacee0b41bbbbc941821108eeb040f5977d"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 1.0,
+   "left_sha256": "a7a44b855815bb5a23ed5fec1cdeb8c0e713a9abc584aaa8f0b42fb3742fdc13",
+   "max_abs_difference": 0.0,
+   "right_sha256": "a7a44b855815bb5a23ed5fec1cdeb8c0e713a9abc584aaa8f0b42fb3742fdc13"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 2.0,
+   "left_sha256": "4aa0db39bc8da6607c7401a492ba9ebec2e0c72178cbaf6e28c3919c8f85c2e7",
+   "max_abs_difference": 0.0,
+   "right_sha256": "4aa0db39bc8da6607c7401a492ba9ebec2e0c72178cbaf6e28c3919c8f85c2e7"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_one_identity_equals_published_exact_cmicl",
+   "knob": 1.0,
+   "left_sha256": "f101a5eebe93a2e0d02afe273c5b046448746b3c53c36f0a6bde8c93b1410179",
+   "max_abs_difference": 0.0,
+   "right_sha256": "f101a5eebe93a2e0d02afe273c5b046448746b3c53c36f0a6bde8c93b1410179"
+  }
+ ],
+ "diagnostic_only": false,
+ "exact_base_asset": {
+  "outcome_fields_available_to_compute": false,
+  "path": "data/earlier_run.json",
+  "cost_support_contract": {
+   "deployed_shape_fold": 0,
+   "fit_receipt_relpath": "(not shipped)",
+   "fit_receipt_sha256": "b12efbd993b228f7cb41f4e8ae56b7b68c24618911d3155f2a69640b461afc04",
+   "manifest_sha256": "f286840dd4a93003bd972dcbe1f537f4736a7643ac39b95d837afdbf588a12ef",
+   "run_root": "(not shipped)"
+  },
+  "sha256": "6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565",
+  "source_seed": 1
+ },
+ "expression_structure": {
+  "fit_loss": "pinball",
+  "fit_tau": 0.9,
+  "hash": "799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49",
+  "only_coefficients_refit": true
+ },
+ "family_formula": "g_{lambda,s}(x)=s*((1-lambda)+lambda*u(x)/median_cal(u)); u(x)=max(CMICL_predict(x),epsilon)",
+ "frozen_method_source": {
+  "namespace_module": "LLM-SR/scripts/certification_run.py",
+  "namespace_module_sha256": "0d205e3ed9e74629a94c8bed524b9bb3d1c392bbd598db4f6ed5d5a552227005",
+  "policy_contract_module": "scripts/frozen_policy_contract.py",
+  "policy_contract_module_sha256": "6658d5b8b00f288844a89e7f6991f24643509d61a16ac582347deabe3885bfdd",
+  "floor_scale_module": "LLM-SR/scripts/run_earlier_run.py",
+  "floor_scale_module_sha256": "5ea823f456f2910f4796f87b6e85bb62d4955504efe7708c8ea7d12d6be61e34",
+  "repair_matcher_module": "LLM-SR/scripts/run_earlier_run.py",
+  "repair_matcher_module_sha256": "642f0ec0a5816a7d75a059090efe1845086b5a74f87f25fc163c684b0ae6d27b",
+  "why": "the correction family, solver effort and matcher are frozen by A2"
+ },
+ "identity_probe_rows": 65,
+ "identity_probe_sha256": "48a893a13dbf3998caacc3f408824d59cb8ea35778808deb34711525e731fee8",
+ "lambda_grid": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "locked_at": "2026-08-24T23:51:46+08:00",
+ "matcher_contract": {
+  "contract": "matcher-terminal-states-v1",
+  "module": "scripts/matcher_state_machine.py",
+  "module_sha256": "b63c07316374529ccb3ae3356c561ab51bc9e515389f20774f944e8a16d1339b",
+  "relative_tolerance": 0.01,
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "terminal_states": [
+   "matched",
+   "randomized_matched",
+   "unresolved",
+   "proven_unavailable"
+  ]
+ },
+ "namespace_id": "methane_seed3",
+ "objective_laws": [
+  "random_linear",
+  "corner_pressure",
+  "boundary_pressure",
+  "residual_hotspot_pressure",
+  "boundary_residual_pressure"
+ ],
+ "policy_contract": {
+  "contract": "frozen-policy-role-contract-v1",
+  "controls_matched_to": "the certified policy's measured D_perf cost",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "only_d_match_searches_a_knob": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ]
+ },
+ "published_provenance": {
+  "expression_manifest": "(not shipped)",
+  "expression_manifest_sha256": "0c8f57617f5b2d10e1eb00fec93f010bc22b8a27d31e66827f49d955c9a64b0c",
+  "cost_support_manifest": "(not shipped)",
+  "cost_support_manifest_sha256": "f286840dd4a93003bd972dcbe1f537f4736a7643ac39b95d837afdbf588a12ef"
+ },
+ "run_name": "methane_seed3",
+ "schema_version": 1,
+ "seed": 3,
+ "selector": "minimum D_prop selected risk over the D_match-frozen lambda policies; exact tie chooses smaller lambda",
+ "solver": {
+  "claim_budgets": [
+   20,
+   100,
+   500
+  ],
+  "fd_relative_step": 1e-06,
+  "feasibility_tolerance": 1e-06,
+  "max_iter": 200,
+  "proposal_starts": 500
+ },
+ "source_sha": "a83573856bd627acc2a3062505ba05a48d8f349394e30b515243126de9d9d325",
+ "target": "methane",
+ "upstream_gates": {
+  "gate_key": "williams_integration_replay_may_start",
+  "gate_value": true,
+  "published_assets_bound": [
+   "certification_run",
+   "certification_run",
+   "certification_run"
+  ],
+  "certification_report": "(not shipped)",
+  "certification_report_sha256": "fc954b33ecf0375ad052c92a385f73465e4b070d0ff8a6d61173cbbc68d09de7",
+  "certification_report_verdicts": {
+   "derived_figure_metadata": "PASS",
+   "fresh_namespaces": "PASS",
+   "production_finalization": "PASS",
+   "recomputed_estimands": "PASS"
+  }
+ }
+}

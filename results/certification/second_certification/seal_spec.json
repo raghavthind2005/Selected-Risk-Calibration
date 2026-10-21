@@ -1,0 +1,37 @@
+{
+ "bindings": {
+  "cert_objective_receipt_sha256": "510a18cc290422d236216d78282efc4392dd7b73ad1b943d92989b05052959c2",
+  "certification_sha256": "b0e3153ce75542c24b9fab040fc4abb24682d43189271789118e9ebb4cae0600",
+  "context_index_sha256": "c65aa060bfe4cb7e2a10fb0193370350af57bbce7a15f20a3585a380dbdb8879",
+  "fixed_row_receipt_sha256": "6e87fe616d536c5a9aec7a665b0c1780a5f3b6aec91b16b23cf2a7805268d854",
+  "input_inventory_sha256": "d333f10372f3331aad1488a814ebb7db72c1e8857e48c3f3df5d9013b3744057",
+  "solver_receipt_sha256": "87ef1d7dbf130de829f4bec9418fe3e3febcc1ad2e6906634facb4271e9c429f"
+ },
+ "envelope_names": [
+  "seal_spec.json"
+ ],
+ "launcher_finalize_resource_receipt": true,
+ "launcher_required_completion_files": [
+  ".done",
+  "manifest.json",
+  "manifest_v2.json",
+  "report.json",
+  "context_index.json",
+  "cert_objective_receipt.json",
+  "fixed_row_receipt.json",
+  "certification.json",
+  "certification_rows.csv",
+  "per_law_rows.csv",
+  "decision_rows.csv",
+  "nested_rows.csv",
+  "cluster_rows.csv",
+  "availability_rows.csv",
+  "input_receipt.json",
+  "solver_receipt.json",
+  "query_ledger.csv"
+ ],
+ "post_seal_writes_into_this_root_are_forbidden": true,
+ "protocol": "receipt-v2",
+ "run_name": "second_certification",
+ "schema_version": 2
+}

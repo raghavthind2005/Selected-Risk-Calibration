@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{The coverage diagnostic, summarized over the five repetitions of each
+configuration: the range of coverage on random inputs, at the returned decisions
+and at matched-boundary points, the number of repetitions in which coverage at the
+returned decisions is below $0.90$, and the range of the drop from matched-boundary
+points to returned decisions. Where matched-boundary points were found in fewer
+than five repetitions, the number is given in brackets.}
+\label{tab:fcs-fits}
+\begin{tabular}{lccccc}
+\toprule
+ & random & returned & below & matched & \\
+configuration & inputs & decisions & $0.90$ & boundary & drop \\
+\midrule
+Methane / symbolic / scalar & 0.910 & 0.53--0.71 & 5 of 5 & 0.875--0.920 & 0.205--0.353 \\
+Methane / MLP / scalar & 0.955--0.990 & 0.19--0.60 & 5 of 5 & 0.855--0.990 & 0.325--0.703 \\
+Methane / MLP / normalized & 0.955--0.990 & 0.17--0.46 & 5 of 5 & 0.790--0.933 & 0.330--0.703 \\
+Methane / symbolic / normalized & 0.980--0.990 & 0.80--1.00 & 1 of 5 & 0.987--1.000 (2 of 5) & 0.000--0.187 \\
+Williams--Otto / symbolic / scalar & 0.895 & 0.74--0.78 & 5 of 5 & 0.993--1.000 & 0.220--0.255 \\
+Williams--Otto / MLP / scalar & 0.895--0.940 & 0.53--0.88 & 5 of 5 & 0.993--1.000 & 0.120--0.463 \\
+\bottomrule
+\end{tabular}
+\end{table}

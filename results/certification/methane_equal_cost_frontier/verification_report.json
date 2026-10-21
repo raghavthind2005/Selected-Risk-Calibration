@@ -1,0 +1,828 @@
+{
+ "checks": [
+  {
+   "check": "witness:class_meets_minimum",
+   "detail": {
+    "minimum": "launcher_events",
+    "observed": "launcher_events"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:covers_the_claimed_wall_clock",
+   "detail": {
+    "claimed_wall_clock_seconds": 62506.08953309059,
+    "tolerance_seconds": 3125.30447665453,
+    "utc_end": "2026-09-02T08:09:39Z",
+    "utc_start": "2026-09-01T14:40:42Z",
+    "window_seconds": 62937.0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:non_degenerate_when_resource_is_claimed",
+   "detail": {
+    "claimed_wall_clock_seconds": 62506.08953309059,
+    "cpu_seconds": 1699259.849401,
+    "timestamp_resolution_seconds": 1.0,
+    "window_seconds": 62937.0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:contains_every_resource_segment",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:receipt_enumerates_every_segment",
+   "detail": {
+    "declared": [
+     "methane_equal_cost_frontier--s01-0901-224042",
+     "methane_equal_cost_frontier--s02-0901-233559",
+     "methane_equal_cost_frontier--s03-0902-003131",
+     "methane_equal_cost_frontier--s04-0902-012704",
+     "methane_equal_cost_frontier--s05-0902-022243",
+     "methane_equal_cost_frontier--s06-0902-031830",
+     "methane_equal_cost_frontier--s07-0902-041359",
+     "methane_equal_cost_frontier--s08-0902-050937",
+     "methane_equal_cost_frontier--s09-0902-060514",
+     "methane_equal_cost_frontier--s10-0902-070059",
+     "methane_equal_cost_frontier--s11-0902-075932",
+     "methane_equal_cost_frontier--s12-0902-085516",
+     "methane_equal_cost_frontier--s13-0902-095101",
+     "methane_equal_cost_frontier--s14-0902-104650",
+     "methane_equal_cost_frontier--s15-0902-114235",
+     "methane_equal_cost_frontier--s16-0902-124034",
+     "methane_equal_cost_frontier--s17-0902-133620",
+     "methane_equal_cost_frontier--s18-0902-143200",
+     "methane_equal_cost_frontier--s19-0902-152740"
+    ],
+    "missing": [],
+    "observed": [
+     "methane_equal_cost_frontier--s01-0901-224042",
+     "methane_equal_cost_frontier--s02-0901-233559",
+     "methane_equal_cost_frontier--s03-0902-003131",
+     "methane_equal_cost_frontier--s04-0902-012704",
+     "methane_equal_cost_frontier--s05-0902-022243",
+     "methane_equal_cost_frontier--s06-0902-031830",
+     "methane_equal_cost_frontier--s07-0902-041359",
+     "methane_equal_cost_frontier--s08-0902-050937",
+     "methane_equal_cost_frontier--s09-0902-060514",
+     "methane_equal_cost_frontier--s10-0902-070059",
+     "methane_equal_cost_frontier--s11-0902-075932",
+     "methane_equal_cost_frontier--s12-0902-085516",
+     "methane_equal_cost_frontier--s13-0902-095101",
+     "methane_equal_cost_frontier--s14-0902-104650",
+     "methane_equal_cost_frontier--s15-0902-114235",
+     "methane_equal_cost_frontier--s16-0902-124034",
+     "methane_equal_cost_frontier--s17-0902-133620",
+     "methane_equal_cost_frontier--s18-0902-143200",
+     "methane_equal_cost_frontier--s19-0902-152740"
+    ]
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:every_segment_shares_the_declared_source",
+   "detail": {
+    "declared_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "drifted": []
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:aggregate_resource_equals_the_sum_of_segments",
+   "detail": {
+    "receipt_cpu_seconds": 1699259.849401,
+    "segment_cpu_seconds": 1699259.849401
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:recovered_resource_is_conservative_and_explicit",
+   "detail": {
+    "declared_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "observed_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "problems": []
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "schema:segment_events",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:every_start_has_a_finish",
+   "detail": {
+    "finishes": 19,
+    "starts": 19
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:hash_chain_is_contiguous",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:index_agrees_with_the_event_files",
+   "detail": {
+    "drift": [],
+    "events": 38,
+    "index_rows": 38
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:head_is_bound_by_the_receipt",
+   "detail": {
+    "receipt": "0c67aae5a58646b32731a8950a714b0c5120728628e9cb31d4cd721f6f7959b8",
+    "recomputed": "0c67aae5a58646b32731a8950a714b0c5120728628e9cb31d4cd721f6f7959b8"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:every_event_census_reproduces",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:start_event_matches_the_launcher_census",
+   "detail": {
+    "launcher_count": 0,
+    "only_in_launcher": [],
+    "self_reported_count": 0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:consecutive_segment_censuses_agree",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:every_payload_file_maps_to_a_writing_segment",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:no_file_appeared_without_a_write_ledger_entry",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "inputs:receipt_matches_the_launcher_inventory",
+   "detail": {
+    "input_receipt": "f3b6aba2b7a2a51ba6193081040772e4649def8f0091159704f35a82c40c24dd",
+    "launcher": "f3b6aba2b7a2a51ba6193081040772e4649def8f0091159704f35a82c40c24dd"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:no_inherited_payload_unless_the_run_declares_a_resume",
+   "detail": {
+    "inherited": 0,
+    "resume_of": null
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "schema:tree_receipt_v2",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:source_binding",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:execution_start",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:execution_finish",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:commit_resolves",
+   "detail": "105bade406af9955772373fc0a119983a53fab13",
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:every_declared_file_present_at_commit",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:blob_digests_match_binding",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:binding_self_reported_bound",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:runner_is_in_its_own_binding",
+   "detail": {
+    "scripts": [
+     "run_earlier_run.py"
+    ],
+    "undeclared": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:no_module_imported_outside_execution_tree",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:tree_digest_reproduces",
+   "detail": "6560527dde2f5d4cfad19c0aea5cd4ac59ee0dd6157ff34d24ec9cdf98749881",
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:finish_binds_start_digest",
+   "detail": {
+    "recomputed": "aef266b4624e05dc14dd373225abc97a15f90336ea286fa4065f57f8536c60bd",
+    "recorded": "aef266b4624e05dc14dd373225abc97a15f90336ea286fa4065f57f8536c60bd"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:start_binding_digest_matches_source_binding",
+   "detail": {
+    "bound_document": "source_snapshot.json",
+    "recomputed": "495040f5e81ffb8725c32ce0ae56acbaf43c8a2ce99be35066eb1a47b0d9bc9a",
+    "recorded": "495040f5e81ffb8725c32ce0ae56acbaf43c8a2ce99be35066eb1a47b0d9bc9a"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:git_witness_agrees_with_the_bound_snapshot",
+   "detail": {
+    "binding_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "missing_segment_snapshots": [],
+    "per_file_drift": [],
+    "snapshot_commits": [
+     "105bade406af9955772373fc0a119983a53fab13"
+    ],
+    "snapshot_problems": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:start_before_finish",
+   "detail": {
+    "end": "2026-09-02T08:09:39Z",
+    "start": "2026-09-01T14:40:42Z"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:no_payload_file_predates_the_start_event",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:exit_code_zero",
+   "detail": 0,
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:reopened_digest_matches_receipt",
+   "detail": {
+    "recomputed": "968bc1260a1153411a4ebe024400d3993e99682ee27e532dc6d92bbdc8a6e2b3",
+    "recorded": "968bc1260a1153411a4ebe024400d3993e99682ee27e532dc6d92bbdc8a6e2b3"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:file_count_matches",
+   "detail": {
+    "recomputed": 15275,
+    "recorded": 15275
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:per_file_digests_match",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:no_envelope_name_inside_payload",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:receipt_does_not_hash_itself",
+   "detail": [
+    ".done",
+    "execution_finish.json",
+    "execution_start.json",
+    "job.pid",
+    "launch.sh",
+    "manifest.json",
+    "manifest_v2.json",
+    "resource_receipt.json",
+    "seal_spec.json",
+    "train.log"
+   ],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:envelope_members_reproduce",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:no_unrecorded_envelope_member_appeared_after_the_seal",
+   "detail": {
+    "post_seal_allowed": [
+     "local_sync_receipt.json",
+     "source_binding.json",
+     "tree_receipt_v2.json",
+     "verification_report.json"
+    ],
+    "unrecorded": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:bindings_present",
+   "detail": {
+    "distinct_resource_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "distinct_source_commits": [
+     "105bade406af9955772373fc0a119983a53fab13"
+    ],
+    "dominance_rows_sha256": "e3cfbd031ee10fecc6470f7ee096c69c5e0299ebb856c38f480ff504832ca5d9",
+    "execution_finish_sha256": "88a853ff901ef87d0d6895b4ead07e150ad8e92bd1b0ba9d372afe71838853d9",
+    "execution_start_sha256": "aef266b4624e05dc14dd373225abc97a15f90336ea286fa4065f57f8536c60bd",
+    "frontier_rows_sha256": "445c5bd4e4898a94742cbfab4c50b65767ef6cb5f72fa01cbf14886c932e4e03",
+    "frontier_summary_sha256": "37c956349cb01363f0c5681234ad8bd0aac76c9b3d086220f5378324159ba1e5",
+    "group_rows_sha256": "96a17395a1005f1c360cd827c53125560d5737c6b621755b6fa4a5bbcd0ee794",
+    "input_inventory_sha256": "f3b6aba2b7a2a51ba6193081040772e4649def8f0091159704f35a82c40c24dd",
+    "multi_source_declared": false,
+    "segment_chain_head_sha256": "0c67aae5a58646b32731a8950a714b0c5120728628e9cb31d4cd721f6f7959b8",
+    "segments": [
+     {
+      "cpu_seconds": 112921.610874,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s01-0901-224042",
+      "segment_index": 1,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 86396.33424200001,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s02-0901-233559",
+      "segment_index": 2,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 34196.843335,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s03-0902-003131",
+      "segment_index": 3,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 144690.851122,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s04-0902-012704",
+      "segment_index": 4,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 114345.358056,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s05-0902-022243",
+      "segment_index": 5,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 97827.219171,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s06-0902-031830",
+      "segment_index": 6,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 107048.70043299999,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s07-0902-041359",
+      "segment_index": 7,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 80778.082545,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s08-0902-050937",
+      "segment_index": 8,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 61821.325763,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s09-0902-060514",
+      "segment_index": 9,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 33580.062026,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s10-0902-070059",
+      "segment_index": 10,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 108446.144301,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s11-0902-075932",
+      "segment_index": 11,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 91359.30128,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s12-0902-085516",
+      "segment_index": 12,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 39623.212475,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s13-0902-095101",
+      "segment_index": 13,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 144691.207093,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s14-0902-104650",
+      "segment_index": 14,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 119719.07291399999,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s15-0902-114235",
+      "segment_index": 15,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 115839.7064,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s16-0902-124034",
+      "segment_index": 16,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 89968.5821,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s17-0902-133620",
+      "segment_index": 17,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 66449.83961299999,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s18-0902-143200",
+      "segment_index": 18,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     },
+     {
+      "cpu_seconds": 49556.395658,
+      "jobs": 44,
+      "run_id": "methane_equal_cost_frontier--s19-0902-152740",
+      "segment_index": 19,
+      "source_commit": "105bade406af9955772373fc0a119983a53fab13"
+     }
+    ],
+    "solver_receipt_sha256": "1e1055ecf4fd90bd9519082b4ac361a310886451891539ca198270c0b1456313",
+    "source_binding_sha256": "495040f5e81ffb8725c32ce0ae56acbaf43c8a2ce99be35066eb1a47b0d9bc9a",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "source_tree_sha256": "6560527dde2f5d4cfad19c0aea5cd4ac59ee0dd6157ff34d24ec9cdf98749881"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:execution_chronology_gate_passes",
+   "detail": {
+    "execution_chronology": "PASS",
+    "witness_class": "launcher_events"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "scope",
+   "detail": "this run declares no consumer input bindings; the gate applies to provenance runs that gate a downstream run",
+   "gate": "required_input_bindings",
+   "not_applicable": true,
+   "ok": true
+  },
+  {
+   "check": "scope",
+   "detail": "this run publishes no claim-evidence inventory; the gate applies to provenance runs",
+   "gate": "historical_inventory_complete",
+   "not_applicable": true,
+   "ok": true
+  }
+ ],
+ "chronology": {
+  "attribution": {
+   "mode_counts": {
+    "created": 15275
+   },
+   "n_payload_files": 15275,
+   "problems": [],
+   "unattributed": [],
+   "vanished_since_last_census": []
+  },
+  "claimed_wall_clock_seconds": 62506.08953309059,
+  "n_events": 38,
+  "n_resource_segments": 19,
+  "segments": [
+   {
+    "cpu_seconds": 112921.610874,
+    "finished_utc": "2026-09-01T15:35:59Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s01-0901-224042",
+    "source": "segment_events/0002",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T14:40:42Z",
+    "wall_clock_seconds": 3316.560042142868
+   },
+   {
+    "cpu_seconds": 86396.33424200001,
+    "finished_utc": "2026-09-01T16:31:31Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s02-0901-233559",
+    "source": "segment_events/0004",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T15:36:00Z",
+    "wall_clock_seconds": 3330.0199224948883
+   },
+   {
+    "cpu_seconds": 34196.843335,
+    "finished_utc": "2026-09-01T17:27:04Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s03-0902-003131",
+    "source": "segment_events/0006",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T16:31:32Z",
+    "wall_clock_seconds": 3330.2443401813507
+   },
+   {
+    "cpu_seconds": 144690.851122,
+    "finished_utc": "2026-09-01T18:22:43Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s04-0902-012704",
+    "source": "segment_events/0008",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T17:27:05Z",
+    "wall_clock_seconds": 3336.152408838272
+   },
+   {
+    "cpu_seconds": 114345.358056,
+    "finished_utc": "2026-09-01T19:18:16Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s05-0902-022243",
+    "source": "segment_events/0010",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T18:22:44Z",
+    "wall_clock_seconds": 3330.735715150833
+   },
+   {
+    "cpu_seconds": 97827.219171,
+    "finished_utc": "2026-09-01T20:13:59Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s06-0902-031830",
+    "source": "segment_events/0012",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T19:18:31Z",
+    "wall_clock_seconds": 3326.5134778022766
+   },
+   {
+    "cpu_seconds": 107048.70043299999,
+    "finished_utc": "2026-09-01T21:09:37Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s07-0902-041359",
+    "source": "segment_events/0014",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T20:14:00Z",
+    "wall_clock_seconds": 3334.46204161644
+   },
+   {
+    "cpu_seconds": 80778.082545,
+    "finished_utc": "2026-09-01T22:05:14Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s08-0902-050937",
+    "source": "segment_events/0016",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T21:09:39Z",
+    "wall_clock_seconds": 3332.7170894145966
+   },
+   {
+    "cpu_seconds": 61821.325763,
+    "finished_utc": "2026-09-01T23:00:59Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s09-0902-060514",
+    "source": "segment_events/0018",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T22:05:15Z",
+    "wall_clock_seconds": 3341.9708960056305
+   },
+   {
+    "cpu_seconds": 33580.062026,
+    "finished_utc": "2026-09-01T23:56:34Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s10-0902-070059",
+    "source": "segment_events/0020",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T23:01:01Z",
+    "wall_clock_seconds": 3331.2181224823
+   },
+   {
+    "cpu_seconds": 108446.144301,
+    "finished_utc": "2026-09-02T00:55:16Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s11-0902-075932",
+    "source": "segment_events/0022",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-01T23:59:33Z",
+    "wall_clock_seconds": 3339.212480068207
+   },
+   {
+    "cpu_seconds": 91359.30128,
+    "finished_utc": "2026-09-02T01:51:01Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s12-0902-085516",
+    "source": "segment_events/0024",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T00:55:20Z",
+    "wall_clock_seconds": 3335.953064918518
+   },
+   {
+    "cpu_seconds": 39623.212475,
+    "finished_utc": "2026-09-02T02:46:50Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s13-0902-095101",
+    "source": "segment_events/0026",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T01:51:04Z",
+    "wall_clock_seconds": 3341.9618792533875
+   },
+   {
+    "cpu_seconds": 144691.207093,
+    "finished_utc": "2026-09-02T03:42:35Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s14-0902-104650",
+    "source": "segment_events/0028",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T02:46:52Z",
+    "wall_clock_seconds": 3336.3720321655273
+   },
+   {
+    "cpu_seconds": 119719.07291399999,
+    "finished_utc": "2026-09-02T04:38:17Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s15-0902-114235",
+    "source": "segment_events/0030",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T03:42:38Z",
+    "wall_clock_seconds": 3333.755967617035
+   },
+   {
+    "cpu_seconds": 115839.7064,
+    "finished_utc": "2026-09-02T05:36:20Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s16-0902-124034",
+    "source": "segment_events/0032",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T04:40:39Z",
+    "wall_clock_seconds": 3336.2321524620056
+   },
+   {
+    "cpu_seconds": 89968.5821,
+    "finished_utc": "2026-09-02T06:32:00Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s17-0902-133620",
+    "source": "segment_events/0034",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T05:36:22Z",
+    "wall_clock_seconds": 3333.8923087120056
+   },
+   {
+    "cpu_seconds": 66449.83961299999,
+    "finished_utc": "2026-09-02T07:27:39Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s18-0902-143200",
+    "source": "segment_events/0036",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T06:32:02Z",
+    "wall_clock_seconds": 3328.7390534877777
+   },
+   {
+    "cpu_seconds": 49556.395658,
+    "finished_utc": "2026-09-02T08:09:38Z",
+    "jobs": 44,
+    "run_id": "methane_equal_cost_frontier--s19-0902-152740",
+    "source": "segment_events/0038",
+    "source_commit": "105bade406af9955772373fc0a119983a53fab13",
+    "started_utc": "2026-09-02T07:27:42Z",
+    "wall_clock_seconds": 2509.3765382766724
+   }
+  ],
+  "window_seconds": 62937.0,
+  "witness_class": "launcher_events"
+ },
+ "chronology_helper_sha256": "adbfcc164df0bc4e5d3d0b8116b43d96158664c18c17a06ee8cea9777b933831",
+ "failures": {
+  "execution_chronology": [],
+  "historical_inventory_complete": [],
+  "protocol_self_check": [],
+  "required_input_bindings": []
+ },
+ "min_witness_class": "launcher_events",
+ "n_checks": 48,
+ "protocol": "receipt-v2",
+ "required": [
+  "protocol_self_check",
+  "execution_chronology"
+ ],
+ "run_root": "results/methane_equal_cost_frontier",
+ "run_verdict": "execution_provenance_verified",
+ "schema_sha256": "f41e44d0119a3e318fa4dc5f5cdb2df5a9d286a680a8f8ceae361159f36afa5a",
+ "schema_version": 2,
+ "verdicts": {
+  "execution_chronology": "PASS",
+  "historical_inventory_complete": "NOT_APPLICABLE",
+  "protocol_self_check": "PASS",
+  "required_input_bindings": "NOT_APPLICABLE"
+ },
+ "verified_at_utc": "2026-09-02T08:40:03Z",
+ "verifier": "scripts/verify_receipt_v2.py",
+ "verifier_sha256": "af72e94256cfcea2f48bd6090ff619eff1da938428facf6eed00aeecc24dfdb9",
+ "workspace_root": ""
+}

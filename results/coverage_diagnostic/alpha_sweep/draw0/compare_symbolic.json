@@ -1,0 +1,335 @@
+{
+ "config": "symbolic",
+ "stored_file": "(not shipped) alpha_sweep_symbolic.json",
+ "alphas_stored": [
+  0.01,
+  0.02,
+  0.05,
+  0.1,
+  0.15,
+  0.2
+ ],
+ "alphas_rebuilt": [
+  0.01,
+  0.02,
+  0.05,
+  0.1,
+  0.15,
+  0.2
+ ],
+ "per_alpha": {
+  "0.01": {
+   "alpha": {
+    "stored": 0.01,
+    "rebuilt": 0.01,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.99,
+    "rebuilt": 0.99,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 6.740971576353098,
+    "rebuilt": 6.740971576353098,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.99,
+    "rebuilt": 0.99,
+    "identical": true
+   },
+   "selected": {
+    "stored": 1.0,
+    "rebuilt": 1.0,
+    "identical": true
+   },
+   "feas": {
+    "stored": 1.0,
+    "rebuilt": 1.0,
+    "identical": true
+   },
+   "gap": {
+    "stored": -0.010000000000000009,
+    "rebuilt": -0.010000000000000009,
+    "identical": true
+   },
+   "slack": {
+    "stored": 3.6775027467683685e-11,
+    "rebuilt": 6.345235448179665e-11,
+    "identical": false
+   },
+   "obj": {
+    "stored": 39.54401321247944,
+    "rebuilt": 39.544013212614885,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.02": {
+   "alpha": {
+    "stored": 0.02,
+    "rebuilt": 0.02,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.98,
+    "rebuilt": 0.98,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 1.2271859801641014,
+    "rebuilt": 1.2271859801641014,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.965,
+    "rebuilt": 0.965,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.8,
+    "rebuilt": 0.8,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.83,
+    "rebuilt": 0.83,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.17999999999999994,
+    "rebuilt": 0.17999999999999994,
+    "identical": true
+   },
+   "slack": {
+    "stored": 1.3801617626540974e-09,
+    "rebuilt": 9.398526401582785e-10,
+    "identical": false
+   },
+   "obj": {
+    "stored": 33.91514879551813,
+    "rebuilt": 33.915148795696865,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.05": {
+   "alpha": {
+    "stored": 0.05,
+    "rebuilt": 0.05,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.95,
+    "rebuilt": 0.95,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": 0.380898465386597,
+    "rebuilt": 0.380898465386597,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.955,
+    "rebuilt": 0.955,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.78,
+    "rebuilt": 0.78,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.81,
+    "rebuilt": 0.81,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.16999999999999993,
+    "rebuilt": 0.16999999999999993,
+    "identical": true
+   },
+   "slack": {
+    "stored": 8.461960021577397e-10,
+    "rebuilt": 7.850822214550135e-10,
+    "identical": false
+   },
+   "obj": {
+    "stored": 33.33507103307101,
+    "rebuilt": 33.33507103281477,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.1": {
+   "alpha": {
+    "stored": 0.1,
+    "rebuilt": 0.1,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.9,
+    "rebuilt": 0.9,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": -0.15053046001636972,
+    "rebuilt": -0.15053046001636972,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.91,
+    "rebuilt": 0.91,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.71,
+    "rebuilt": 0.71,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.78,
+    "rebuilt": 0.78,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.19000000000000006,
+    "rebuilt": 0.19000000000000006,
+    "identical": true
+   },
+   "slack": {
+    "stored": 8.46547720811941e-10,
+    "rebuilt": 6.773994698505703e-10,
+    "identical": false
+   },
+   "obj": {
+    "stored": 32.97067384200156,
+    "rebuilt": 32.97067384203705,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.15": {
+   "alpha": {
+    "stored": 0.15,
+    "rebuilt": 0.15,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.85,
+    "rebuilt": 0.85,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": -0.6098192770623339,
+    "rebuilt": -0.6098192770623339,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.835,
+    "rebuilt": 0.835,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.7,
+    "rebuilt": 0.7,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.78,
+    "rebuilt": 0.78,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.15000000000000002,
+    "rebuilt": 0.15000000000000002,
+    "identical": true
+   },
+   "slack": {
+    "stored": 5.189466634192286e-10,
+    "rebuilt": 1.111454039914861e-09,
+    "identical": false
+   },
+   "obj": {
+    "stored": 32.65568878959386,
+    "rebuilt": 32.655688789183344,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  },
+  "0.2": {
+   "alpha": {
+    "stored": 0.2,
+    "rebuilt": 0.2,
+    "identical": true
+   },
+   "target": {
+    "stored": 0.8,
+    "rebuilt": 0.8,
+    "identical": true
+   },
+   "q_hat": {
+    "stored": -0.9849320484205092,
+    "rebuilt": -0.9849320484205092,
+    "identical": true
+   },
+   "sanity": {
+    "stored": 0.74,
+    "rebuilt": 0.74,
+    "identical": true
+   },
+   "selected": {
+    "stored": 0.68,
+    "rebuilt": 0.68,
+    "identical": true
+   },
+   "feas": {
+    "stored": 0.78,
+    "rebuilt": 0.78,
+    "identical": true
+   },
+   "gap": {
+    "stored": 0.12,
+    "rebuilt": 0.12,
+    "identical": true
+   },
+   "slack": {
+    "stored": 4.748929027797999e-10,
+    "rebuilt": 2.5764801403482807e-10,
+    "identical": false
+   },
+   "obj": {
+    "stored": 32.39848628278044,
+    "rebuilt": 32.39848628269771,
+    "identical": false
+   },
+   "n": {
+    "stored": 100,
+    "rebuilt": 100,
+    "identical": true
+   }
+  }
+ },
+ "all_identical": false
+}

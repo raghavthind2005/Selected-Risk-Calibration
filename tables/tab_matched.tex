@@ -1,0 +1,32 @@
+\begin{table*}[p]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\caption{The comparisons of Table~\ref{tab:matched} on the same seeds. The first row is
+the violation rate of SRC's correction$^{\ast}$ over five seeds. Every other entry is a baseline's violation
+rate minus that of SRC's correction, on the seeds where the two are compared, so a
+positive entry means SRC's correction was safer. A subscript gives the number of
+seeds when it is below five, and ``--'' means no seed could be compared. Exact
+McNemar test on the same objectives: $^{\ast}p<0.05$; $^{\ast\ast}$significant
+after Bonferroni correction for all 62 tests. Budgets are fractions of C-MICL's own
+cost $C^{\star}$. $^{\ast}$SRC's correction sized to each budget without the
+certification step. $^{\ddagger}$Our controls rather than published methods.}
+\label{tab:matched-diff}
+\begin{tabular}{l ccc ccc ccc}
+\toprule
+ & \multicolumn{3}{c}{Methane} & \multicolumn{3}{c}{Williams--Otto} & \multicolumn{3}{c}{Hanoi} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+budget $/C^{\star}$ & 0.25 & 0.55 & 1.0 & 0.25 & 0.55 & 1.0 & 0.25 & 0.55 & 1.0 \\
+\midrule
+SRC correction$^{\ast}$, rate & 0.423 & 0.266 & 0.070 & 0.176 & 0.078 & 0.075 & 0.353 & 0.204 & 0.102 \\
+\midrule
+C-MICL~\cite{bib12} & $+0.061^{\ast\ast}$ & $+0.149^{\ast\ast}$ & $+0.330^{\ast\ast}_{4}$ & $+0.183^{\ast\ast}$ & $+0.253^{\ast\ast}$ & $+0.264^{\ast\ast}$ & $+0.104^{\ast\ast}_{4}$ & $+0.228^{\ast\ast}$ & $+0.327^{\ast\ast}_{3}$ \\
+C-MICL refit$^{\ddagger}$ & $+0.065^{\ast\ast}_{4}$ & $+0.045^{\ast}$ & $+0.054^{\ast\ast}$ & $+0.184^{\ast\ast}$ & $+0.275^{\ast\ast}$ & $+0.156^{\ast\ast}$ & $+0.081^{\ast\ast}$ & $+0.213^{\ast\ast}$ & $+0.329^{\ast\ast}$ \\
+W-MICL~\cite{bib12} & $+0.018_{2}$ & $+0.125^{\ast\ast}_{2}$ & $+0.196^{\ast\ast}$ & $+0.173^{\ast\ast}_{3}$ & $+0.176^{\ast\ast}$ & $+0.120^{\ast\ast}$ & $+0.040_{1}$ & $+0.052^{\ast}_{3}$ & $0.000_{4}$ \\
+Locally weighted~\cite{bib31} & $+0.062^{\ast\ast}_{3}$ & $+0.150^{\ast\ast}_{3}$ & $+0.291^{\ast\ast}_{4}$ & $+0.145^{\ast\ast}_{4}$ & $+0.131^{\ast\ast}_{4}$ & $+0.119^{\ast\ast}_{4}$ & $0.000$ & $-0.006$ & $-0.020$ \\
+Scalar padding & $+0.012$ & $+0.056^{\ast\ast}$ & $+0.187^{\ast\ast}$ & $+0.161^{\ast\ast}$ & $+0.184^{\ast\ast}$ & $+0.127^{\ast\ast}$ & $+0.053^{\ast\ast}$ & $+0.117^{\ast\ast}$ & $+0.120^{\ast\ast}$ \\
+$\alpha$-tightening & $+0.028^{\ast}_{2}$ & $+0.008$ & $+0.115^{\ast\ast}_{2}$ & $+0.125^{\ast\ast}_{1}$ & $+0.110^{\ast\ast}_{3}$ & $+0.200^{\ast\ast}_{1}$ & $+0.048^{\ast\ast}_{3}$ & -- & $+0.040^{\ast}_{2}$ \\
+Box trust region$^{\ddagger}$ & $-0.021_{4}$ & $+0.047^{\ast\ast}$ & $+0.207^{\ast\ast}$ & $+0.088^{\ast\ast}$ & $+0.184^{\ast\ast}$ & $+0.188^{\ast\ast}$ & $+0.055^{\ast\ast}_{3}$ & $+0.102^{\ast\ast}$ & $+0.094^{\ast\ast}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,47 @@
+{
+ "driver": "src/matched_cost/extended_refinement.py",
+ "preregistered_in": "(not shipped) protocol A3.3",
+ "prereg_commit": "4e84094f",
+ "benchmark": "methane",
+ "seed": 9,
+ "arm": "scalar",
+ "refine_iters_committed": 4,
+ "refine_iters_used": 12,
+ "only_change": "REFINE_ITERS",
+ "held_constants": {
+  "REFINE_TOL": 0.02,
+  "MATCH_TOL": 0.02,
+  "ALPHA": 0.1,
+  "FIT_TAU": 0.9,
+  "N_FIT": 1000,
+  "N_CAL": 300,
+  "N_ENV": 400,
+  "N_SANE": 800,
+  "N_PROP_PL": 20,
+  "N_PERF_PL": 40,
+  "PRIMARY_STARTS": 60,
+  "CHECK_STARTS": 120,
+  "N_SPAN_RUNGS": 3,
+  "LAWS": [
+   "random_linear",
+   "corner_pressure",
+   "boundary_pressure",
+   "residual_hotspot_pressure",
+   "boundary_residual_pressure"
+  ],
+  "CAP_FRACTIONS": [
+   0.25,
+   0.4,
+   0.55,
+   0.7,
+   1.0
+  ],
+  "REFINE_ITERS_as_committed": 4
+ },
+ "run_seed_code_md5": "697de4c246d6718b433c3d38bbc29548",
+ "sandbox": " (not shipped)",
+ "emits_method_rows": false,
+ "emits_method_rows_reason": "ARMS restricts the roster; an arms-restricted run writes no law_blind_envelope frontier key (verified against matched_cost/runs/seed6.arms.json).",
+ "label_for_filled_cells": "extended refinement",
+ "elapsed_s": 7963.038020133972
+}

@@ -1,0 +1,194 @@
+{
+ "arms": [
+  "floorscale_lam0",
+  "floorscale_lam0.25",
+  "floorscale_lam0.5",
+  "floorscale_lam0.75",
+  "floorscale_lam1",
+  "pure_scalar",
+  "alpha_tightening",
+  "dose_response",
+  "trust_region_box",
+  "trust_region_knn",
+  "scaled_cmicl",
+  "oc_envelope",
+  "law_blind_envelope",
+  "oc_scalar_floor"
+ ],
+ "cmicl": {
+  "architecture": [
+   32,
+   32
+  ],
+  "identity_strength": 1.0016012582931035,
+  "loss": "absolute fresh D_train residual prediction + normalized split conformal",
+  "weight_decay": 0.001
+ },
+ "common_random_numbers": "same target/seed/split/law/objective_id seed across every arm",
+ "coordinate_identity_checks": [
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.0,
+   "left_sha256": "1bc218d2264b4cfe98944d4c024757bf7aee60f13fcf1b724b0dc071127f46ce",
+   "max_abs_difference": 0.0,
+   "right_sha256": "1bc218d2264b4cfe98944d4c024757bf7aee60f13fcf1b724b0dc071127f46ce"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.5,
+   "left_sha256": "974428dfb7a9900c0590236dd247354cd4456104de30775787916dccabeab312",
+   "max_abs_difference": 0.0,
+   "right_sha256": "974428dfb7a9900c0590236dd247354cd4456104de30775787916dccabeab312"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 1.0,
+   "left_sha256": "829858ca7d40374ac7e7400d07d1be3c18bff334158546ab08842dd2e13425a9",
+   "max_abs_difference": 0.0,
+   "right_sha256": "829858ca7d40374ac7e7400d07d1be3c18bff334158546ab08842dd2e13425a9"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 2.0,
+   "left_sha256": "43e4decceff566d1487a5cd85728e073175226e0fcd09b373654a951f921964a",
+   "max_abs_difference": 0.0,
+   "right_sha256": "43e4decceff566d1487a5cd85728e073175226e0fcd09b373654a951f921964a"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_one_identity_equals_published_exact_cmicl",
+   "knob": 1.0,
+   "left_sha256": "25339103ec68c06b77f9a973ab4859e89ddd11b282ea837ef94584d7725f8c85",
+   "max_abs_difference": 0.0,
+   "right_sha256": "25339103ec68c06b77f9a973ab4859e89ddd11b282ea837ef94584d7725f8c85"
+  }
+ ],
+ "diagnostic_only": false,
+ "exact_base_asset": {
+  "outcome_fields_available_to_compute": false,
+  "path": "data/earlier_run.json",
+  "cost_support_contract": {
+   "deployed_shape_fold": 0,
+   "fit_receipt_relpath": "(not shipped)",
+   "fit_receipt_sha256": "b6073f20e81867f8dcab26ef9c805f2602669652281b397432a75553a0998829",
+   "manifest_sha256": "f79488baa64c89e0717518c378e5a6d15d1c612fc27ca03783de9851bfb16bf8",
+   "run_root": "(not shipped)"
+  },
+  "sha256": "6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565",
+  "source_seed": 1
+ },
+ "expression_structure": {
+  "fit_loss": "pinball",
+  "fit_tau": 0.85,
+  "hash": "37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9",
+  "only_coefficients_refit": true
+ },
+ "family_formula": "g_{lambda,s}(x)=s*((1-lambda)+lambda*u(x)/median_cal(u)); u(x)=max(CMICL_predict(x),epsilon)",
+ "frozen_method_source": {
+  "namespace_module": "LLM-SR/scripts/certification_run.py",
+  "namespace_module_sha256": "0d205e3ed9e74629a94c8bed524b9bb3d1c392bbd598db4f6ed5d5a552227005",
+  "policy_contract_module": "scripts/frozen_policy_contract.py",
+  "policy_contract_module_sha256": "6658d5b8b00f288844a89e7f6991f24643509d61a16ac582347deabe3885bfdd",
+  "floor_scale_module": "LLM-SR/scripts/run_earlier_run.py",
+  "floor_scale_module_sha256": "5ea823f456f2910f4796f87b6e85bb62d4955504efe7708c8ea7d12d6be61e34",
+  "repair_matcher_module": "LLM-SR/scripts/run_earlier_run.py",
+  "repair_matcher_module_sha256": "642f0ec0a5816a7d75a059090efe1845086b5a74f87f25fc163c684b0ae6d27b",
+  "why": "the correction family, solver effort and matcher are frozen by A2"
+ },
+ "identity_probe_rows": 65,
+ "identity_probe_sha256": "0bbac7d4639ecde66812a98d7717609748aaa9b05afc8bc471646e450b70d27a",
+ "lambda_grid": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "locked_at": "2026-08-24T23:48:55+08:00",
+ "matcher_contract": {
+  "contract": "matcher-terminal-states-v1",
+  "module": "scripts/matcher_state_machine.py",
+  "module_sha256": "b63c07316374529ccb3ae3356c561ab51bc9e515389f20774f944e8a16d1339b",
+  "relative_tolerance": 0.01,
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "terminal_states": [
+   "matched",
+   "randomized_matched",
+   "unresolved",
+   "proven_unavailable"
+  ]
+ },
+ "namespace_id": "williams_seed3",
+ "objective_laws": [
+  "random_linear",
+  "corner_pressure",
+  "boundary_pressure",
+  "residual_hotspot_pressure",
+  "boundary_residual_pressure"
+ ],
+ "policy_contract": {
+  "contract": "frozen-policy-role-contract-v1",
+  "controls_matched_to": "the certified policy's measured D_perf cost",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "only_d_match_searches_a_knob": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ]
+ },
+ "published_provenance": {
+  "expression_manifest": "(not shipped)",
+  "expression_manifest_sha256": "6b906365f1c05390a7c593283bcfd727279c9a9b71e96e76bfbc10e3f290372d",
+  "cost_support_manifest": "(not shipped)",
+  "cost_support_manifest_sha256": "f79488baa64c89e0717518c378e5a6d15d1c612fc27ca03783de9851bfb16bf8"
+ },
+ "run_name": "williams_seed3",
+ "schema_version": 1,
+ "seed": 3,
+ "selector": "minimum D_prop selected risk over the D_match-frozen lambda policies; exact tie chooses smaller lambda",
+ "solver": {
+  "claim_budgets": [
+   20,
+   100,
+   500
+  ],
+  "fd_relative_step": 1e-06,
+  "feasibility_tolerance": 1e-06,
+  "max_iter": 200,
+  "proposal_starts": 500
+ },
+ "source_sha": "a4af7d6a1d862aa9ef8044bb5211b1b677782db3e2e503796c457761b626e66e",
+ "target": "williams",
+ "upstream_gates": {
+  "gate_key": "williams_integration_replay_may_start",
+  "gate_value": true,
+  "published_assets_bound": [
+   "certification_run",
+   "certification_run",
+   "certification_run"
+  ],
+  "certification_report": "(not shipped)",
+  "certification_report_sha256": "fc954b33ecf0375ad052c92a385f73465e4b070d0ff8a6d61173cbbc68d09de7",
+  "certification_report_verdicts": {
+   "derived_figure_metadata": "PASS",
+   "fresh_namespaces": "PASS",
+   "production_finalization": "PASS",
+   "recomputed_estimands": "PASS"
+  }
+ }
+}

@@ -1,0 +1,34 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Fresh violation rates at equal cost in the certification study, pooled over
+anchors, for all 30 anchors with a fresh evaluation (seed~10 excluded) and for the 22
+of them whose margin was certified. ``more'', ``fewer'' and ``equal'' count the anchors
+at which the comparator had more, fewer or as many violations as SRC's locked margin;
+$n$ is the number of anchors at which the comparator could be matched. At the methane
+anchors where SRC locked $\theta=0$, the constant margin is the same margin, so those
+anchors count as equal. $^{\S}$$\alpha$-tightening cannot hit a cost exactly and is
+randomized between two neighbouring settings, so its counts are expected values.}
+\label{tab:cert-panel}
+\begin{tabular}{l ccccc ccccc}
+\toprule
+ & \multicolumn{5}{c}{all anchors} & \multicolumn{5}{c}{certified anchors} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}
+ & rate & more & fewer & equal & $n$ & rate & more & fewer & equal & $n$ \\
+\midrule
+SRC's locked margin & 0.055 & & & & 30 & 0.013 & & & & 22 \\
+\midrule
+Constant margin ($\theta=0$) & 0.095 & 12 & 2 & 16 & 30 & 0.065 & 10 & 1 & 11 & 22 \\
+Fixed shape $\theta=0.25$ & 0.096 & 17 & 2 & 10 & 29 & 0.064 & 12 & 0 & 9 & 21 \\
+Fixed shape $\theta=0.5$ & 0.106 & 18 & 1 & 6 & 25 & 0.068 & 12 & 0 & 5 & 17 \\
+Fixed shape $\theta=0.75$ & 0.119 & 19 & 0 & 4 & 23 & 0.094 & 15 & 0 & 3 & 18 \\
+Fixed shape $\theta=1$ & 0.141 & 25 & 0 & 3 & 28 & 0.118 & 18 & 0 & 2 & 20 \\
+Scaled C-MICL & 0.136 & 25 & 0 & 4 & 29 & 0.113 & 18 & 0 & 3 & 21 \\
+$\alpha$-tightening$^{\S}$ & 0.109 & 26 & 3 & 1 & 30 & 0.086 & 20 & 1 & 1 & 22 \\
+Trust region (box) & 0.198 & 30 & 0 & 0 & 30 & 0.185 & 22 & 0 & 0 & 22 \\
+Trust region (nearest neighbour) & 0.173 & 28 & 1 & 1 & 30 & 0.161 & 21 & 1 & 0 & 22 \\
+Correction of Section~\ref{sec:exp-cost} & 0.053 & 22 & 7 & 1 & 30 & 0.039 & 20 & 1 & 1 & 22 \\
+\bottomrule
+\end{tabular}
+\end{table}

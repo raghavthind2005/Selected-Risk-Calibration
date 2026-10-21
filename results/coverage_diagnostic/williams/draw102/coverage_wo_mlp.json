@@ -1,0 +1,65 @@
+{
+  "surrogate": "mlp",
+  "q": 0.1442081837453708,
+  "alpha": 0.1,
+  "target": 0.9,
+  "sanity_random_coverage": 0.92,
+  "reported_selected_coverage": 0.68,
+  "n_selected": 100,
+  "mechanism_matched_boundary_coverage": 0.9975,
+  "n_matched": 400,
+  "margin_band": [
+    -2.0928472922041803,
+    9.782709699257542e-09
+  ],
+  "dose_response": [
+    {
+      "lambda": 0.0,
+      "coverage": 0.68,
+      "mean_dist": 1.0229431820628119,
+      "n": 100
+    },
+    {
+      "lambda": 1.0,
+      "coverage": 0.72,
+      "mean_dist": 0.9127937959634315,
+      "n": 100
+    },
+    {
+      "lambda": 3.0,
+      "coverage": 0.87,
+      "mean_dist": 0.7361048105863535,
+      "n": 100
+    },
+    {
+      "lambda": 10.0,
+      "coverage": 0.99,
+      "mean_dist": 0.5411133278872747,
+      "n": 100
+    },
+    {
+      "lambda": 30.0,
+      "coverage": 1.0,
+      "mean_dist": 0.2634827299723749,
+      "n": 100
+    },
+    {
+      "lambda": 100.0,
+      "coverage": 1.0,
+      "mean_dist": 0.08421696903966853,
+      "n": 100
+    },
+    {
+      "lambda": 300.0,
+      "coverage": 1.0,
+      "mean_dist": 0.02807233873387709,
+      "n": 100
+    },
+    {
+      "lambda": 1000.0,
+      "coverage": 1.0,
+      "mean_dist": 0.008421717598636698,
+      "n": 100
+    }
+  ]
+}

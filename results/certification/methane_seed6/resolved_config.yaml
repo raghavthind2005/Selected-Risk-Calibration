@@ -1,0 +1,211 @@
+run_name: methane_seed6
+namespace_id: methane_seed6
+target: methane
+benchmark: methane_reactor
+seed: 6
+out: 
+input_root: 
+protocol_mode: formal
+diagnostic_only: false
+claim_ids:
+- C2
+- C3
+- C4
+claim_role: formal_fixed_row_certification_and_same_cost_effect
+evaluation_type: simulator_true_outcome
+evaluation_subtype: fresh_exact_policy_equal_cost_seed6_formal
+alpha: 0.1
+fit_tau: 0.9
+fit_maxiter: 300
+n_train: 1000
+n_cal: 300
+n_prop_per_law: 60
+n_match_per_law: 20
+n_cert_per_law: 60
+n_perf_per_law: 40
+objective_laws:
+- random_linear
+- corner_pressure
+- boundary_pressure
+- residual_hotspot_pressure
+- boundary_residual_pressure
+lambda_grid:
+- 0.0
+- 0.25
+- 0.5
+- 0.75
+- 1.0
+anchors:
+- id: a0p25
+  fraction: 0.25
+- id: a0p50
+  fraction: 0.5
+- id: a0p75
+  fraction: 0.75
+knob_maps:
+  alpha_max_knob: 3.0
+  dose_log_scale: 2.0
+  box_level_scale: 4.0
+  knn_level_scale: 4.0
+cmicl:
+  hidden_layers:
+  - 32
+  - 32
+  weight_decay: 0.001
+  max_iter: 2000
+  tol: 1.0e-06
+  epsilon: 0.01
+solver:
+  proposal_starts: 500
+  claim_budgets:
+  - 20
+  - 100
+  - 500
+  max_iter: 200
+  feasibility_tolerance: 1.0e-06
+  fd_relative_step: 1.0e-06
+certification:
+  familywise_k: 40
+  delta_row: 0.00125
+  counts_against_familywise_k: true
+risk_target: 0.12
+relative_tolerance: 0.01
+initial_knob_grid:
+- 0.0
+- 0.5
+- 1.0
+- 2.0
+- 4.0
+- 8.0
+max_total_iterations: 12
+jobs: 32
+checkpoint_every: 2
+deadline_guard_seconds: 300
+segment_max_seconds: 3600
+max_evaluation_cells: 12000
+max_physical_cpu_hours: 380.0
+hard_physical_cpu_hours: 450.0
+force_segment_after_stages: []
+inputs:
+  expression_sample: (not shipped)
+  expression_spec: LLM-SR/specs/specification_methane_reactor_ocl_numpy.txt
+  expression_hash: 799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49
+  expression_manifest: (not shipped)
+  expression_manifest_sha256: 0c8f57617f5b2d10e1eb00fec93f010bc22b8a27d31e66827f49d955c9a64b0c
+  earlier_run: (not shipped)
+  earlier_run: f286840dd4a93003bd972dcbe1f537f4736a7643ac39b95d837afdbf588a12ef
+  exact_base_asset: data/earlier_run.json
+  exact_base_asset_sha256: 6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565
+  history_census: data/certification_run.json
+  history_census_sha256: 9f8c16b52d871125c6b6773bdc0e4c68630ee2a6289a1710062b5e3b9f23f30f
+  history_census_asset_id: certification_run
+  namespace_preflight: data/certification_run.json
+  namespace_preflight_sha256: fa93e51f68d78e7b61ba4ed770c5d97934762f475a65320152e6b677d43d2653
+  namespace_preflight_asset_id: certification_run
+  certification_run: (not shipped)
+  certification_run: fc954b33ecf0375ad052c92a385f73465e4b070d0ff8a6d61173cbbc68d09de7
+  certification_run: williams_integration_replay_may_start
+  provenance_repair_manifest: (not shipped)
+  provenance_repair_manifest_sha256: 993b8aecced89ddb48da1fe1fe563daa3f0e084f85ce412ff74f7e1130b39d71
+  fit_acceptance_manifest: (not shipped)
+  fit_acceptance_manifest_sha256: fb3f6e46196c7613f183731918c3e8327fcd6ced4f9dce1ecd47476f4f3c807a
+  spent_census: data/certification_run.json
+  spent_census_sha256: acde953f9514228ae3957ae5db9a7d11b423b49c3b30e8378de7f7d3db7ede13
+  spent_census_asset_id: certification_run
+  peer_expression_sample: (not shipped)
+  peer_expression_sample_sha256: f897f3b8c17f995f72633149410f79b4aa7831c643064fcde6429f73c0849086
+  peer_expression_spec: LLM-SR/specs/specification_williams_otto_ocl_numpy_tau085.txt
+  peer_expression_hash: 37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9
+  peer_read_reason: spent_namespace_census_replay_only
+allowed_result_files:
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+- (not shipped)
+input_list: conf/runs/methane_seed6.inputs.json
+expected:
+  question: on fresh methane seed-6 roles, does the seed-3/4/5 certification, lambda-0
+    dominance and same-cost control-tie pattern replicate under the exact same frozen
+    policy contract
+  claim_authority: formal fixed-seed evidence for C2/C3/C4; no cross-seed conclusion
+    before seeds 3-10 complete
+  release_contract: the certification chain production chain is SHA-bound, local_canonical, independently
+    verified and screened PASS by the iter-43 screen, the earlier_run provenance repair receipt
+    passes, and the earlier_run fit-acceptance receipt authorises seed 5+ before any fit
+    or solve
+  split_contract: six fresh mutually exclusive seed-6 roles are SHA-registered before
+    fit with zero historical, cross-role, cross-domain overlap and exact zero overlap
+    against every spent seed-3/4/5 namespace in the v3 census; the census replay rebuilds
+    both domains' spent namespaces, so the other domain's expression sample is declared
+    and read for that replay alone; the v2 preflight stays the bound generator lock
+  policy_contract: D_match freezes seven fields; D_prop selects only among those records;
+    D_cert and D_perf-primary carry the selected record bitwise
+  cost_contract: all controls match the selected policy's measured D_perf cost within
+    1%, or remain honestly unresolved/proven_unavailable outside the risk denominator
+  randomized_contract: the endpoint-weighted expectation is the primary estimand and
+    reports weighted per-UID expected failure mass, the single-hash realization is
+    a separately labelled sensitivity, and every flow row, plot and manifest entry
+    declares its estimand
+  certification_contract: 3 fixed rows x 300 fresh objectives at delta_row .00125,
+    each counts against K=40 and reports the .12 target without result-based stopping
+  resume_contract: objective-level checkpoints and bounded one-hour child segments
+    resume without recomputing completed cells
+  finalization_contract: the bound launcher seals 0444/0555, clears ACLs, rescans
+    after 12 seconds, writes an external sidecar, and exits zero before fresh-root
+    local verification
+  provenance_contract: the deploy is extracted from the commit into a clean detached
+    root with a recorded dirty-path exclusion, each segment binds its own source snapshot,
+    local verification never rewrites a sealed manifest, and the seed-6 namespace
+    is live-registered against the frozen v2 preflight plus the v3 spent census rather
+    than by rebuilding either asset
+  anomaly_contract: the cross-seed primary-risk heterogeneity, lambda-0 dominance,
+    same-cost control ties, methane fit termination and 20/100/500 nested flips are
+    localised from saved per-objective corrections, knobs, failure flows and trajectories
+    joined by UID rather than re-argued
+  science_gate: none; every lambda/risk/availability/control direction is handed back
+    without changing the matrix
+server: 
+remote_dir: 
+command:  -u LLM-SR/scripts/run_certification_run.py
+  runs=methane_seed6 runs.jobs=32
+smoke:
+  n_train: 60
+  n_cal: 40
+  n_prop_per_law: 2
+  n_match_per_law: 1
+  n_cert_per_law: 2
+  n_perf_per_law: 1
+  claim_budgets:
+  - 2
+  - 3
+  - 4
+  anchors:
+  - id: smoke_a0p5
+    fraction: 0.5
+  initial_knob_grid:
+  - 0.0
+  - 1.0
+  - 4.0
+  max_total_iterations: 4
+  max_evaluation_cells: 2000
+numerical_environment:
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  NUMEXPR_NUM_THREADS: '1'
+  PYTHONHASHSEED: '0'
+  NPY_DISABLE_CPU_FEATURES: AVX512F
+  OPENBLAS_CORETYPE: Cooperlake
+run_id: job-methane_seed6-0828-032841

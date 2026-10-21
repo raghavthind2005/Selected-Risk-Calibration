@@ -1,0 +1,94 @@
+{
+ "bindings": {
+  "candidate_lock_sha256": "b4bd9623b66d9416467466e6c17f9afc096fe68239b09b48132dd49a6257e1ae",
+  "frozen_policies_sha256": "610a40cf4bee850c011158435dc35e05d1ff7349565951bfac3a9431f6306ef9",
+  "input_inventory_sha256": "10f9b3f6242ed8128f0ac5d933a6a3da84609e9146a15e155ed746738f27d28f",
+  "method_lock_sha256": "5d964b94554e13e011ad2e3559780b8e099fd6b3d9c13ba28641361742c20b62",
+  "operational_readiness_sha256": "c848bea87fe8ff844f5b01482d81dd67a7554be73a7f5de63df96c54c213b0f3",
+  "perf_cost_support_lock_sha256": "5140f3e102d56e9d8b9d056a5db396a2c2e340828e6d44095e058f39d78f06d4",
+  "perf_primary_cost_lock_sha256": "d46bf0486679a2e9ee8ac75fa0cfa7f21cd36dfc32eff325f01129d1f087de0f",
+  "policy_flow_sha256": "969449248b57b46e1f6a0b0c105e20ceaa5757dc2af00387a7318c56e8f11436",
+  "solver_receipt_sha256": "e2d0cc08c3d1423bc3d6a17b3c03a2e6fa243b3ac79f60ce7840158daf07ed26",
+  "split_receipt_sha256": "53c931a2b0d23a207fbd9a1639cb2ecfb0573a0f1bb749615f297ac4281a3aa0"
+ },
+ "envelope_names": [
+  "seal_spec.json"
+ ],
+ "launcher_finalize_resource_receipt": true,
+ "launcher_required_completion_files": [
+  ".done",
+  "manifest.json",
+  "manifest_v2.json",
+  "split_receipt.json",
+  "method_lock.json",
+  "cost_support_lock.json",
+  "frozen_policies.json",
+  "proposal_cost_lock.json",
+  "candidate_lock.json",
+  "certification_rows.csv",
+  "perf_primary_cost_lock.json",
+  "perf_cost_support_lock.json",
+  "perf_rows.csv",
+  "randomized_primary_rows.csv",
+  "randomized_sensitivity_rows.csv",
+  "policy_flow.json",
+  "availability_rows.csv",
+  "operational_readiness.json",
+  "input_receipt.json",
+  "solver_receipt.json",
+  "matcher/matcher_trace.csv"
+ ],
+ "operational_scale_readiness": {
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 76,
+   "proven_unavailable": 0,
+   "randomized_matched": 6,
+   "unresolved": 2
+  },
+  "fail_reasons": [
+   "unresolved_slots_present"
+  ],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 82,
+  "n_slots": 84,
+  "pass": false,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 39,
+    "randomized_matched": 3
+   },
+   "perf": {
+    "matched": 37,
+    "randomized_matched": 3,
+    "unresolved": 2
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 15,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 10,
+   "perf": 12
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 2
+ },
+ "policy_flow_pass": true,
+ "post_seal_writes_into_this_root_are_forbidden": true,
+ "protocol": "receipt-v2",
+ "run_name": "methane_seed3",
+ "schema_version": 2
+}

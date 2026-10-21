@@ -1,0 +1,642 @@
+{
+ "checks": [
+  {
+   "check": "witness:class_meets_minimum",
+   "detail": {
+    "minimum": "launcher_events",
+    "observed": "launcher_events"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:covers_the_claimed_wall_clock",
+   "detail": {
+    "claimed_wall_clock_seconds": 29335.276532649994,
+    "tolerance_seconds": 1466.7638266324998,
+    "utc_end": "2026-08-26T23:59:06Z",
+    "utc_start": "2026-08-26T14:14:16Z",
+    "window_seconds": 35090.0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:non_degenerate_when_resource_is_claimed",
+   "detail": {
+    "claimed_wall_clock_seconds": 29335.276532649994,
+    "cpu_seconds": 670065.299234,
+    "timestamp_resolution_seconds": 1.0,
+    "window_seconds": 35090.0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:contains_every_resource_segment",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:receipt_enumerates_every_segment",
+   "detail": {
+    "declared": [
+     "methane_seed5--s01-0826-221416",
+     "methane_seed5--s02-0826-230958",
+     "methane_seed5--s03-0827-000534",
+     "methane_seed5--s04-0827-010105",
+     "methane_seed5--s05-0827-015642",
+     "methane_seed5--s06-0827-042746",
+     "methane_seed5--s07-0827-052336",
+     "methane_seed5--s08-0827-061847",
+     "methane_seed5--s09-0827-071426"
+    ],
+    "missing": [],
+    "observed": [
+     "methane_seed5--s01-0826-221416",
+     "methane_seed5--s02-0826-230958",
+     "methane_seed5--s03-0827-000534",
+     "methane_seed5--s04-0827-010105",
+     "methane_seed5--s05-0827-015642",
+     "methane_seed5--s06-0827-042746",
+     "methane_seed5--s07-0827-052336",
+     "methane_seed5--s08-0827-061847",
+     "methane_seed5--s09-0827-071426"
+    ]
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:every_segment_shares_the_declared_source",
+   "detail": {
+    "declared_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "drifted": []
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:aggregate_resource_equals_the_sum_of_segments",
+   "detail": {
+    "receipt_cpu_seconds": 670065.299234,
+    "segment_cpu_seconds": 670065.299234
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:recovered_resource_is_conservative_and_explicit",
+   "detail": {
+    "declared_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "observed_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "problems": []
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "schema:segment_events",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:every_start_has_a_finish",
+   "detail": {
+    "finishes": 9,
+    "starts": 9
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:hash_chain_is_contiguous",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:index_agrees_with_the_event_files",
+   "detail": {
+    "drift": [],
+    "events": 18,
+    "index_rows": 18
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:head_is_bound_by_the_receipt",
+   "detail": {
+    "receipt": "96735bb1671881c6b17af3bca3e518919e9d0492e47b447a2bb9df6af82729e8",
+    "recomputed": "96735bb1671881c6b17af3bca3e518919e9d0492e47b447a2bb9df6af82729e8"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:every_event_census_reproduces",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:start_event_matches_the_launcher_census",
+   "detail": {
+    "launcher_count": 0,
+    "only_in_launcher": [],
+    "self_reported_count": 0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:consecutive_segment_censuses_agree",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:every_payload_file_maps_to_a_writing_segment",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:no_file_appeared_without_a_write_ledger_entry",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "inputs:receipt_matches_the_launcher_inventory",
+   "detail": {
+    "input_receipt": "958dcc7b79c4f0f58e4827f32352fa2cb178b09291e8755fd2a154c0f0d3f4b5",
+    "launcher": "958dcc7b79c4f0f58e4827f32352fa2cb178b09291e8755fd2a154c0f0d3f4b5"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:no_inherited_payload_unless_the_run_declares_a_resume",
+   "detail": {
+    "inherited": 0,
+    "resume_of": null
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "schema:tree_receipt_v2",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:source_binding",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:execution_start",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:execution_finish",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:commit_resolves",
+   "detail": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:every_declared_file_present_at_commit",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:blob_digests_match_binding",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:binding_self_reported_bound",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:runner_is_in_its_own_binding",
+   "detail": {
+    "scripts": [
+     "run_certification_run.py"
+    ],
+    "undeclared": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:no_module_imported_outside_execution_tree",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:tree_digest_reproduces",
+   "detail": "289261302ac0971d753a5a0748ee3cebfa3e07bc85e446ba0c06543f1167f6fc",
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:finish_binds_start_digest",
+   "detail": {
+    "recomputed": "f9ad1eb1785cb905c8580ea7040fd45216f73df887a2677e665bbd5a00781957",
+    "recorded": "f9ad1eb1785cb905c8580ea7040fd45216f73df887a2677e665bbd5a00781957"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:start_binding_digest_matches_source_binding",
+   "detail": {
+    "bound_document": "source_snapshot.json",
+    "recomputed": "ef29eeb1920184eb83229f86a97b34cb7ac17cc7905f61edd2c15a4ffff97fb3",
+    "recorded": "ef29eeb1920184eb83229f86a97b34cb7ac17cc7905f61edd2c15a4ffff97fb3"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:git_witness_agrees_with_the_bound_snapshot",
+   "detail": {
+    "binding_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "missing_segment_snapshots": [],
+    "per_file_drift": [],
+    "snapshot_commits": [
+     "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+    ],
+    "snapshot_problems": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:start_before_finish",
+   "detail": {
+    "end": "2026-08-26T23:59:06Z",
+    "start": "2026-08-26T14:14:16Z"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:no_payload_file_predates_the_start_event",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:exit_code_zero",
+   "detail": 0,
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:reopened_digest_matches_receipt",
+   "detail": {
+    "recomputed": "caeef1fb16e199d82e18d4f8edde9d34a8945894f65cc09526334ca9b05f13e5",
+    "recorded": "caeef1fb16e199d82e18d4f8edde9d34a8945894f65cc09526334ca9b05f13e5"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:file_count_matches",
+   "detail": {
+    "recomputed": 8285,
+    "recorded": 8285
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:per_file_digests_match",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:no_envelope_name_inside_payload",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:receipt_does_not_hash_itself",
+   "detail": [
+    ".done",
+    "execution_finish.json",
+    "execution_start.json",
+    "job.pid",
+    "launch.sh",
+    "manifest.json",
+    "manifest_v2.json",
+    "resource_receipt.json",
+    "seal_spec.json",
+    "train.log"
+   ],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:envelope_members_reproduce",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:no_unrecorded_envelope_member_appeared_after_the_seal",
+   "detail": {
+    "post_seal_allowed": [
+     "local_sync_receipt.json",
+     "source_binding.json",
+     "tree_receipt_v2.json",
+     "verification_report.json"
+    ],
+    "unrecorded": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:bindings_present",
+   "detail": {
+    "candidate_lock_sha256": "96f778dc13404e538bd174a977f7e9a93bf919aec8aa284a6886ad858d455dfa",
+    "distinct_resource_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "distinct_source_commits": [
+     "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+    ],
+    "execution_finish_sha256": "9473106afd7d9ffca626908dbf5ed2f13373bd51da43713d4940d66cc0f42687",
+    "execution_start_sha256": "f9ad1eb1785cb905c8580ea7040fd45216f73df887a2677e665bbd5a00781957",
+    "frozen_policies_sha256": "d78f469e70ec7d19e04dd93d91072567a271493527760e5704eca106b2169291",
+    "input_inventory_sha256": "958dcc7b79c4f0f58e4827f32352fa2cb178b09291e8755fd2a154c0f0d3f4b5",
+    "method_lock_sha256": "77d1d5394beeb218b10891e3ff8e1990ead03048409861d44e149c115dcb1b55",
+    "multi_source_declared": false,
+    "operational_readiness_sha256": "f0d26171eb1d3fd8c1e359164a21fd0f36404f5f3e03afe3e30136b21d7441f9",
+    "perf_cost_support_lock_sha256": "10f89df7a57d99822c92d52d9e8f7726429806c7648a9f16d1cacc7aa0ebaf33",
+    "perf_primary_cost_lock_sha256": "3a59ae60245bc0020a334d68ec8e6d72f2077fe24526b9d1d6262591bf3fb291",
+    "policy_flow_sha256": "fdeae0af6cb19fcbdfae5a6983076b7bbcdeb8f7344fd59cda167c003455bb37",
+    "segment_chain_head_sha256": "96735bb1671881c6b17af3bca3e518919e9d0492e47b447a2bb9df6af82729e8",
+    "segments": [
+     {
+      "cpu_seconds": 98824.22726700001,
+      "jobs": 32,
+      "run_id": "methane_seed5--s01-0826-221416",
+      "segment_index": 1,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 84178.502486,
+      "jobs": 32,
+      "run_id": "methane_seed5--s02-0826-230958",
+      "segment_index": 2,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 56485.434372,
+      "jobs": 32,
+      "run_id": "methane_seed5--s03-0827-000534",
+      "segment_index": 3,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 58511.473314999996,
+      "jobs": 32,
+      "run_id": "methane_seed5--s04-0827-010105",
+      "segment_index": 4,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 105283.180604,
+      "jobs": 32,
+      "run_id": "methane_seed5--s05-0827-015642",
+      "segment_index": 5,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 85665.576313,
+      "jobs": 32,
+      "run_id": "methane_seed5--s06-0827-042746",
+      "segment_index": 6,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 76020.232965,
+      "jobs": 32,
+      "run_id": "methane_seed5--s07-0827-052336",
+      "segment_index": 7,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 75758.104323,
+      "jobs": 32,
+      "run_id": "methane_seed5--s08-0827-061847",
+      "segment_index": 8,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     },
+     {
+      "cpu_seconds": 29338.567589,
+      "jobs": 32,
+      "run_id": "methane_seed5--s09-0827-071426",
+      "segment_index": 9,
+      "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478"
+     }
+    ],
+    "solver_receipt_sha256": "01f8d0f557534bc5765c097c7e6ce4ef013e2ebe9a022e2a1f93d3f20e99ee6c",
+    "source_binding_sha256": "ef29eeb1920184eb83229f86a97b34cb7ac17cc7905f61edd2c15a4ffff97fb3",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "source_tree_sha256": "289261302ac0971d753a5a0748ee3cebfa3e07bc85e446ba0c06543f1167f6fc",
+    "split_receipt_sha256": "1edab85010291c79ddfc8842e7eecc557fbd5f123c540d9c3fc86dc33e6b35e2"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:execution_chronology_gate_passes",
+   "detail": {
+    "execution_chronology": "PASS",
+    "witness_class": "launcher_events"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "scope",
+   "detail": "this run declares no consumer input bindings; the gate applies to provenance runs that gate a downstream run",
+   "gate": "required_input_bindings",
+   "not_applicable": true,
+   "ok": true
+  },
+  {
+   "check": "scope",
+   "detail": "this run publishes no claim-evidence inventory; the gate applies to provenance runs",
+   "gate": "historical_inventory_complete",
+   "not_applicable": true,
+   "ok": true
+  }
+ ],
+ "chronology": {
+  "attribution": {
+   "mode_counts": {
+    "created": 8285
+   },
+   "n_payload_files": 8285,
+   "problems": [],
+   "unattributed": [],
+   "vanished_since_last_census": []
+  },
+  "claimed_wall_clock_seconds": 29335.276532649994,
+  "n_events": 18,
+  "n_resource_segments": 9,
+  "segments": [
+   {
+    "cpu_seconds": 98824.22726700001,
+    "finished_utc": "2026-08-26T15:09:58Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s01-0826-221416",
+    "source": "segment_events/0002",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T14:14:16Z",
+    "wall_clock_seconds": 3340.6946425437927
+   },
+   {
+    "cpu_seconds": 84178.502486,
+    "finished_utc": "2026-08-26T16:05:34Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s02-0826-230958",
+    "source": "segment_events/0004",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T15:09:58Z",
+    "wall_clock_seconds": 3334.7347853183746
+   },
+   {
+    "cpu_seconds": 56485.434372,
+    "finished_utc": "2026-08-26T17:01:05Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s03-0827-000534",
+    "source": "segment_events/0006",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T16:05:34Z",
+    "wall_clock_seconds": 3329.2208154201508
+   },
+   {
+    "cpu_seconds": 58511.473314999996,
+    "finished_utc": "2026-08-26T17:56:42Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s04-0827-010105",
+    "source": "segment_events/0008",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T17:01:05Z",
+    "wall_clock_seconds": 3335.510045528412
+   },
+   {
+    "cpu_seconds": 105283.180604,
+    "finished_utc": "2026-08-26T18:52:20Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s05-0827-015642",
+    "source": "segment_events/0010",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T17:56:43Z",
+    "wall_clock_seconds": 3334.25586271286
+   },
+   {
+    "cpu_seconds": 85665.576313,
+    "finished_utc": "2026-08-26T21:23:35Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s06-0827-042746",
+    "source": "segment_events/0012",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T20:27:48Z",
+    "wall_clock_seconds": 3345.1696059703827
+   },
+   {
+    "cpu_seconds": 76020.232965,
+    "finished_utc": "2026-08-26T22:18:47Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s07-0827-052336",
+    "source": "segment_events/0014",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T21:23:36Z",
+    "wall_clock_seconds": 3307.0469295978546
+   },
+   {
+    "cpu_seconds": 75758.104323,
+    "finished_utc": "2026-08-26T23:14:26Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s08-0827-061847",
+    "source": "segment_events/0016",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T22:18:49Z",
+    "wall_clock_seconds": 3334.9228172302246
+   },
+   {
+    "cpu_seconds": 29338.567589,
+    "finished_utc": "2026-08-26T23:59:06Z",
+    "jobs": 32,
+    "run_id": "methane_seed5--s09-0827-071426",
+    "source": "segment_events/0018",
+    "source_commit": "fd07581a51c39cec00e6dfb2430e89ea2ce96478",
+    "started_utc": "2026-08-26T23:14:28Z",
+    "wall_clock_seconds": 2673.721028327942
+   }
+  ],
+  "window_seconds": 35090.0,
+  "witness_class": "launcher_events"
+ },
+ "chronology_helper_sha256": "adbfcc164df0bc4e5d3d0b8116b43d96158664c18c17a06ee8cea9777b933831",
+ "failures": {
+  "execution_chronology": [],
+  "historical_inventory_complete": [],
+  "protocol_self_check": [],
+  "required_input_bindings": []
+ },
+ "min_witness_class": "launcher_events",
+ "n_checks": 48,
+ "protocol": "receipt-v2",
+ "required": [
+  "protocol_self_check",
+  "execution_chronology"
+ ],
+ "run_root": "results/methane_seed5",
+ "run_verdict": "execution_provenance_verified",
+ "schema_sha256": "f41e44d0119a3e318fa4dc5f5cdb2df5a9d286a680a8f8ceae361159f36afa5a",
+ "schema_version": 2,
+ "verdicts": {
+  "execution_chronology": "PASS",
+  "historical_inventory_complete": "NOT_APPLICABLE",
+  "protocol_self_check": "PASS",
+  "required_input_bindings": "NOT_APPLICABLE"
+ },
+ "verified_at_utc": "2026-08-28T05:28:45Z",
+ "verifier": "scripts/verify_receipt_v2.py",
+ "verifier_sha256": "af72e94256cfcea2f48bd6090ff619eff1da938428facf6eed00aeecc24dfdb9",
+ "workspace_root": ""
+}

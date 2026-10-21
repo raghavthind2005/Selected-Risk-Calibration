@@ -1,0 +1,58 @@
+{
+  "true_form": "ODE: DMA membrane reactor (C-MICL regression.py port)",
+  "reference": "Carrasco & Lima; opyrability repo (per C-MICL appendix)",
+  "cmicl_benchmark": "Ovalle et al., NeurIPS 2025 (arXiv:2506.03531)",
+  "replication": "EXACT: ODE, 5 variables, bounds, and benzene>=50 constraint ported verbatim from C-MICL regression.py",
+  "variables": {
+    "x1": "v0_cm3_h",
+    "x2": "vHe_cm3_h",
+    "x3": "T_K",
+    "x4": "dt_cm",
+    "x5": "L_cm"
+  },
+  "variable_bounds": {
+    "x1": [
+      450.0,
+      1500.0
+    ],
+    "x2": [
+      450.0,
+      1500.0
+    ],
+    "x3": [
+      997.18,
+      1348.12
+    ],
+    "x4": [
+      0.5,
+      2.0
+    ],
+    "x5": [
+      10.0,
+      100.0
+    ]
+  },
+  "feature_columns": [
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5"
+  ],
+  "target_column": "h",
+  "constraint": "h(x) = 50 - FC6H6(x) <= 0  [feasible when benzene outlet flow FC6H6 >= 50]",
+  "objective": "C-MICL: random cost vectors uniform(-4,4) with negatives shrunk /10, + operability constraints",
+  "sigma_noise": 1.0,
+  "seeds": {
+    "train": 42,
+    "calibration": 43,
+    "test_id": 44,
+    "test_clean": 45
+  },
+  "split_sizes": {
+    "train": 800,
+    "calibration": 200,
+    "test_id": 200,
+    "test_clean": 200
+  }
+}

@@ -1,0 +1,486 @@
+{
+ "checks": [
+  {
+   "check": "witness:class_meets_minimum",
+   "detail": {
+    "minimum": "launcher_events",
+    "observed": "launcher_events"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:covers_the_claimed_wall_clock",
+   "detail": {
+    "claimed_wall_clock_seconds": 1427.2494432926178,
+    "tolerance_seconds": 71.36247216463089,
+    "utc_end": "2026-08-31T20:28:19Z",
+    "utc_start": "2026-08-31T20:04:31Z",
+    "window_seconds": 1428.0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:non_degenerate_when_resource_is_claimed",
+   "detail": {
+    "claimed_wall_clock_seconds": 1427.2494432926178,
+    "cpu_seconds": 55392.641446,
+    "timestamp_resolution_seconds": 1.0,
+    "window_seconds": 1428.0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "window:contains_every_resource_segment",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:receipt_enumerates_every_segment",
+   "detail": {
+    "declared": [
+     "second_certification--s01-0901-040431"
+    ],
+    "missing": [],
+    "observed": [
+     "second_certification--s01-0901-040431"
+    ]
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:every_segment_shares_the_declared_source",
+   "detail": {
+    "declared_commit": "89bd8518991c88b2a6a1d88893536c6dc487b546",
+    "drifted": []
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:aggregate_resource_equals_the_sum_of_segments",
+   "detail": {
+    "receipt_cpu_seconds": 55392.641446,
+    "segment_cpu_seconds": 55392.641446
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "segments:recovered_resource_is_conservative_and_explicit",
+   "detail": {
+    "declared_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "observed_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "problems": []
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "schema:segment_events",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:every_start_has_a_finish",
+   "detail": {
+    "finishes": 1,
+    "starts": 1
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:hash_chain_is_contiguous",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:index_agrees_with_the_event_files",
+   "detail": {
+    "drift": [],
+    "events": 2,
+    "index_rows": 2
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "chain:head_is_bound_by_the_receipt",
+   "detail": {
+    "receipt": "4cfe255fb8852422a06bfefff07a2acd2aad761dc7145f746236a0859fa92c28",
+    "recomputed": "4cfe255fb8852422a06bfefff07a2acd2aad761dc7145f746236a0859fa92c28"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:every_event_census_reproduces",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:start_event_matches_the_launcher_census",
+   "detail": {
+    "launcher_count": 0,
+    "only_in_launcher": [],
+    "self_reported_count": 0
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "census:consecutive_segment_censuses_agree",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:every_payload_file_maps_to_a_writing_segment",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:no_file_appeared_without_a_write_ledger_entry",
+   "detail": [],
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "inputs:receipt_matches_the_launcher_inventory",
+   "detail": {
+    "input_receipt": "d333f10372f3331aad1488a814ebb7db72c1e8857e48c3f3df5d9013b3744057",
+    "launcher": "d333f10372f3331aad1488a814ebb7db72c1e8857e48c3f3df5d9013b3744057"
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "attribution:no_inherited_payload_unless_the_run_declares_a_resume",
+   "detail": {
+    "inherited": 0,
+    "resume_of": null
+   },
+   "gate": "execution_chronology",
+   "ok": true
+  },
+  {
+   "check": "schema:tree_receipt_v2",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:source_binding",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:execution_start",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "schema:execution_finish",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:commit_resolves",
+   "detail": "89bd8518991c88b2a6a1d88893536c6dc487b546",
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:every_declared_file_present_at_commit",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:blob_digests_match_binding",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:binding_self_reported_bound",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:runner_is_in_its_own_binding",
+   "detail": {
+    "scripts": [
+     "run_earlier_run.py"
+    ],
+    "undeclared": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:no_module_imported_outside_execution_tree",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:tree_digest_reproduces",
+   "detail": "63ac1f509ba28ebbc10aac13f9e116c8025c9153da055b96ca8c35f089f9b1e8",
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:finish_binds_start_digest",
+   "detail": {
+    "recomputed": "276bc2661c7aa8bf5d5029391bb9b82da562626fb0c96f882621fd3fbf746fbc",
+    "recorded": "276bc2661c7aa8bf5d5029391bb9b82da562626fb0c96f882621fd3fbf746fbc"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:start_binding_digest_matches_source_binding",
+   "detail": {
+    "bound_document": "source_snapshot.json",
+    "recomputed": "28b0f61ee8479b5ae44b7d4d5fc502c4f2de7e058c78b39205f4702a4546421d",
+    "recorded": "28b0f61ee8479b5ae44b7d4d5fc502c4f2de7e058c78b39205f4702a4546421d"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "source:git_witness_agrees_with_the_bound_snapshot",
+   "detail": {
+    "binding_commit": "89bd8518991c88b2a6a1d88893536c6dc487b546",
+    "missing_segment_snapshots": [],
+    "per_file_drift": [],
+    "snapshot_commits": [
+     "89bd8518991c88b2a6a1d88893536c6dc487b546"
+    ],
+    "snapshot_problems": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:start_before_finish",
+   "detail": {
+    "end": "2026-08-31T20:28:19Z",
+    "start": "2026-08-31T20:04:31Z"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:no_payload_file_predates_the_start_event",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:exit_code_zero",
+   "detail": 0,
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:reopened_digest_matches_receipt",
+   "detail": {
+    "recomputed": "87125094993bfdecd5e4b00a9924a5630bc48966794c59b4805bfd0d4164b1bc",
+    "recorded": "87125094993bfdecd5e4b00a9924a5630bc48966794c59b4805bfd0d4164b1bc"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:file_count_matches",
+   "detail": {
+    "recomputed": 971,
+    "recorded": 971
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:per_file_digests_match",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:no_envelope_name_inside_payload",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:receipt_does_not_hash_itself",
+   "detail": [
+    ".done",
+    "execution_finish.json",
+    "execution_start.json",
+    "job.pid",
+    "launch.sh",
+    "manifest.json",
+    "manifest_v2.json",
+    "resource_receipt.json",
+    "seal_spec.json",
+    "train.log"
+   ],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:envelope_members_reproduce",
+   "detail": [],
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:no_unrecorded_envelope_member_appeared_after_the_seal",
+   "detail": {
+    "post_seal_allowed": [
+     "local_sync_receipt.json",
+     "source_binding.json",
+     "tree_receipt_v2.json",
+     "verification_report.json"
+    ],
+    "unrecorded": []
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "payload:bindings_present",
+   "detail": {
+    "cert_objective_receipt_sha256": "510a18cc290422d236216d78282efc4392dd7b73ad1b943d92989b05052959c2",
+    "certification_sha256": "b0e3153ce75542c24b9fab040fc4abb24682d43189271789118e9ebb4cae0600",
+    "context_index_sha256": "c65aa060bfe4cb7e2a10fb0193370350af57bbce7a15f20a3585a380dbdb8879",
+    "distinct_resource_measurements": [
+     "launcher_os_wait4_rusage_children"
+    ],
+    "distinct_source_commits": [
+     "89bd8518991c88b2a6a1d88893536c6dc487b546"
+    ],
+    "execution_finish_sha256": "62d13aa188c62bf7a4fc00bf05bbfc6d9752e5d157778eabc262cd4da60f7a92",
+    "execution_start_sha256": "276bc2661c7aa8bf5d5029391bb9b82da562626fb0c96f882621fd3fbf746fbc",
+    "fixed_row_receipt_sha256": "6e87fe616d536c5a9aec7a665b0c1780a5f3b6aec91b16b23cf2a7805268d854",
+    "input_inventory_sha256": "d333f10372f3331aad1488a814ebb7db72c1e8857e48c3f3df5d9013b3744057",
+    "multi_source_declared": false,
+    "segment_chain_head_sha256": "4cfe255fb8852422a06bfefff07a2acd2aad761dc7145f746236a0859fa92c28",
+    "segments": [
+     {
+      "cpu_seconds": 55392.641446,
+      "jobs": 64,
+      "run_id": "second_certification--s01-0901-040431",
+      "segment_index": 1,
+      "source_commit": "89bd8518991c88b2a6a1d88893536c6dc487b546"
+     }
+    ],
+    "solver_receipt_sha256": "87ef1d7dbf130de829f4bec9418fe3e3febcc1ad2e6906634facb4271e9c429f",
+    "source_binding_sha256": "28b0f61ee8479b5ae44b7d4d5fc502c4f2de7e058c78b39205f4702a4546421d",
+    "source_commit": "89bd8518991c88b2a6a1d88893536c6dc487b546",
+    "source_tree_sha256": "63ac1f509ba28ebbc10aac13f9e116c8025c9153da055b96ca8c35f089f9b1e8"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "event:execution_chronology_gate_passes",
+   "detail": {
+    "execution_chronology": "PASS",
+    "witness_class": "launcher_events"
+   },
+   "gate": "protocol_self_check",
+   "ok": true
+  },
+  {
+   "check": "scope",
+   "detail": "this run declares no consumer input bindings; the gate applies to provenance runs that gate a downstream run",
+   "gate": "required_input_bindings",
+   "not_applicable": true,
+   "ok": true
+  },
+  {
+   "check": "scope",
+   "detail": "this run publishes no claim-evidence inventory; the gate applies to provenance runs",
+   "gate": "historical_inventory_complete",
+   "not_applicable": true,
+   "ok": true
+  }
+ ],
+ "chronology": {
+  "attribution": {
+   "mode_counts": {
+    "created": 971
+   },
+   "n_payload_files": 971,
+   "problems": [],
+   "unattributed": [],
+   "vanished_since_last_census": []
+  },
+  "claimed_wall_clock_seconds": 1427.2494432926178,
+  "n_events": 2,
+  "n_resource_segments": 1,
+  "segments": [
+   {
+    "cpu_seconds": 55392.641446,
+    "finished_utc": "2026-08-31T20:28:19Z",
+    "jobs": 64,
+    "run_id": "second_certification--s01-0901-040431",
+    "source": "segment_events/0002",
+    "source_commit": "89bd8518991c88b2a6a1d88893536c6dc487b546",
+    "started_utc": "2026-08-31T20:04:31Z",
+    "wall_clock_seconds": 1427.2494432926178
+   }
+  ],
+  "window_seconds": 1428.0,
+  "witness_class": "launcher_events"
+ },
+ "chronology_helper_sha256": "adbfcc164df0bc4e5d3d0b8116b43d96158664c18c17a06ee8cea9777b933831",
+ "failures": {
+  "execution_chronology": [],
+  "historical_inventory_complete": [],
+  "protocol_self_check": [],
+  "required_input_bindings": []
+ },
+ "min_witness_class": "launcher_events",
+ "n_checks": 48,
+ "protocol": "receipt-v2",
+ "required": [
+  "protocol_self_check",
+  "execution_chronology"
+ ],
+ "run_root": "results/second_certification",
+ "run_verdict": "execution_provenance_verified",
+ "schema_sha256": "f41e44d0119a3e318fa4dc5f5cdb2df5a9d286a680a8f8ceae361159f36afa5a",
+ "schema_version": 2,
+ "verdicts": {
+  "execution_chronology": "PASS",
+  "historical_inventory_complete": "NOT_APPLICABLE",
+  "protocol_self_check": "PASS",
+  "required_input_bindings": "NOT_APPLICABLE"
+ },
+ "verified_at_utc": "2026-08-31T20:29:44Z",
+ "verifier": "scripts/verify_receipt_v2.py",
+ "verifier_sha256": "af72e94256cfcea2f48bd6090ff619eff1da938428facf6eed00aeecc24dfdb9",
+ "workspace_root": ""
+}

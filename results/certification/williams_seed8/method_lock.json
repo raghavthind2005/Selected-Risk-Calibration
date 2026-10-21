@@ -1,0 +1,243 @@
+{
+ "arms": [
+  "floorscale_lam0",
+  "floorscale_lam0.25",
+  "floorscale_lam0.5",
+  "floorscale_lam0.75",
+  "floorscale_lam1",
+  "pure_scalar",
+  "alpha_tightening",
+  "dose_response",
+  "trust_region_box",
+  "trust_region_knn",
+  "scaled_cmicl",
+  "oc_envelope",
+  "law_blind_envelope",
+  "oc_scalar_floor"
+ ],
+ "cmicl": {
+  "architecture": [
+   32,
+   32
+  ],
+  "identity_strength": 1.102838924492117,
+  "loss": "absolute fresh D_train residual prediction + normalized split conformal",
+  "weight_decay": 0.001
+ },
+ "common_random_numbers": "same target/seed/split/law/objective_id seed across every arm",
+ "coordinate_identity_checks": [
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.0,
+   "left_sha256": "788537b49a69ed51575dd48ed0c202ea4d6af8dca800020078b8393bda487f54",
+   "max_abs_difference": 0.0,
+   "right_sha256": "788537b49a69ed51575dd48ed0c202ea4d6af8dca800020078b8393bda487f54"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.5,
+   "left_sha256": "d9f81cc2b7e514378399e977ba2973cf972c2c92095e8104a90f1a817b11949c",
+   "max_abs_difference": 0.0,
+   "right_sha256": "d9f81cc2b7e514378399e977ba2973cf972c2c92095e8104a90f1a817b11949c"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 1.0,
+   "left_sha256": "9988eff60c176a7a358b4ad72b9e1ae1698bcf0a3b00f5c49faa3a487516677c",
+   "max_abs_difference": 0.0,
+   "right_sha256": "9988eff60c176a7a358b4ad72b9e1ae1698bcf0a3b00f5c49faa3a487516677c"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 2.0,
+   "left_sha256": "7ee694854e27048cf4ea9e62c1a753a65f32b59cbd9403c29a6e869d091204e0",
+   "max_abs_difference": 0.0,
+   "right_sha256": "7ee694854e27048cf4ea9e62c1a753a65f32b59cbd9403c29a6e869d091204e0"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_one_identity_equals_published_exact_cmicl",
+   "knob": 1.0,
+   "left_sha256": "f7ae3954bc66e608fada1db24631b80ad47ce17025a419dcd7740c1e87a80d94",
+   "max_abs_difference": 0.0,
+   "right_sha256": "f7ae3954bc66e608fada1db24631b80ad47ce17025a419dcd7740c1e87a80d94"
+  }
+ ],
+ "diagnostic_only": false,
+ "exact_base_asset": {
+  "outcome_fields_available_to_compute": false,
+  "path": "data/earlier_run.json",
+  "cost_support_contract": {
+   "deployed_shape_fold": 0,
+   "fit_receipt_relpath": "(not shipped)",
+   "fit_receipt_sha256": "b6073f20e81867f8dcab26ef9c805f2602669652281b397432a75553a0998829",
+   "manifest_sha256": "f79488baa64c89e0717518c378e5a6d15d1c612fc27ca03783de9851bfb16bf8",
+   "run_root": "(not shipped)"
+  },
+  "sha256": "6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565",
+  "source_seed": 1
+ },
+ "expression_structure": {
+  "fit_loss": "pinball",
+  "fit_tau": 0.85,
+  "hash": "37da5ce03822d570ed1a530b8d9080a4b7b4222e72d77d615e290ab3ec6272d9",
+  "only_coefficients_refit": true
+ },
+ "family_formula": "g_{lambda,s}(x)=s*((1-lambda)+lambda*u(x)/median_cal(u)); u(x)=max(CMICL_predict(x),epsilon)",
+ "frozen_method_source": {
+  "namespace_module": "LLM-SR/scripts/certification_run.py",
+  "namespace_module_sha256": "ccaad9a67d9afc9325c9b1dcc4a84be1e1a7e3a43b31d32096661c4bd4421ea1",
+  "policy_contract_module": "scripts/frozen_policy_contract.py",
+  "policy_contract_module_sha256": "6658d5b8b00f288844a89e7f6991f24643509d61a16ac582347deabe3885bfdd",
+  "floor_scale_module": "LLM-SR/scripts/run_earlier_run.py",
+  "floor_scale_module_sha256": "5ea823f456f2910f4796f87b6e85bb62d4955504efe7708c8ea7d12d6be61e34",
+  "repair_matcher_module": "LLM-SR/scripts/run_earlier_run.py",
+  "repair_matcher_module_sha256": "cfad9d1bf67bfd8d4b3a51bd3a0540ca33adb437e3f101fe33984b18358cc652",
+  "why": "the correction family, solver effort and matcher are frozen by A2"
+ },
+ "identity_probe_rows": 65,
+ "identity_probe_sha256": "6e0e2a65689a6d4c0f592c4a866b3ea0e6c2496c58213f4e57e15d8d0c29fbf3",
+ "lambda_grid": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "locked_at": "2026-08-29T21:57:53+08:00",
+ "matcher_contract": {
+  "contract": "matcher-terminal-states-v1",
+  "module": "scripts/matcher_state_machine.py",
+  "module_sha256": "b63c07316374529ccb3ae3356c561ab51bc9e515389f20774f944e8a16d1339b",
+  "relative_tolerance": 0.01,
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "terminal_states": [
+   "matched",
+   "randomized_matched",
+   "unresolved",
+   "proven_unavailable"
+  ]
+ },
+ "namespace_id": "williams_seed8",
+ "objective_laws": [
+  "random_linear",
+  "corner_pressure",
+  "boundary_pressure",
+  "residual_hotspot_pressure",
+  "boundary_residual_pressure"
+ ],
+ "policy_contract": {
+  "contract": "frozen-policy-role-contract-v1",
+  "controls_matched_to": "the certified policy's measured D_perf cost",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "only_d_match_searches_a_knob": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ]
+ },
+ "published_provenance": {
+  "expression_manifest": "(not shipped)",
+  "expression_manifest_sha256": "6b906365f1c05390a7c593283bcfd727279c9a9b71e96e76bfbc10e3f290372d",
+  "cost_support_manifest": "(not shipped)",
+  "cost_support_manifest_sha256": "f79488baa64c89e0717518c378e5a6d15d1c612fc27ca03783de9851bfb16bf8"
+ },
+ "run_name": "williams_seed8",
+ "schema_version": 1,
+ "seed": 8,
+ "selector": "minimum D_prop selected risk over the D_match-frozen lambda policies; exact tie chooses smaller lambda",
+ "solver": {
+  "claim_budgets": [
+   20,
+   100,
+   500
+  ],
+  "fd_relative_step": 1e-06,
+  "feasibility_tolerance": 1e-06,
+  "max_iter": 200,
+  "proposal_starts": 500
+ },
+ "source_sha": "5cfc3bf0f2cd57dd334f1477f35fa561cb274c41f6f661cc5f61c734642cf0b8",
+ "target": "williams",
+ "upstream_gates": {
+  "fit_acceptance": {
+   "bound_input": {
+    "path": "(not shipped)",
+    "sha256": "fb3f6e46196c7613f183731918c3e8327fcd6ced4f9dce1ecd47476f4f3c807a"
+   },
+   "classification": "finite_stable",
+   "domains": [
+    "methane",
+    "williams"
+   ],
+   "fit_acceptance_pass": true,
+   "fit_acceptance_run": "earlier_run",
+   "may_be_described_as_converged": false,
+   "seed5_may_launch": true,
+   "target": "williams"
+  },
+  "gate_key": "williams_integration_replay_may_start",
+  "gate_value": true,
+  "provenance_repair": {
+   "all_segment_commits_registered": true,
+   "bound_input": {
+    "path": "(not shipped)",
+    "sha256": "993b8aecced89ddb48da1fe1fe563daa3f0e084f85ce412ff74f7e1130b39d71"
+   },
+   "domains": [
+    "methane",
+    "williams"
+   ],
+   "local_status_outside_run_root": true,
+   "mutation_fixtures": 8,
+   "payload_reproduces": true,
+   "repair_pass": true,
+   "repair_run": "earlier_run"
+  },
+  "published_assets_bound": [
+   "certification_run",
+   "certification_run",
+   "certification_run"
+  ],
+  "certification_report": "(not shipped)",
+  "certification_report_sha256": "fc954b33ecf0375ad052c92a385f73465e4b070d0ff8a6d61173cbbc68d09de7",
+  "certification_report_verdicts": {
+   "derived_figure_metadata": "PASS",
+   "fresh_namespaces": "PASS",
+   "production_finalization": "PASS",
+   "recomputed_estimands": "PASS"
+  },
+  "spent_census": {
+   "asset_id": "certification_run",
+   "bound_input": {
+    "path": "data/certification_run.json",
+    "sha256": "6beb3bf01084bea80c04ffc4ed006343006a301914c18796d53028b71cb40ed6"
+   },
+   "n_namespaces": 10,
+   "payload_sha256": "800be370fa22e5982b852dc7a399e69bcf8d997b41260775dfe597f1993354ae",
+   "spent_census_run": "earlier_run",
+   "spent_seeds": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ }
+}

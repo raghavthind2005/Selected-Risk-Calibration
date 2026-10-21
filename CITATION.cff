@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Selected-Risk-Calibration"
+type: software
+authors:
+  - family-names: Thind
+    given-names: Raghav
+  - family-names: Sun
+    given-names: Youran
+  - family-names: Yang
+    given-names: Haizhao
+repository-code: "https://github.com/raghavthind2005/Selected-Risk-Calibration"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-21

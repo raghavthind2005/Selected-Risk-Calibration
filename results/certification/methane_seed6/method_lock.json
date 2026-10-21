@@ -1,0 +1,241 @@
+{
+ "arms": [
+  "floorscale_lam0",
+  "floorscale_lam0.25",
+  "floorscale_lam0.5",
+  "floorscale_lam0.75",
+  "floorscale_lam1",
+  "pure_scalar",
+  "alpha_tightening",
+  "dose_response",
+  "trust_region_box",
+  "trust_region_knn",
+  "scaled_cmicl",
+  "oc_envelope",
+  "law_blind_envelope",
+  "oc_scalar_floor"
+ ],
+ "cmicl": {
+  "architecture": [
+   32,
+   32
+  ],
+  "identity_strength": 4.656278286796003,
+  "loss": "absolute fresh D_train residual prediction + normalized split conformal",
+  "weight_decay": 0.001
+ },
+ "common_random_numbers": "same target/seed/split/law/objective_id seed across every arm",
+ "coordinate_identity_checks": [
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.0,
+   "left_sha256": "bebbd00c5186db490774206dbde8f16fa57e9b2801d3776bab1fb27ac6cb0594",
+   "max_abs_difference": 0.0,
+   "right_sha256": "bebbd00c5186db490774206dbde8f16fa57e9b2801d3776bab1fb27ac6cb0594"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 0.5,
+   "left_sha256": "a855f144e6c6c312a2216f0d5e2e8bd23ffabf8eb2358cb1bd0477fdf38b27ae",
+   "max_abs_difference": 0.0,
+   "right_sha256": "a855f144e6c6c312a2216f0d5e2e8bd23ffabf8eb2358cb1bd0477fdf38b27ae"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 1.0,
+   "left_sha256": "da16b657c62277ed0dbe9460b07c7e097555a429935d9957aa13095718c0b407",
+   "max_abs_difference": 0.0,
+   "right_sha256": "da16b657c62277ed0dbe9460b07c7e097555a429935d9957aa13095718c0b407"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_zero_equals_pure_scalar",
+   "knob": 2.0,
+   "left_sha256": "9c87af31de97161dcd870bb3f24fef35fb25d7c2be3ada19ef08c7795157075b",
+   "max_abs_difference": 0.0,
+   "right_sha256": "9c87af31de97161dcd870bb3f24fef35fb25d7c2be3ada19ef08c7795157075b"
+  },
+  {
+   "bitwise_equal": true,
+   "coordinate": "lambda_one_identity_equals_published_exact_cmicl",
+   "knob": 1.0,
+   "left_sha256": "cae821fe18bd1523662ba4498fa5d8d7aa78104388bbe4502b13205a999d2d85",
+   "max_abs_difference": 0.0,
+   "right_sha256": "cae821fe18bd1523662ba4498fa5d8d7aa78104388bbe4502b13205a999d2d85"
+  }
+ ],
+ "diagnostic_only": false,
+ "exact_base_asset": {
+  "outcome_fields_available_to_compute": false,
+  "path": "data/earlier_run.json",
+  "cost_support_contract": {
+   "deployed_shape_fold": 0,
+   "fit_receipt_relpath": "(not shipped)",
+   "fit_receipt_sha256": "b12efbd993b228f7cb41f4e8ae56b7b68c24618911d3155f2a69640b461afc04",
+   "manifest_sha256": "f286840dd4a93003bd972dcbe1f537f4736a7643ac39b95d837afdbf588a12ef",
+   "run_root": "(not shipped)"
+  },
+  "sha256": "6a43206efb5f249cb6784802db961363245691f77c8484689e4b7109d0986565",
+  "source_seed": 1
+ },
+ "expression_structure": {
+  "fit_loss": "pinball",
+  "fit_tau": 0.9,
+  "hash": "799f1bd1ecb276490d967776f683d07a959ee5af4ece4bb8f74c4dfac5805f49",
+  "only_coefficients_refit": true
+ },
+ "family_formula": "g_{lambda,s}(x)=s*((1-lambda)+lambda*u(x)/median_cal(u)); u(x)=max(CMICL_predict(x),epsilon)",
+ "frozen_method_source": {
+  "namespace_module": "LLM-SR/scripts/certification_run.py",
+  "namespace_module_sha256": "3d9896220029941c1594c8ab51ea6646c89a7a75d8a242f413831c4168e39aac",
+  "policy_contract_module": "scripts/frozen_policy_contract.py",
+  "policy_contract_module_sha256": "6658d5b8b00f288844a89e7f6991f24643509d61a16ac582347deabe3885bfdd",
+  "floor_scale_module": "LLM-SR/scripts/run_earlier_run.py",
+  "floor_scale_module_sha256": "5ea823f456f2910f4796f87b6e85bb62d4955504efe7708c8ea7d12d6be61e34",
+  "repair_matcher_module": "LLM-SR/scripts/run_earlier_run.py",
+  "repair_matcher_module_sha256": "cfad9d1bf67bfd8d4b3a51bd3a0540ca33adb437e3f101fe33984b18358cc652",
+  "why": "the correction family, solver effort and matcher are frozen by A2"
+ },
+ "identity_probe_rows": 65,
+ "identity_probe_sha256": "2a0c6332c12fa7b8f5a74c2ee136f2893f043d4f45e14f4d5e2aa11c623ca762",
+ "lambda_grid": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "locked_at": "2026-08-28T15:28:56+08:00",
+ "matcher_contract": {
+  "contract": "matcher-terminal-states-v1",
+  "module": "scripts/matcher_state_machine.py",
+  "module_sha256": "b63c07316374529ccb3ae3356c561ab51bc9e515389f20774f944e8a16d1339b",
+  "relative_tolerance": 0.01,
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "terminal_states": [
+   "matched",
+   "randomized_matched",
+   "unresolved",
+   "proven_unavailable"
+  ]
+ },
+ "namespace_id": "methane_seed6",
+ "objective_laws": [
+  "random_linear",
+  "corner_pressure",
+  "boundary_pressure",
+  "residual_hotspot_pressure",
+  "boundary_residual_pressure"
+ ],
+ "policy_contract": {
+  "contract": "frozen-policy-role-contract-v1",
+  "controls_matched_to": "the certified policy's measured D_perf cost",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "only_d_match_searches_a_knob": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ]
+ },
+ "published_provenance": {
+  "expression_manifest": "(not shipped)",
+  "expression_manifest_sha256": "0c8f57617f5b2d10e1eb00fec93f010bc22b8a27d31e66827f49d955c9a64b0c",
+  "cost_support_manifest": "(not shipped)",
+  "cost_support_manifest_sha256": "f286840dd4a93003bd972dcbe1f537f4736a7643ac39b95d837afdbf588a12ef"
+ },
+ "run_name": "methane_seed6",
+ "schema_version": 1,
+ "seed": 6,
+ "selector": "minimum D_prop selected risk over the D_match-frozen lambda policies; exact tie chooses smaller lambda",
+ "solver": {
+  "claim_budgets": [
+   20,
+   100,
+   500
+  ],
+  "fd_relative_step": 1e-06,
+  "feasibility_tolerance": 1e-06,
+  "max_iter": 200,
+  "proposal_starts": 500
+ },
+ "source_sha": "b6e689c75c7a5c4c652f6fba83e0c3bcdbf2744e269fff5e831f940cfc9ea5eb",
+ "target": "methane",
+ "upstream_gates": {
+  "fit_acceptance": {
+   "bound_input": {
+    "path": "(not shipped)",
+    "sha256": "fb3f6e46196c7613f183731918c3e8327fcd6ced4f9dce1ecd47476f4f3c807a"
+   },
+   "classification": "finite_stable",
+   "domains": [
+    "methane",
+    "williams"
+   ],
+   "fit_acceptance_pass": true,
+   "fit_acceptance_run": "earlier_run",
+   "may_be_described_as_converged": false,
+   "seed5_may_launch": true,
+   "target": "methane"
+  },
+  "gate_key": "williams_integration_replay_may_start",
+  "gate_value": true,
+  "provenance_repair": {
+   "all_segment_commits_registered": true,
+   "bound_input": {
+    "path": "(not shipped)",
+    "sha256": "993b8aecced89ddb48da1fe1fe563daa3f0e084f85ce412ff74f7e1130b39d71"
+   },
+   "domains": [
+    "methane",
+    "williams"
+   ],
+   "local_status_outside_run_root": true,
+   "mutation_fixtures": 8,
+   "payload_reproduces": true,
+   "repair_pass": true,
+   "repair_run": "earlier_run"
+  },
+  "published_assets_bound": [
+   "certification_run",
+   "certification_run",
+   "certification_run"
+  ],
+  "certification_report": "(not shipped)",
+  "certification_report_sha256": "fc954b33ecf0375ad052c92a385f73465e4b070d0ff8a6d61173cbbc68d09de7",
+  "certification_report_verdicts": {
+   "derived_figure_metadata": "PASS",
+   "fresh_namespaces": "PASS",
+   "production_finalization": "PASS",
+   "recomputed_estimands": "PASS"
+  },
+  "spent_census": {
+   "asset_id": "certification_run",
+   "bound_input": {
+    "path": "data/certification_run.json",
+    "sha256": "acde953f9514228ae3957ae5db9a7d11b423b49c3b30e8378de7f7d3db7ede13"
+   },
+   "n_namespaces": 6,
+   "payload_sha256": "0784898876199e794e159b61d4daf6f90855ca0fa395017f335fedf27d0f7a80",
+   "spent_census_run": "earlier_run",
+   "spent_seeds": [
+    3,
+    4,
+    5
+   ]
+  }
+ }
+}

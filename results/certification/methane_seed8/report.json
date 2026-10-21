@@ -1,0 +1,633 @@
+{
+ "cert_perf_identity": "3/3",
+ "certification_rows": [
+  {
+   "anchor_fraction": 0.25,
+   "anchor_id": "a0p25",
+   "arm": "floorscale_lam0",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.02203562803274769,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "familywise_k": 40,
+   "knob": 0.6875,
+   "knob_bits": "3fe6000000000000",
+   "match_cost": 0.01081113816993279,
+   "match_relative_error": 0.004316949450934685,
+   "mean_positive_severity": 0.0,
+   "measured": true,
+   "method": "earlier_run",
+   "n": 300,
+   "namespace_id": "methane_seed8",
+   "passes_registered_target": true,
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "selected_lambda": 0.0,
+   "selected_violation_risk": 0.0,
+   "source_sha": "e095b447ef77c807693a3a67e9826a39b2516fc4f2c9d5250a57c5d6bdf22fd0",
+   "status": "measured",
+   "target": "methane",
+   "violation_count": 0
+  },
+  {
+   "anchor_fraction": 0.5,
+   "anchor_id": "a0p50",
+   "arm": "floorscale_lam0",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.02203562803274769,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "familywise_k": 40,
+   "knob": 0.8359375,
+   "knob_bits": "3feac00000000000",
+   "match_cost": 0.01409457011802725,
+   "match_relative_error": 0.002251588594887244,
+   "mean_positive_severity": 0.0,
+   "measured": true,
+   "method": "earlier_run",
+   "n": 300,
+   "namespace_id": "methane_seed8",
+   "passes_registered_target": true,
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "selected_lambda": 0.0,
+   "selected_violation_risk": 0.0,
+   "source_sha": "e095b447ef77c807693a3a67e9826a39b2516fc4f2c9d5250a57c5d6bdf22fd0",
+   "status": "measured",
+   "target": "methane",
+   "violation_count": 0
+  },
+  {
+   "anchor_fraction": 0.75,
+   "anchor_id": "a0p75",
+   "arm": "floorscale_lam0",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.02203562803274769,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "familywise_k": 40,
+   "knob": 0.953125,
+   "knob_bits": "3fee800000000000",
+   "match_cost": 0.017233905774106845,
+   "match_relative_error": 0.009246264265590512,
+   "mean_positive_severity": 0.0,
+   "measured": true,
+   "method": "earlier_run",
+   "n": 300,
+   "namespace_id": "methane_seed8",
+   "passes_registered_target": true,
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "selected_lambda": 0.0,
+   "selected_violation_risk": 0.0,
+   "source_sha": "e095b447ef77c807693a3a67e9826a39b2516fc4f2c9d5250a57c5d6bdf22fd0",
+   "status": "measured",
+   "target": "methane",
+   "violation_count": 0
+  }
+ ],
+ "certification_rows_count_against_familywise_k": true,
+ "claim_ids": [
+  "C2",
+  "C3",
+  "C4"
+ ],
+ "claim_role": "formal_fixed_row_certification_and_same_cost_effect",
+ "completed_at": "2026-08-30T07:13:32+08:00",
+ "diagnostic_only": false,
+ "estimand_adjudication": {
+  "adjudication_policy": "none; the primary count is recomputed from the locked weight and the two endpoint counts, so every remaining problem is a defect",
+  "contract": "frozen-policy-role-contract-v1",
+  "explained": [],
+  "explained_problem_kinds": [],
+  "n_explained": 0,
+  "n_problems": 0,
+  "n_rows_in_the_wrong_schema": 0,
+  "n_unexplained": 0,
+  "pass": true,
+  "unexplained": []
+ },
+ "estimand_separation": {
+  "contract": "frozen-policy-role-contract-v1",
+  "distinct_roles": [
+   "primary",
+   "sensitivity"
+  ],
+  "locked_weights_checked": true,
+  "n_primary_rows": 3,
+  "n_rows_in_the_wrong_schema": 0,
+  "n_sensitivity_rows": 3,
+  "pass": true,
+  "problems": []
+ },
+ "evaluation_subtype": "fresh_exact_policy_equal_cost_seed8_formal",
+ "evaluation_type": "simulator_true_outcome",
+ "n_cal": 300,
+ "n_cert_per_fixed_row": 300,
+ "n_match": 100,
+ "n_measured_certification_rows": 3,
+ "n_perf": 200,
+ "n_prop": 300,
+ "n_train": 1000,
+ "namespace_id": "methane_seed8",
+ "operational_scale_readiness": {
+  "availability_tables": {
+   "class_counts": {
+    "measured": 42,
+    "proven_unavailable": 0,
+    "unresolved": 0
+   },
+   "contract": "availability-schema-v1",
+   "empty_table_is_not_zero_measured_slots": true,
+   "empty_table_meaning": "no_availability_exception_rows",
+   "exception_table_is_a_subset_of_the_ledger": true,
+   "ledger_recomputed_from": "perf_cost_support_lock.json",
+   "n_exception_rows": 0,
+   "n_ledger_rows": 42,
+   "pass": true,
+   "perf_split_declared_counts": {
+    "measurable_slots": 42,
+    "n_slots": 42,
+    "proven_unavailable_slots": 0,
+    "unresolved_slots": 0
+   },
+   "problems": []
+  },
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 78,
+   "proven_unavailable": 0,
+   "randomized_matched": 6,
+   "unresolved": 0
+  },
+  "fail_reasons": [],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 84,
+  "n_slots": 84,
+  "pass": true,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 39,
+    "randomized_matched": 3
+   },
+   "perf": {
+    "matched": 39,
+    "randomized_matched": 3
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 15,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 7,
+   "perf": 6
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 0
+ },
+ "perf_availability": {
+  "measured": 42,
+  "proven_unavailable": 0,
+  "unresolved": 0
+ },
+ "perf_context_rows": [
+  {
+   "arm": "static_conformal",
+   "failure_uid_sha256": "a03f97c389ff7868931808cef627ac73404aaab03eff589bed8c6523a47b02b9",
+   "mean_box_range_cost": 0.0,
+   "mean_positive_severity": 2.33580381384475,
+   "n": 200,
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "selected_violation_risk": 0.245,
+   "target": "methane",
+   "violation_count": 49
+  },
+  {
+   "arm": "published_exact_cmicl",
+   "failure_uid_sha256": "5594b9eac96090fcbb4379952e06e2c1888b26f4822836dff2db714712161e8d",
+   "mean_box_range_cost": 0.014717618265488236,
+   "mean_positive_severity": 0.8827659576420441,
+   "n": 200,
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "selected_violation_risk": 0.215,
+   "target": "methane",
+   "violation_count": 43
+  }
+ ],
+ "perf_empirical_denominator_objectives": 8400,
+ "policy_flow": {
+  "all_controls_matched": true,
+  "chain": [
+   {
+    "anchor_id": "a0p25",
+    "arm": "floorscale_lam0",
+    "certified_cp_upper": 0.02203562803274769,
+    "certified_violation_count": 0,
+    "d_cert_risk": 0.0,
+    "d_perf_primary_risk": 0.0,
+    "d_prop_selector_risk": 0.0,
+    "knob_bits": "3fe6000000000000",
+    "method": "earlier_run",
+    "perf_measured_cost": 0.010658740322313984,
+    "selected_lambda": 0.0
+   },
+   {
+    "anchor_id": "a0p50",
+    "arm": "floorscale_lam0",
+    "certified_cp_upper": 0.02203562803274769,
+    "certified_violation_count": 0,
+    "d_cert_risk": 0.0,
+    "d_perf_primary_risk": 0.0,
+    "d_prop_selector_risk": 0.0,
+    "knob_bits": "3feac00000000000",
+    "method": "earlier_run",
+    "perf_measured_cost": 0.014216959955065573,
+    "selected_lambda": 0.0
+   },
+   {
+    "anchor_id": "a0p75",
+    "arm": "floorscale_lam0",
+    "certified_cp_upper": 0.02203562803274769,
+    "certified_violation_count": 0,
+    "d_cert_risk": 0.0,
+    "d_perf_primary_risk": 0.0,
+    "d_prop_selector_risk": 0.0,
+    "knob_bits": "3fee800000000000",
+    "method": "earlier_run",
+    "perf_measured_cost": 0.01740806346289688,
+    "selected_lambda": 0.0
+   }
+  ],
+  "contract": "frozen-policy-role-contract-v1",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "n_anchors_declared": 3,
+  "n_anchors_with_a_fixed_row": 3,
+  "n_controls": 39,
+  "n_controls_within_tolerance": 39,
+  "pass": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ],
+  "run_name": "methane_seed8",
+  "schema_version": 1,
+  "source_sha": "e095b447ef77c807693a3a67e9826a39b2516fc4f2c9d5250a57c5d6bdf22fd0"
+ },
+ "primary_perf_rows": [
+  {
+   "anchor_cost": 0.010658740322313984,
+   "anchor_id": "a0p25",
+   "arm": "floorscale_lam0",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 43,
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "is_primary": true,
+   "knob": 0.6875,
+   "locked_cost": 0.010658740322313984,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 0.0,
+   "measured_cost": 0.010658740322313984,
+   "measured_relative_error": 0.0,
+   "method": "earlier_run",
+   "n": 200,
+   "risk": 0.0,
+   "role": "primary",
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "static_discordance_count": 49,
+   "target": "methane",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 0,
+   "within_equal_cost_tolerance": true
+  },
+  {
+   "anchor_cost": 0.014216959955065573,
+   "anchor_id": "a0p50",
+   "arm": "floorscale_lam0",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 43,
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "is_primary": true,
+   "knob": 0.8359375,
+   "locked_cost": 0.014216959955065573,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 0.0,
+   "measured_cost": 0.014216959955065571,
+   "measured_relative_error": 1.220178914099506e-16,
+   "method": "earlier_run",
+   "n": 200,
+   "risk": 0.0,
+   "role": "primary",
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "static_discordance_count": 49,
+   "target": "methane",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 0,
+   "within_equal_cost_tolerance": true
+  },
+  {
+   "anchor_cost": 0.01740806346289688,
+   "anchor_id": "a0p75",
+   "arm": "floorscale_lam0",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 43,
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "is_primary": true,
+   "knob": 0.953125,
+   "locked_cost": 0.01740806346289688,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 0.0,
+   "measured_cost": 0.017408063462896875,
+   "measured_relative_error": 1.993011433665961e-16,
+   "method": "earlier_run",
+   "n": 200,
+   "risk": 0.0,
+   "role": "primary",
+   "run_name": "methane_seed8",
+   "seed": 8,
+   "static_discordance_count": 49,
+   "target": "methane",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 0,
+   "within_equal_cost_tolerance": true
+  }
+ ],
+ "proposal_cert_identity": "3/3",
+ "run_name": "methane_seed8",
+ "schema_version": 1,
+ "scientific_result_gate": "none; every result is handed back to the scientist",
+ "seed": 8,
+ "segments": {
+  "current_segment_index": 10,
+  "declared_forced_boundaries": [],
+  "distinct_run_ids_so_far": [
+   "methane_seed8--s01-0829-215733",
+   "methane_seed8--s02-0829-225305",
+   "methane_seed8--s03-0829-234841",
+   "methane_seed8--s04-0830-004355",
+   "methane_seed8--s05-0830-013945",
+   "methane_seed8--s06-0830-031405",
+   "methane_seed8--s07-0830-040942",
+   "methane_seed8--s08-0830-050522",
+   "methane_seed8--s09-0830-060109"
+  ],
+  "forced_boundaries": [],
+  "n_finished_segments_before_this_one": 9,
+  "n_segments_total": 10,
+  "resume_exercised": true
+ },
+ "selected_candidates": [
+  {
+   "anchor_fraction": 0.25,
+   "anchor_id": "a0p25",
+   "lambda_risk_curve": [
+    {
+     "arm": "floorscale_lam0",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.0,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.25",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.25,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.5",
+     "failure_uid_sha256": "c84f94c9421e81a28722a3d5290e0493f11358e6ebe658eb4e24da927000dad3",
+     "lambda": 0.5,
+     "mean_positive_severity": 0.4043859783948962,
+     "selected_violation_risk": 0.16,
+     "violation_count": 48
+    },
+    {
+     "arm": "floorscale_lam0.75",
+     "failure_uid_sha256": "f3b960a3f43e14bffe1bb9f5abea43bdd9b0209d29929954ed42ba5debc16755",
+     "lambda": 0.75,
+     "mean_positive_severity": 0.8424315894643911,
+     "selected_violation_risk": 0.16666666666666666,
+     "violation_count": 50
+    },
+    {
+     "arm": "floorscale_lam1",
+     "failure_uid_sha256": "1bcf1f06f0f0d4ecacd3fc096f5a36fc7a7e79553e933c74b9c74844e05aa78b",
+     "lambda": 1.0,
+     "mean_positive_severity": 1.0464361162465128,
+     "selected_violation_risk": 0.20666666666666667,
+     "violation_count": 62
+    }
+   ],
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 2,
+   "proposal_failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "proposal_n": 300,
+   "proposal_risk": 0.0,
+   "proposal_violation_count": 0,
+   "risk_gap_to_runner_up": 0.16,
+   "runner_up_arm": "floorscale_lam0.5",
+   "runner_up_risk": 0.16,
+   "selected_arm": "floorscale_lam0",
+   "selected_lambda": 0.0,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0",
+    "floorscale_lam0.25"
+   ]
+  },
+  {
+   "anchor_fraction": 0.5,
+   "anchor_id": "a0p50",
+   "lambda_risk_curve": [
+    {
+     "arm": "floorscale_lam0",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.0,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.25",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.25,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.5",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.5,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.75",
+     "failure_uid_sha256": "67c9a3146ea39e2c9163d702b58f65df8c672079524dd6cd1d2d5050cdec4145",
+     "lambda": 0.75,
+     "mean_positive_severity": 0.4401940242423657,
+     "selected_violation_risk": 0.15666666666666668,
+     "violation_count": 47
+    },
+    {
+     "arm": "floorscale_lam1",
+     "failure_uid_sha256": "3e564f4e13680154b97f2810c84b30222e83d41e220ee38178dfd4fd069fbf5a",
+     "lambda": 1.0,
+     "mean_positive_severity": 0.8869217149260692,
+     "selected_violation_risk": 0.18333333333333332,
+     "violation_count": 55
+    }
+   ],
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 3,
+   "proposal_failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "proposal_n": 300,
+   "proposal_risk": 0.0,
+   "proposal_violation_count": 0,
+   "risk_gap_to_runner_up": 0.15666666666666668,
+   "runner_up_arm": "floorscale_lam0.75",
+   "runner_up_risk": 0.15666666666666668,
+   "selected_arm": "floorscale_lam0",
+   "selected_lambda": 0.0,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0",
+    "floorscale_lam0.25",
+    "floorscale_lam0.5"
+   ]
+  },
+  {
+   "anchor_fraction": 0.75,
+   "anchor_id": "a0p75",
+   "lambda_risk_curve": [
+    {
+     "arm": "floorscale_lam0",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.0,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.25",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.25,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.5",
+     "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "lambda": 0.5,
+     "mean_positive_severity": 0.0,
+     "selected_violation_risk": 0.0,
+     "violation_count": 0
+    },
+    {
+     "arm": "floorscale_lam0.75",
+     "failure_uid_sha256": "e6193a82fa90dbf85edd1f3155a9283352218ade06511e56802e5e9c9767e984",
+     "lambda": 0.75,
+     "mean_positive_severity": 0.665533761195352,
+     "selected_violation_risk": 0.0033333333333333335,
+     "violation_count": 1
+    },
+    {
+     "arm": "floorscale_lam1",
+     "failure_uid_sha256": "5f6d1552de55da98a56c4eca867ad07ff7538a986d9bc992a9b53ff2ad10556a",
+     "lambda": 1.0,
+     "mean_positive_severity": 0.6244281750909406,
+     "selected_violation_risk": 0.18,
+     "violation_count": 54
+    }
+   ],
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 3,
+   "proposal_failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "proposal_n": 300,
+   "proposal_risk": 0.0,
+   "proposal_violation_count": 0,
+   "risk_gap_to_runner_up": 0.0033333333333333335,
+   "runner_up_arm": "floorscale_lam0.75",
+   "runner_up_risk": 0.0033333333333333335,
+   "selected_arm": "floorscale_lam0",
+   "selected_lambda": 0.0,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0",
+    "floorscale_lam0.25",
+    "floorscale_lam0.5"
+   ]
+  }
+ ],
+ "solver_counts": {
+  "objective_solve_rows": 77000,
+  "oracle_queries": 56000,
+  "solver_failure_rows": 300,
+  "unique_cells": 2470
+ },
+ "source_file_of_each_number": {
+  "availability_all_slots": "availability_ledger.csv",
+  "availability_exceptions": "availability_rows.csv",
+  "binding_and_displacement": "binding_diagnostics.csv",
+  "certification_rows": "certification_rows.csv",
+  "failure_flow_by_estimand": "failure_flow.csv",
+  "fit_acceptance_and_termination": "fit_acceptance.json",
+  "frozen_policies": "frozen_policies.json",
+  "matcher_terminal_states": "operational_readiness.json",
+  "per_law_failure_flow": "per_law_failure_flow.csv",
+  "per_iteration_matcher_trace": "matcher/matcher_trace.csv",
+  "policy_identity_chain": "policy_flow.json",
+  "primary_and_control_perf_rows": "perf_rows.csv",
+  "proposal_rows": "proposal_rows.csv",
+  "randomized_primary": "randomized_primary_rows.csv",
+  "randomized_sensitivity": "randomized_sensitivity_rows.csv",
+  "selected_candidates": "candidate_lock.json",
+  "solver_counts": "solver_receipt.json",
+  "static_and_exact_context": "perf_context_rows.csv"
+ },
+ "target": "methane"
+}

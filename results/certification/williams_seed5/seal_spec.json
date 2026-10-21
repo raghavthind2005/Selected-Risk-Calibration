@@ -1,0 +1,113 @@
+{
+ "bindings": {
+  "candidate_lock_sha256": "c912dcb84a6bdedae921865ce218b9f5f2cbe67d52f2e76ac6b0cf17b91bba3d",
+  "frozen_policies_sha256": "d4a42b1b8ce197e0d3230fde318a1f7717590b798e51258761149b2d83def5ef",
+  "input_inventory_sha256": "402a8f629e6fda6df2d2e50209810fe561733baf5853463eeb131fbbc7745489",
+  "method_lock_sha256": "d4d43d7bdfc6755d4ead9407de5b61d60716417aceedfab86e413d3508ae99e8",
+  "operational_readiness_sha256": "4e7cc0d1898eab8e941c155a447f49868fee8c8193a98d7af17b71d3159482d1",
+  "perf_cost_support_lock_sha256": "6b739ec6efe3278afb0f9e4e3af110d2834cdebc062939fca7c44f4f690af0d5",
+  "perf_primary_cost_lock_sha256": "3a61d7cf4ea11477d780d8a3d9fd37c263bd158c95bffd3c9d41fe7a0db994c7",
+  "policy_flow_sha256": "99f68b1ca93cd0e5a41a4da967403c3618a70c5b9c6f7cc6105e5576c4d79453",
+  "solver_receipt_sha256": "872b933600cb06a6e478406ea47554b21799032e6b84338d90b5f2d53904a491",
+  "split_receipt_sha256": "292f5f25e549a89f8851b5949bfd648994b1dec0b67df47ae014d2ff0400bbad"
+ },
+ "envelope_names": [
+  "seal_spec.json"
+ ],
+ "launcher_finalize_resource_receipt": true,
+ "launcher_required_completion_files": [
+  ".done",
+  "manifest.json",
+  "manifest_v2.json",
+  "split_receipt.json",
+  "method_lock.json",
+  "cost_support_lock.json",
+  "frozen_policies.json",
+  "proposal_cost_lock.json",
+  "candidate_lock.json",
+  "certification_rows.csv",
+  "perf_primary_cost_lock.json",
+  "perf_cost_support_lock.json",
+  "perf_rows.csv",
+  "randomized_primary_rows.csv",
+  "randomized_sensitivity_rows.csv",
+  "policy_flow.json",
+  "availability_rows.csv",
+  "operational_readiness.json",
+  "input_receipt.json",
+  "solver_receipt.json",
+  "matcher/matcher_trace.csv"
+ ],
+ "operational_scale_readiness": {
+  "availability_tables": {
+   "class_counts": {
+    "measured": 28,
+    "proven_unavailable": 0,
+    "unresolved": 0
+   },
+   "contract": "availability-schema-v1",
+   "empty_table_is_not_zero_measured_slots": true,
+   "empty_table_meaning": "no_availability_exception_rows",
+   "exception_table_is_a_subset_of_the_ledger": true,
+   "ledger_recomputed_from": "perf_cost_support_lock.json",
+   "n_exception_rows": 0,
+   "n_ledger_rows": 28,
+   "pass": true,
+   "perf_split_declared_counts": {
+    "measurable_slots": 28,
+    "n_slots": 28,
+    "proven_unavailable_slots": 0,
+    "unresolved_slots": 0
+   },
+   "problems": []
+  },
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 52,
+   "proven_unavailable": 0,
+   "randomized_matched": 4,
+   "unresolved": 0
+  },
+  "fail_reasons": [],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 56,
+  "n_slots": 56,
+  "pass": true,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 26,
+    "randomized_matched": 2
+   },
+   "perf": {
+    "matched": 26,
+    "randomized_matched": 2
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 10,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 8,
+   "perf": 7
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 0
+ },
+ "policy_flow_pass": true,
+ "post_seal_writes_into_this_root_are_forbidden": true,
+ "protocol": "receipt-v2",
+ "run_name": "williams_seed5",
+ "schema_version": 2
+}

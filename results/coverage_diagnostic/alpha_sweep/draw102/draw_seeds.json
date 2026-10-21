@@ -1,0 +1,11 @@
+{
+ "draw": 102,
+ "seeds": {
+  "global": 102,
+  "mlp_h": 102,
+  "cost": 102
+ },
+ "configs": [
+  "mlp"
+ ]
+}

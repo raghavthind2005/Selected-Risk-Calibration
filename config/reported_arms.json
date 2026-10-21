@@ -1,0 +1,85 @@
+{
+ "_comment": "The arms the paper reports. The shipped result files carry a few further exploratory arms; this file -- and only this file -- decides what the analysis compares. Changing the paper's comparison set is a change to this file, not to any result file. Every analysis script loads it through analysis/_config.py; none of them carries an arm list of its own.",
+ "_excluded_comment": "excluded_arms names any arm that is present in the shipped result files but must never enter a reported comparison. It is empty: every arm the result files still carry is either named by a study roster or reached by no reported item at all. The mechanism stays because it is the only place such an exclusion may be written down.",
+ "method": "law_blind_envelope",
+ "method_label": "SRC correction*",
+ "reported_baselines": [
+  "cmicl",
+  "cmicl_refit",
+  "wmicl_p5",
+  "cqr_scaled",
+  "scalar",
+  "alpha_tightening",
+  "trust_region_box",
+  "trust_region_hull"
+ ],
+ "excluded_arms": [],
+ "budgets": [
+  "cap025",
+  "cap055",
+  "cap100"
+ ],
+ "seeds": [
+  3,
+  5,
+  6,
+  7,
+  9
+ ],
+ "_studies_comment": "Each study reports a different subset, and they are NOT interchangeable: the matched-cost table runs five seeds and omits the hull (which has no admissible cell at any budget), while the certification study runs eight seeds and compares a different control set. Listing them separately is what keeps a script from silently borrowing another study's roster.",
+ "studies": {
+  "matched_cost_table": {
+   "_used_by": "analysis/c1_table1.py",
+   "_note": "trust_region_hull is a reported baseline but has no admissible cell at any budget, so it is not one of this table's columns; see the OptiCL comparison instead.",
+   "benchmarks": ["methane", "williams", "hanoi"],
+   "method": "law_blind_envelope",
+   "baselines": [
+    "cmicl",
+    "cmicl_refit",
+    "wmicl_p5",
+    "cqr_scaled",
+    "scalar",
+    "alpha_tightening",
+    "trust_region_box"
+   ],
+   "budgets": ["cap025", "cap055", "cap100"],
+   "seeds": [3, 5, 6, 7, 9]
+  },
+  "certification_study": {
+   "_used_by": "analysis/c3_table72.py, analysis/c4_fig72.py",
+   "pad": "pure_scalar",
+   "scaled_cmicl": "scaled_cmicl",
+   "controls": [
+    "pure_scalar",
+    "scaled_cmicl",
+    "alpha_tightening",
+    "trust_region_box",
+    "trust_region_knn",
+    "law_blind_envelope"
+   ],
+   "benchmark_prefix": {"methane": "methane", "williams": "williams"},
+   "seeds": [3, 4, 5, 6, 7, 8, 9, 10],
+   "_constants_comment": "The certification constants of section 4: the risk target gamma, the familywise error budget delta, the number of certified margins K, and the number of certification objectives n per margin. The per-margin level is epsilon = delta / K. src/ocl/certify.py reads them from here and carries no defaults of its own.",
+   "gamma": 0.12,
+   "delta": 0.05,
+   "familywise_k": 40,
+   "n_certification": 300
+  },
+  "equal_cost_panel": {
+   "_used_by": "analysis/c5_equalcost.py",
+   "_note": "this panel discovers its comparators from the stored perf rows; the only roster decision it makes is to drop excluded_arms.",
+   "discovers_arms_from_data": true
+  },
+  "opticl_comparison": {
+   "_used_by": "analysis/c6_opticl.py",
+   "hull": "trust_region_hull",
+   "method": "law_blind_envelope",
+   "seeds": [3, 5, 6, 7, 9]
+  },
+  "fcs_diagnostic": {
+   "_used_by": "analysis/c2_fig71.py",
+   "_note": "the FCS diagnostic compares surrogate/conformal CONFIGURATIONS, not arms; it has no roster in the sense the other studies do.",
+   "draws": [0, 101, 102, 103, 104]
+  }
+ }
+}

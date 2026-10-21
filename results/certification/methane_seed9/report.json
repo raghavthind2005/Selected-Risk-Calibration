@@ -1,0 +1,630 @@
+{
+ "cert_perf_identity": "3/3",
+ "certification_rows": [
+  {
+   "anchor_fraction": 0.25,
+   "anchor_id": "a0p25",
+   "arm": "floorscale_lam0",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.27390266649612854,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "4b5160d02f374e797d13aae89faa8cc0fe7ad9c62a85b22d7bcc5396234d2901",
+   "familywise_k": 40,
+   "knob": 0.40625,
+   "knob_bits": "3fda000000000000",
+   "match_cost": 0.0033538632042900626,
+   "match_relative_error": 0.005267718407198448,
+   "mean_positive_severity": 1.3148644624268553,
+   "measured": true,
+   "method": "earlier_run",
+   "n": 300,
+   "namespace_id": "methane_seed9",
+   "passes_registered_target": false,
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "selected_lambda": 0.0,
+   "selected_violation_risk": 0.19666666666666666,
+   "source_sha": "83bf18ad7821492d512e7b0339f92ea30250193ab463b17a8f9bb6bc0e5a62e5",
+   "status": "measured",
+   "target": "methane",
+   "violation_count": 59
+  },
+  {
+   "anchor_fraction": 0.5,
+   "anchor_id": "a0p50",
+   "arm": "floorscale_lam0",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.23655463267460766,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "8aa92b26b7776d5adbb5fd719343593763a4c1515ee338c5fad90a4592afc8b9",
+   "familywise_k": 40,
+   "knob": 0.546875,
+   "knob_bits": "3fe1800000000000",
+   "match_cost": 0.004998900503034375,
+   "match_relative_error": 0.00835569281629126,
+   "mean_positive_severity": 0.9407726207950939,
+   "measured": true,
+   "method": "earlier_run",
+   "n": 300,
+   "namespace_id": "methane_seed9",
+   "passes_registered_target": false,
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "selected_lambda": 0.0,
+   "selected_violation_risk": 0.16333333333333333,
+   "source_sha": "83bf18ad7821492d512e7b0339f92ea30250193ab463b17a8f9bb6bc0e5a62e5",
+   "status": "measured",
+   "target": "methane",
+   "violation_count": 49
+  },
+  {
+   "anchor_fraction": 0.75,
+   "anchor_id": "a0p75",
+   "arm": "floorscale_lam0",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.2327722222541594,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "22395f72881947868cb088fe4078b5558e37ad73b0dd03902aad236a1f9ab069",
+   "familywise_k": 40,
+   "knob": 0.65625,
+   "knob_bits": "3fe5000000000000",
+   "match_cost": 0.006487997757336243,
+   "match_relative_error": 0.008456391015142306,
+   "mean_positive_severity": 0.4447875349946972,
+   "measured": true,
+   "method": "earlier_run",
+   "n": 300,
+   "namespace_id": "methane_seed9",
+   "passes_registered_target": false,
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "selected_lambda": 0.0,
+   "selected_violation_risk": 0.16,
+   "source_sha": "83bf18ad7821492d512e7b0339f92ea30250193ab463b17a8f9bb6bc0e5a62e5",
+   "status": "measured",
+   "target": "methane",
+   "violation_count": 48
+  }
+ ],
+ "certification_rows_count_against_familywise_k": true,
+ "claim_ids": [
+  "C2",
+  "C3",
+  "C4"
+ ],
+ "claim_role": "formal_fixed_row_certification_and_same_cost_effect",
+ "completed_at": "2026-08-30T20:18:18+08:00",
+ "diagnostic_only": false,
+ "estimand_adjudication": {
+  "adjudication_policy": "none; the primary count is recomputed from the locked weight and the two endpoint counts, so every remaining problem is a defect",
+  "contract": "frozen-policy-role-contract-v1",
+  "explained": [],
+  "explained_problem_kinds": [],
+  "n_explained": 0,
+  "n_problems": 0,
+  "n_rows_in_the_wrong_schema": 0,
+  "n_unexplained": 0,
+  "pass": true,
+  "unexplained": []
+ },
+ "estimand_separation": {
+  "contract": "frozen-policy-role-contract-v1",
+  "distinct_roles": [
+   "primary",
+   "sensitivity"
+  ],
+  "locked_weights_checked": true,
+  "n_primary_rows": 3,
+  "n_rows_in_the_wrong_schema": 0,
+  "n_sensitivity_rows": 3,
+  "pass": true,
+  "problems": []
+ },
+ "evaluation_subtype": "fresh_exact_policy_equal_cost_seed9_formal",
+ "evaluation_type": "simulator_true_outcome",
+ "n_cal": 300,
+ "n_cert_per_fixed_row": 300,
+ "n_match": 100,
+ "n_measured_certification_rows": 3,
+ "n_perf": 200,
+ "n_prop": 300,
+ "n_train": 1000,
+ "namespace_id": "methane_seed9",
+ "operational_scale_readiness": {
+  "availability_tables": {
+   "class_counts": {
+    "measured": 42,
+    "proven_unavailable": 0,
+    "unresolved": 0
+   },
+   "contract": "availability-schema-v1",
+   "empty_table_is_not_zero_measured_slots": true,
+   "empty_table_meaning": "no_availability_exception_rows",
+   "exception_table_is_a_subset_of_the_ledger": true,
+   "ledger_recomputed_from": "perf_cost_support_lock.json",
+   "n_exception_rows": 0,
+   "n_ledger_rows": 42,
+   "pass": true,
+   "perf_split_declared_counts": {
+    "measurable_slots": 42,
+    "n_slots": 42,
+    "proven_unavailable_slots": 0,
+    "unresolved_slots": 0
+   },
+   "problems": []
+  },
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 78,
+   "proven_unavailable": 0,
+   "randomized_matched": 6,
+   "unresolved": 0
+  },
+  "fail_reasons": [],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 84,
+  "n_slots": 84,
+  "pass": true,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 39,
+    "randomized_matched": 3
+   },
+   "perf": {
+    "matched": 39,
+    "randomized_matched": 3
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 15,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 9,
+   "perf": 8
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 0
+ },
+ "perf_availability": {
+  "measured": 42,
+  "proven_unavailable": 0,
+  "unresolved": 0
+ },
+ "perf_context_rows": [
+  {
+   "arm": "static_conformal",
+   "failure_uid_sha256": "225ecad37a055e2f4b8a0c0d68b34f43d3218e0d4d5b2ba95fcc2ada058ce597",
+   "mean_box_range_cost": 0.0,
+   "mean_positive_severity": 2.3547685422917133,
+   "n": 200,
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "selected_violation_risk": 0.225,
+   "target": "methane",
+   "violation_count": 45
+  },
+  {
+   "arm": "published_exact_cmicl",
+   "failure_uid_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "mean_box_range_cost": 0.012775929694725754,
+   "mean_positive_severity": 0.0,
+   "n": 200,
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "selected_violation_risk": 0.0,
+   "target": "methane",
+   "violation_count": 0
+  }
+ ],
+ "perf_empirical_denominator_objectives": 8400,
+ "policy_flow": {
+  "all_controls_matched": true,
+  "chain": [
+   {
+    "anchor_id": "a0p25",
+    "arm": "floorscale_lam0",
+    "certified_cp_upper": 0.27390266649612854,
+    "certified_violation_count": 59,
+    "d_cert_risk": 0.19666666666666666,
+    "d_perf_primary_risk": 0.2,
+    "d_prop_selector_risk": 0.21333333333333335,
+    "knob_bits": "3fda000000000000",
+    "method": "earlier_run",
+    "perf_measured_cost": 0.0029747639073437995,
+    "selected_lambda": 0.0
+   },
+   {
+    "anchor_id": "a0p50",
+    "arm": "floorscale_lam0",
+    "certified_cp_upper": 0.23655463267460766,
+    "certified_violation_count": 49,
+    "d_cert_risk": 0.16333333333333333,
+    "d_perf_primary_risk": 0.165,
+    "d_prop_selector_risk": 0.17333333333333334,
+    "knob_bits": "3fe1800000000000",
+    "method": "earlier_run",
+    "perf_measured_cost": 0.004473944797199484,
+    "selected_lambda": 0.0
+   },
+   {
+    "anchor_id": "a0p75",
+    "arm": "floorscale_lam0",
+    "certified_cp_upper": 0.2327722222541594,
+    "certified_violation_count": 48,
+    "d_cert_risk": 0.16,
+    "d_perf_primary_risk": 0.16,
+    "d_prop_selector_risk": 0.17333333333333334,
+    "knob_bits": "3fe5000000000000",
+    "method": "earlier_run",
+    "perf_measured_cost": 0.00581759234088682,
+    "selected_lambda": 0.0
+   }
+  ],
+  "contract": "frozen-policy-role-contract-v1",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "n_anchors_declared": 3,
+  "n_anchors_with_a_fixed_row": 3,
+  "n_controls": 39,
+  "n_controls_within_tolerance": 39,
+  "pass": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ],
+  "run_name": "methane_seed9",
+  "schema_version": 1,
+  "source_sha": "83bf18ad7821492d512e7b0339f92ea30250193ab463b17a8f9bb6bc0e5a62e5"
+ },
+ "primary_perf_rows": [
+  {
+   "anchor_cost": 0.0029747639073437995,
+   "anchor_id": "a0p25",
+   "arm": "floorscale_lam0",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 40,
+   "failure_uid_sha256": "59b5b6f61a0438c10b00c26b1370dd5c807837ee48a04e467e711ff6ec5676ba",
+   "is_primary": true,
+   "knob": 0.40625,
+   "locked_cost": 0.0029747639073437995,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 1.3696699655796827,
+   "measured_cost": 0.0029747639073438,
+   "measured_relative_error": 1.457866514796599e-16,
+   "method": "earlier_run",
+   "n": 200,
+   "risk": 0.2,
+   "role": "primary",
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "static_discordance_count": 7,
+   "target": "methane",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 40,
+   "within_equal_cost_tolerance": true
+  },
+  {
+   "anchor_cost": 0.004473944797199484,
+   "anchor_id": "a0p50",
+   "arm": "floorscale_lam0",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 33,
+   "failure_uid_sha256": "2f6214893cff99786a5313397ac4493a2bc66a9c0bc6893bd49b077ab71722f0",
+   "is_primary": true,
+   "knob": 0.546875,
+   "locked_cost": 0.004473944797199484,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 0.9566176776500497,
+   "measured_cost": 0.004473944797199483,
+   "measured_relative_error": 1.9386956641292005e-16,
+   "method": "earlier_run",
+   "n": 200,
+   "risk": 0.165,
+   "role": "primary",
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "static_discordance_count": 12,
+   "target": "methane",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 33,
+   "within_equal_cost_tolerance": true
+  },
+  {
+   "anchor_cost": 0.00581759234088682,
+   "anchor_id": "a0p75",
+   "arm": "floorscale_lam0",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 32,
+   "failure_uid_sha256": "9f345ada202bf1b27f387c65c2c4ed7ff4de937bf2909bafcf0dd72d26b6075f",
+   "is_primary": true,
+   "knob": 0.65625,
+   "locked_cost": 0.00581759234088682,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 0.4603067036864017,
+   "measured_cost": 0.005817592340886819,
+   "measured_relative_error": 2.9818580854917207e-16,
+   "method": "earlier_run",
+   "n": 200,
+   "risk": 0.16,
+   "role": "primary",
+   "run_name": "methane_seed9",
+   "seed": 9,
+   "static_discordance_count": 13,
+   "target": "methane",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 32,
+   "within_equal_cost_tolerance": true
+  }
+ ],
+ "proposal_cert_identity": "3/3",
+ "run_name": "methane_seed9",
+ "schema_version": 1,
+ "scientific_result_gate": "none; every result is handed back to the scientist",
+ "seed": 9,
+ "segments": {
+  "current_segment_index": 11,
+  "declared_forced_boundaries": [],
+  "distinct_run_ids_so_far": [
+   "methane_seed9--s01-0830-105301",
+   "methane_seed9--s02-0830-114807",
+   "methane_seed9--s03-0830-124343",
+   "methane_seed9--s04-0830-133918",
+   "methane_seed9--s05-0830-143452",
+   "methane_seed9--s06-0830-153333",
+   "methane_seed9--s07-0830-162902",
+   "methane_seed9--s08-0830-172440",
+   "methane_seed9--s09-0830-182022",
+   "methane_seed9--s10-0830-191558"
+  ],
+  "forced_boundaries": [],
+  "n_finished_segments_before_this_one": 10,
+  "n_segments_total": 11,
+  "resume_exercised": true
+ },
+ "selected_candidates": [
+  {
+   "anchor_fraction": 0.25,
+   "anchor_id": "a0p25",
+   "lambda_risk_curve": [
+    {
+     "arm": "floorscale_lam0",
+     "failure_uid_sha256": "12621b833045c2d2cede6a1a83d98f1c5f2db598dc19e85c60dd20ee120d66b9",
+     "lambda": 0.0,
+     "mean_positive_severity": 1.2711644831077868,
+     "selected_violation_risk": 0.21333333333333335,
+     "violation_count": 64
+    },
+    {
+     "arm": "floorscale_lam0.25",
+     "failure_uid_sha256": "12621b833045c2d2cede6a1a83d98f1c5f2db598dc19e85c60dd20ee120d66b9",
+     "lambda": 0.25,
+     "mean_positive_severity": 1.4202025134622047,
+     "selected_violation_risk": 0.21333333333333335,
+     "violation_count": 64
+    },
+    {
+     "arm": "floorscale_lam0.5",
+     "failure_uid_sha256": "0f1e17a2cf8e106ec32a6c0e1c1c79fba8d38403aa351994ca67ee43eeaa050d",
+     "lambda": 0.5,
+     "mean_positive_severity": 1.567521286965562,
+     "selected_violation_risk": 0.21666666666666667,
+     "violation_count": 65
+    },
+    {
+     "arm": "floorscale_lam0.75",
+     "failure_uid_sha256": "fbbe9d2d2da7b9e91003c7d121abd96dc9be939ec7a76ab8772cec4de7e2746a",
+     "lambda": 0.75,
+     "mean_positive_severity": 1.6594493409598527,
+     "selected_violation_risk": 0.22,
+     "violation_count": 66
+    },
+    {
+     "arm": "floorscale_lam1",
+     "failure_uid_sha256": "b0ce80cfb5764bbb7097ca9043cdc9c7729514d1f176889d98d4e590de242582",
+     "lambda": 1.0,
+     "mean_positive_severity": 1.7158919324159778,
+     "selected_violation_risk": 0.22666666666666666,
+     "violation_count": 68
+    }
+   ],
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 2,
+   "proposal_failure_uid_sha256": "12621b833045c2d2cede6a1a83d98f1c5f2db598dc19e85c60dd20ee120d66b9",
+   "proposal_n": 300,
+   "proposal_risk": 0.21333333333333335,
+   "proposal_violation_count": 64,
+   "risk_gap_to_runner_up": 0.003333333333333327,
+   "runner_up_arm": "floorscale_lam0.5",
+   "runner_up_risk": 0.21666666666666667,
+   "selected_arm": "floorscale_lam0",
+   "selected_lambda": 0.0,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0",
+    "floorscale_lam0.25"
+   ]
+  },
+  {
+   "anchor_fraction": 0.5,
+   "anchor_id": "a0p50",
+   "lambda_risk_curve": [
+    {
+     "arm": "floorscale_lam0",
+     "failure_uid_sha256": "3805e5c725c126f270ae95422632a4d939b5c6d35bf92d0363997ac9924caf86",
+     "lambda": 0.0,
+     "mean_positive_severity": 0.9397811991658102,
+     "selected_violation_risk": 0.17333333333333334,
+     "violation_count": 52
+    },
+    {
+     "arm": "floorscale_lam0.25",
+     "failure_uid_sha256": "f8af3aff586dbb13a0fdfa07fe1757d1df9af54cc24c229bb5519397ed605d0d",
+     "lambda": 0.25,
+     "mean_positive_severity": 0.9758121560823724,
+     "selected_violation_risk": 0.20666666666666667,
+     "violation_count": 62
+    },
+    {
+     "arm": "floorscale_lam0.5",
+     "failure_uid_sha256": "0507d890f32ccbe8c4fa2adab8adc0d4f51bebd408ca110bfc356fa482eccd8b",
+     "lambda": 0.5,
+     "mean_positive_severity": 1.1610280251314662,
+     "selected_violation_risk": 0.21333333333333335,
+     "violation_count": 64
+    },
+    {
+     "arm": "floorscale_lam0.75",
+     "failure_uid_sha256": "0507d890f32ccbe8c4fa2adab8adc0d4f51bebd408ca110bfc356fa482eccd8b",
+     "lambda": 0.75,
+     "mean_positive_severity": 1.3047106179217687,
+     "selected_violation_risk": 0.21333333333333335,
+     "violation_count": 64
+    },
+    {
+     "arm": "floorscale_lam1",
+     "failure_uid_sha256": "b643b530e32439f25bc4ca1f704cf3f7b35e4d372eb137eeceb2019eedb0a120",
+     "lambda": 1.0,
+     "mean_positive_severity": 1.4046694533393642,
+     "selected_violation_risk": 0.21666666666666667,
+     "violation_count": 65
+    }
+   ],
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 1,
+   "proposal_failure_uid_sha256": "3805e5c725c126f270ae95422632a4d939b5c6d35bf92d0363997ac9924caf86",
+   "proposal_n": 300,
+   "proposal_risk": 0.17333333333333334,
+   "proposal_violation_count": 52,
+   "risk_gap_to_runner_up": 0.033333333333333326,
+   "runner_up_arm": "floorscale_lam0.25",
+   "runner_up_risk": 0.20666666666666667,
+   "selected_arm": "floorscale_lam0",
+   "selected_lambda": 0.0,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0"
+   ]
+  },
+  {
+   "anchor_fraction": 0.75,
+   "anchor_id": "a0p75",
+   "lambda_risk_curve": [
+    {
+     "arm": "floorscale_lam0",
+     "failure_uid_sha256": "3805e5c725c126f270ae95422632a4d939b5c6d35bf92d0363997ac9924caf86",
+     "lambda": 0.0,
+     "mean_positive_severity": 0.43145845981598663,
+     "selected_violation_risk": 0.17333333333333334,
+     "violation_count": 52
+    },
+    {
+     "arm": "floorscale_lam0.25",
+     "failure_uid_sha256": "c32a2d2e3263bc23686dca8ed5517989ef7cec138a56cd8aa5d5d37b911ef1c1",
+     "lambda": 0.25,
+     "mean_positive_severity": 0.7009020743596939,
+     "selected_violation_risk": 0.17666666666666667,
+     "violation_count": 53
+    },
+    {
+     "arm": "floorscale_lam0.5",
+     "failure_uid_sha256": "c32a2d2e3263bc23686dca8ed5517989ef7cec138a56cd8aa5d5d37b911ef1c1",
+     "lambda": 0.5,
+     "mean_positive_severity": 0.9178351506537704,
+     "selected_violation_risk": 0.17666666666666667,
+     "violation_count": 53
+    },
+    {
+     "arm": "floorscale_lam0.75",
+     "failure_uid_sha256": "0507d890f32ccbe8c4fa2adab8adc0d4f51bebd408ca110bfc356fa482eccd8b",
+     "lambda": 0.75,
+     "mean_positive_severity": 0.8797009449480242,
+     "selected_violation_risk": 0.21333333333333335,
+     "violation_count": 64
+    },
+    {
+     "arm": "floorscale_lam1",
+     "failure_uid_sha256": "a4144b42f29bc908c470ce338e74edbf544c0cb19ab44a8bf8d3807360a4cb9c",
+     "lambda": 1.0,
+     "mean_positive_severity": 1.034879581500542,
+     "selected_violation_risk": 0.21,
+     "violation_count": 63
+    }
+   ],
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 1,
+   "proposal_failure_uid_sha256": "3805e5c725c126f270ae95422632a4d939b5c6d35bf92d0363997ac9924caf86",
+   "proposal_n": 300,
+   "proposal_risk": 0.17333333333333334,
+   "proposal_violation_count": 52,
+   "risk_gap_to_runner_up": 0.003333333333333327,
+   "runner_up_arm": "floorscale_lam0.25",
+   "runner_up_risk": 0.17666666666666667,
+   "selected_arm": "floorscale_lam0",
+   "selected_lambda": 0.0,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0"
+   ]
+  }
+ ],
+ "solver_counts": {
+  "objective_solve_rows": 83000,
+  "oracle_queries": 56000,
+  "solver_failure_rows": 300,
+  "unique_cells": 2685
+ },
+ "source_file_of_each_number": {
+  "availability_all_slots": "availability_ledger.csv",
+  "availability_exceptions": "availability_rows.csv",
+  "binding_and_displacement": "binding_diagnostics.csv",
+  "certification_rows": "certification_rows.csv",
+  "failure_flow_by_estimand": "failure_flow.csv",
+  "fit_acceptance_and_termination": "fit_acceptance.json",
+  "frozen_policies": "frozen_policies.json",
+  "matcher_terminal_states": "operational_readiness.json",
+  "per_law_failure_flow": "per_law_failure_flow.csv",
+  "per_iteration_matcher_trace": "matcher/matcher_trace.csv",
+  "policy_identity_chain": "policy_flow.json",
+  "primary_and_control_perf_rows": "perf_rows.csv",
+  "proposal_rows": "proposal_rows.csv",
+  "randomized_primary": "randomized_primary_rows.csv",
+  "randomized_sensitivity": "randomized_sensitivity_rows.csv",
+  "selected_candidates": "candidate_lock.json",
+  "solver_counts": "solver_receipt.json",
+  "static_and_exact_context": "perf_context_rows.csv"
+ },
+ "target": "methane"
+}

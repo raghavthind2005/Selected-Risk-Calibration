@@ -1,0 +1,91 @@
+{
+ "bindings": {
+  "candidate_lock_sha256": "2d8d1ea426373283e4750dd50390fcca01249e521cfd2e67c941c3f145472384",
+  "frozen_policies_sha256": "05edec2a8a9575834f562ee5456a1086816dc1793d0c009f84f79d08e40cbf6a",
+  "input_inventory_sha256": "9d3e3c96d7a53b5daafc13a9d4dc615e3ea000cf4dd29e9286584e7bfa2c69f1",
+  "method_lock_sha256": "0a6bf776e53780deeba83298abe857055ffca93fd07ae46845b5fa42a35c75ef",
+  "operational_readiness_sha256": "2f9fd44eb2183b81d4e10280c4937f1888cd903128a81c6888c5773332bf8fb7",
+  "perf_cost_support_lock_sha256": "8f983c26e3a16960cedfacb20a9d82405e31f5404d017f1de101cd988cca4860",
+  "perf_primary_cost_lock_sha256": "8a0816d53c659268b1102f87f57e53d9301a13df31cf6af68734a0bfbf05944e",
+  "policy_flow_sha256": "254c276104040464a2c4132e034ca66bd244bd2ff1f0aa1b0f939eabb18e9284",
+  "solver_receipt_sha256": "0f7c3419563904f0cb9da0df34e1b7b3fdcaf761f22689f3fb51b4976ae2a2c8",
+  "split_receipt_sha256": "b481248b6640b84766da6d99887d91e3958ae0ed766618fcc3c2128b5e9119c9"
+ },
+ "envelope_names": [
+  "seal_spec.json"
+ ],
+ "launcher_finalize_resource_receipt": true,
+ "launcher_required_completion_files": [
+  ".done",
+  "manifest.json",
+  "manifest_v2.json",
+  "split_receipt.json",
+  "method_lock.json",
+  "cost_support_lock.json",
+  "frozen_policies.json",
+  "proposal_cost_lock.json",
+  "candidate_lock.json",
+  "certification_rows.csv",
+  "perf_primary_cost_lock.json",
+  "perf_cost_support_lock.json",
+  "perf_rows.csv",
+  "randomized_primary_rows.csv",
+  "randomized_sensitivity_rows.csv",
+  "policy_flow.json",
+  "availability_rows.csv",
+  "operational_readiness.json",
+  "input_receipt.json",
+  "solver_receipt.json",
+  "matcher/matcher_trace.csv"
+ ],
+ "operational_scale_readiness": {
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 52,
+   "proven_unavailable": 0,
+   "randomized_matched": 4,
+   "unresolved": 0
+  },
+  "fail_reasons": [],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 56,
+  "n_slots": 56,
+  "pass": true,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 26,
+    "randomized_matched": 2
+   },
+   "perf": {
+    "matched": 26,
+    "randomized_matched": 2
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 10,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 8,
+   "perf": 8
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 0
+ },
+ "policy_flow_pass": true,
+ "post_seal_writes_into_this_root_are_forbidden": true,
+ "protocol": "receipt-v2",
+ "run_name": "williams_seed3",
+ "schema_version": 2
+}

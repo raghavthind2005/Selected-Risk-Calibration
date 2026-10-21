@@ -1,0 +1,403 @@
+{
+ "cert_perf_identity": "2/2",
+ "certification_rows": [
+  {
+   "anchor_fraction": 0.3333333333333333,
+   "anchor_id": "a0p333",
+   "arm": "floorscale_lam0.75",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.255332133365321,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "ce74d28868440f1a72b18d1e22d192e8f49a4fd9691bdf0e5a7783623df54673",
+   "familywise_k": 40,
+   "knob": 1.6484375,
+   "knob_bits": "3ffa600000000000",
+   "match_cost": 0.004482535258715876,
+   "match_relative_error": 0.0012326414827095499,
+   "mean_positive_severity": 1.7576064519844536,
+   "measured": true,
+   "method": "floor_scale_theta0.75__k1p6484375",
+   "n": 300,
+   "namespace_id": "williams_seed5",
+   "passes_registered_target": false,
+   "run_name": "williams_seed5",
+   "seed": 5,
+   "selected_lambda": 0.75,
+   "selected_violation_risk": 0.18,
+   "source_sha": "7d0e65a6d6ddce9b85e373429027380c1cd4765afbad729b0a2b6f61ed273794",
+   "status": "measured",
+   "target": "williams",
+   "violation_count": 54
+  },
+  {
+   "anchor_fraction": 0.6666666666666666,
+   "anchor_id": "a0p667",
+   "arm": "floorscale_lam0.75",
+   "counts_against_familywise_k": true,
+   "cp_upper": 0.0866468523893055,
+   "delta_row": 0.00125,
+   "diagnostic_only": false,
+   "failure_uid_sha256": "0739399a152441ce0a614d492671aa964da5077db0bf7bc93436793ca1125766",
+   "familywise_k": 40,
+   "knob": 2.015625,
+   "knob_bits": "4000200000000000",
+   "match_cost": 0.007923307680844186,
+   "match_relative_error": 0.003551239207254122,
+   "mean_positive_severity": 0.37622970081486,
+   "measured": true,
+   "method": "floor_scale_theta0.75__k2p015625",
+   "n": 300,
+   "namespace_id": "williams_seed5",
+   "passes_registered_target": true,
+   "run_name": "williams_seed5",
+   "seed": 5,
+   "selected_lambda": 0.75,
+   "selected_violation_risk": 0.04,
+   "source_sha": "7d0e65a6d6ddce9b85e373429027380c1cd4765afbad729b0a2b6f61ed273794",
+   "status": "measured",
+   "target": "williams",
+   "violation_count": 12
+  }
+ ],
+ "certification_rows_count_against_familywise_k": true,
+ "claim_ids": [
+  "C2",
+  "C3",
+  "C4"
+ ],
+ "claim_role": "formal_fixed_row_certification_and_same_cost_effect",
+ "completed_at": "2026-08-27T06:11:24+08:00",
+ "diagnostic_only": false,
+ "estimand_adjudication": {
+  "adjudication_policy": "none; the primary count is recomputed from the locked weight and the two endpoint counts, so every remaining problem is a defect",
+  "contract": "frozen-policy-role-contract-v1",
+  "explained": [],
+  "explained_problem_kinds": [],
+  "n_explained": 0,
+  "n_problems": 0,
+  "n_rows_in_the_wrong_schema": 0,
+  "n_unexplained": 0,
+  "pass": true,
+  "unexplained": []
+ },
+ "estimand_separation": {
+  "contract": "frozen-policy-role-contract-v1",
+  "distinct_roles": [
+   "primary",
+   "sensitivity"
+  ],
+  "locked_weights_checked": true,
+  "n_primary_rows": 2,
+  "n_rows_in_the_wrong_schema": 0,
+  "n_sensitivity_rows": 2,
+  "pass": true,
+  "problems": []
+ },
+ "evaluation_subtype": "fresh_exact_policy_equal_cost_seed5_formal",
+ "evaluation_type": "simulator_true_outcome",
+ "n_cal": 1000,
+ "n_cert_per_fixed_row": 300,
+ "n_match": 100,
+ "n_measured_certification_rows": 2,
+ "n_perf": 200,
+ "n_prop": 300,
+ "n_train": 2000,
+ "namespace_id": "williams_seed5",
+ "operational_scale_readiness": {
+  "availability_tables": {
+   "class_counts": {
+    "measured": 28,
+    "proven_unavailable": 0,
+    "unresolved": 0
+   },
+   "contract": "availability-schema-v1",
+   "empty_table_is_not_zero_measured_slots": true,
+   "empty_table_meaning": "no_availability_exception_rows",
+   "exception_table_is_a_subset_of_the_ledger": true,
+   "ledger_recomputed_from": "perf_cost_support_lock.json",
+   "n_exception_rows": 0,
+   "n_ledger_rows": 28,
+   "pass": true,
+   "perf_split_declared_counts": {
+    "measurable_slots": 28,
+    "n_slots": 28,
+    "proven_unavailable_slots": 0,
+    "unresolved_slots": 0
+   },
+   "problems": []
+  },
+  "contract": "matcher-terminal-states-v1",
+  "counts": {
+   "matched": 52,
+   "proven_unavailable": 0,
+   "randomized_matched": 4,
+   "unresolved": 0
+  },
+  "fail_reasons": [],
+  "matched_outside_tolerance": [],
+  "measurable_slots": 56,
+  "n_slots": 56,
+  "pass": true,
+  "per_split_terminal_counts": {
+   "match": {
+    "matched": 26,
+    "randomized_matched": 2
+   },
+   "perf": {
+    "matched": 26,
+    "randomized_matched": 2
+   }
+  },
+  "prop_split": {
+   "n_bisection_iterations": 0,
+   "n_candidate_policies": 10,
+   "searched_a_knob": false,
+   "why": "D_prop evaluates D_match-frozen policies; it never matches"
+  },
+  "proven_unavailable_slots": 0,
+  "recorded_vs_recomputed_disagreements": [],
+  "iteration_cap": 12,
+  "iteration_cap_is_not_convergence": true,
+  "iterations_completed": {
+   "match": 8,
+   "perf": 7
+  },
+  "schema_version": 1,
+  "stuck_brackets": {
+   "match": [],
+   "perf": []
+  },
+  "tolerance": 0.01,
+  "unresolved_slots": 0
+ },
+ "perf_availability": {
+  "measured": 28,
+  "proven_unavailable": 0,
+  "unresolved": 0
+ },
+ "perf_context_rows": [
+  {
+   "arm": "static_conformal",
+   "failure_uid_sha256": "f7a85fb6e9a3bc94d6aef7215ca890e87a3798ab788c6d37ec227ce1ad20c75f",
+   "mean_box_range_cost": 0.0,
+   "mean_positive_severity": 3.6022886885962295,
+   "n": 200,
+   "run_name": "williams_seed5",
+   "seed": 5,
+   "selected_violation_risk": 0.195,
+   "target": "williams",
+   "violation_count": 39
+  },
+  {
+   "arm": "published_exact_cmicl",
+   "failure_uid_sha256": "53832af3d33d707e0f8649b68a670b343ce74a88e47ba89ac559bc54286a7914",
+   "mean_box_range_cost": 0.002482838857910451,
+   "mean_positive_severity": 3.463093098088901,
+   "n": 200,
+   "run_name": "williams_seed5",
+   "seed": 5,
+   "selected_violation_risk": 0.165,
+   "target": "williams",
+   "violation_count": 33
+  }
+ ],
+ "perf_empirical_denominator_objectives": 5600,
+ "policy_flow": {
+  "all_controls_matched": true,
+  "chain": [
+   {
+    "anchor_id": "a0p333",
+    "arm": "floorscale_lam0.75",
+    "certified_cp_upper": 0.255332133365321,
+    "certified_violation_count": 54,
+    "d_cert_risk": 0.18,
+    "d_perf_primary_risk": 0.15,
+    "d_prop_selector_risk": 0.2,
+    "knob_bits": "3ffa600000000000",
+    "method": "floor_scale_theta0.75__k1p6484375",
+    "perf_measured_cost": 0.0065871726896779125,
+    "selected_lambda": 0.75
+   },
+   {
+    "anchor_id": "a0p667",
+    "arm": "floorscale_lam0.75",
+    "certified_cp_upper": 0.0866468523893055,
+    "certified_violation_count": 12,
+    "d_cert_risk": 0.04,
+    "d_perf_primary_risk": 0.04,
+    "d_prop_selector_risk": 0.05333333333333334,
+    "knob_bits": "4000200000000000",
+    "method": "floor_scale_theta0.75__k2p015625",
+    "perf_measured_cost": 0.010476841529262322,
+    "selected_lambda": 0.75
+   }
+  ],
+  "contract": "frozen-policy-role-contract-v1",
+  "identity_fields": [
+   "target",
+   "seed",
+   "anchor_id",
+   "arm",
+   "method",
+   "knob",
+   "source_sha"
+  ],
+  "n_anchors_declared": 2,
+  "n_anchors_with_a_fixed_row": 2,
+  "n_controls": 26,
+  "n_controls_within_tolerance": 26,
+  "pass": true,
+  "role_order": [
+   "match",
+   "prop",
+   "cert",
+   "perf"
+  ],
+  "run_name": "williams_seed5",
+  "schema_version": 1,
+  "source_sha": "7d0e65a6d6ddce9b85e373429027380c1cd4765afbad729b0a2b6f61ed273794"
+ },
+ "primary_perf_rows": [
+  {
+   "anchor_cost": 0.0065871726896779125,
+   "anchor_id": "a0p333",
+   "arm": "floorscale_lam0.75",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 3,
+   "failure_uid_sha256": "ba6de0794fc32fee2586fb0bfa86e668bfeae9a26ed4b0370123447f0459e2ef",
+   "is_primary": true,
+   "knob": 1.6484375,
+   "locked_cost": 0.0065871726896779125,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 1.721598718970659,
+   "measured_cost": 0.0065871726896779125,
+   "measured_relative_error": 0.0,
+   "method": "floor_scale_theta0.75__k1p6484375",
+   "n": 200,
+   "risk": 0.15,
+   "role": "primary",
+   "run_name": "williams_seed5",
+   "seed": 5,
+   "static_discordance_count": 9,
+   "target": "williams",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 30,
+   "within_equal_cost_tolerance": true
+  },
+  {
+   "anchor_cost": 0.010476841529262322,
+   "anchor_id": "a0p667",
+   "arm": "floorscale_lam0.75",
+   "availability_class": "measured",
+   "estimand": "point",
+   "exact_cmicl_discordance_count": 25,
+   "failure_uid_sha256": "b664d621fa60307c2915dde395509c4a6cefde92c5f2636d0466e7aed94b16db",
+   "is_primary": true,
+   "knob": 2.015625,
+   "locked_cost": 0.010476841529262322,
+   "locked_relative_error": 0.0,
+   "mean_positive_severity": 0.4276561285316467,
+   "measured_cost": 0.010476841529262324,
+   "measured_relative_error": 1.6557695094763445e-16,
+   "method": "floor_scale_theta0.75__k2p015625",
+   "n": 200,
+   "risk": 0.04,
+   "role": "primary",
+   "run_name": "williams_seed5",
+   "seed": 5,
+   "static_discordance_count": 31,
+   "target": "williams",
+   "terminal_reason": null,
+   "terminal_state": "matched",
+   "violation_count": 8,
+   "within_equal_cost_tolerance": true
+  }
+ ],
+ "proposal_cert_identity": "2/2",
+ "run_name": "williams_seed5",
+ "schema_version": 1,
+ "scientific_result_gate": "none; every result is handed back to the scientist",
+ "seed": 5,
+ "segments": {
+  "current_segment_index": 7,
+  "declared_forced_boundaries": [],
+  "distinct_run_ids_so_far": [
+   "williams_seed5--s01-0826-215825",
+   "williams_seed5--s02-0826-225353",
+   "williams_seed5--s03-0826-234925",
+   "williams_seed5--s04-0827-004506",
+   "williams_seed5--s05-0827-014045",
+   "williams_seed5--s06-0827-042905"
+  ],
+  "forced_boundaries": [],
+  "n_finished_segments_before_this_one": 6,
+  "n_segments_total": 7,
+  "resume_exercised": true
+ },
+ "selected_candidates": [
+  {
+   "anchor_fraction": 0.3333333333333333,
+   "anchor_id": "a0p333",
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 1,
+   "proposal_failure_uid_sha256": "4c71ab26b8adbd4c19810ee06321154ed96fd60b0af57b043f46ceb566fa6dca",
+   "proposal_n": 300,
+   "proposal_risk": 0.2,
+   "proposal_violation_count": 60,
+   "selected_arm": "floorscale_lam0.75",
+   "selected_lambda": 0.75,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0.75"
+   ]
+  },
+  {
+   "anchor_fraction": 0.6666666666666666,
+   "anchor_id": "a0p667",
+   "n_alternatives": 5,
+   "n_tied_at_minimum": 2,
+   "proposal_failure_uid_sha256": "f9694f372a6f447b23aa4d6155223fa6738021d9e65e82529e37273430e91b01",
+   "proposal_n": 300,
+   "proposal_risk": 0.05333333333333334,
+   "proposal_violation_count": 16,
+   "selected_arm": "floorscale_lam0.75",
+   "selected_lambda": 0.75,
+   "status": "fixed_row",
+   "tie_rule": "minimum D_prop selected risk, then smaller lambda",
+   "tied_arms": [
+    "floorscale_lam0.75",
+    "floorscale_lam1"
+   ]
+  }
+ ],
+ "solver_counts": {
+  "objective_solve_rows": 69800,
+  "oracle_queries": 38400,
+  "solver_failure_rows": 1200,
+  "unique_cells": 2270
+ },
+ "source_file_of_each_number": {
+  "availability_all_slots": "availability_ledger.csv",
+  "availability_exceptions": "availability_rows.csv",
+  "binding_and_displacement": "binding_diagnostics.csv",
+  "certification_rows": "certification_rows.csv",
+  "fit_acceptance_and_termination": "fit_acceptance.json",
+  "frozen_policies": "frozen_policies.json",
+  "matcher_terminal_states": "operational_readiness.json",
+  "per_law_failure_flow": "per_law_failure_flow.csv",
+  "per_iteration_matcher_trace": "matcher/matcher_trace.csv",
+  "policy_identity_chain": "policy_flow.json",
+  "primary_and_control_perf_rows": "perf_rows.csv",
+  "proposal_rows": "proposal_rows.csv",
+  "randomized_primary": "randomized_primary_rows.csv",
+  "randomized_sensitivity": "randomized_sensitivity_rows.csv",
+  "selected_candidates": "candidate_lock.json",
+  "solver_counts": "solver_receipt.json",
+  "static_and_exact_context": "perf_context_rows.csv"
+ },
+ "target": "williams"
+}
